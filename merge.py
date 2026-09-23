@@ -1,4 +1,5 @@
 import requests
+import re
 
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
@@ -6,7 +7,7 @@ URLS = [
     "https://www.apsattv.com/rakuten_es.m3u"
 ]
 
-# Palabras que provocarán la eliminación del canal/categoría
+# Categorías a excluir
 EXCLUIR = [
     "portugal",
     "mexico",
@@ -20,12 +21,12 @@ EXCLUIR = [
     "worldcup club"
 ]
 
-# Cabecera con EPG fijo
+# Cabecera M3U con EPG
 salida = [
     '#EXTM3U url-tvg="http://143.47.50.252:5000/getEPG"'
 ]
 
-# Para evitar duplicados
+# Evitar canales duplicados por URL
 canales_vistos = set()
 
 for url in URLS:
@@ -35,7 +36,6 @@ for url in URLS:
         contenido = requests.get(url, timeout=30).text
         lineas = contenido.splitlines()
 
-        # Eliminar cabecera de origen
         if lineas and lineas[0].startswith("#EXTM3U"):
             lineas = lineas[1:]
 
@@ -49,17 +49,27 @@ for url in URLS:
 
                 enlace = ""
                 if i + 1 < len(lineas):
-                    enlace = lineas[i + 1]
+                    enlace = lineas[i + 1].strip()
 
-                texto = extinf.lower()
+                # Extraer únicamente el group-title
+                grupo = ""
 
-                # Filtrar categorías/canales no deseados
-                if any(palabra in texto for palabra in EXCLUIR):
+                match = re.search(
+                    r'group-title="([^"]*)"',
+                    extinf,
+                    re.IGNORECASE
+                )
+
+                if match:
+                    grupo = match.group(1).lower()
+
+                # Filtrar SOLO por categoría
+                if any(palabra in grupo for palabra in EXCLUIR):
                     i += 2
                     continue
 
-                # Evitar duplicados por URL
-                if enlace in canales_vistos:
+                # Evitar duplicados
+                if enlace and enlace in canales_vistos:
                     i += 2
                     continue
 
@@ -79,4 +89,4 @@ for url in URLS:
 with open("lista.m3u", "w", encoding="utf-8") as f:
     f.write("\n".join(salida))
 
-print(f"Lista creada correctamente ({len(canales_vistos)} canales)")
+print(f"Lista creada correctamente con {len(canales_vistos)} canales")
