@@ -15,8 +15,8 @@ omitir = False
 for url in URLS:
     try:
         print(f"Descargando {url}")
-
         contenido = requests.get(url, timeout=30).text
+
         lineas = contenido.splitlines()
 
         if lineas and lineas[0].startswith("#EXTM3U"):
@@ -25,12 +25,11 @@ for url in URLS:
         for linea in lineas:
 
             if linea.startswith("#EXTINF"):
-
                 texto = linea.lower()
 
                 omitir = (
-                    'group-title="portugal"' in texto or
-                    'group-title="polsat"' in texto
+                    "portugal" in texto or
+                    "polsat" in texto
                 )
 
             if not omitir:
