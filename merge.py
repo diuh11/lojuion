@@ -10,17 +10,31 @@ salida = [
     '#EXTM3U url-tvg="http://143.47.50.252:5000/getEPG"'
 ]
 
+omitir = False
+
 for url in URLS:
     try:
         print(f"Descargando {url}")
-        contenido = requests.get(url, timeout=30).text
 
+        contenido = requests.get(url, timeout=30).text
         lineas = contenido.splitlines()
 
         if lineas and lineas[0].startswith("#EXTM3U"):
             lineas = lineas[1:]
 
-        salida.extend(lineas)
+        for linea in lineas:
+
+            if linea.startswith("#EXTINF"):
+
+                texto = linea.lower()
+
+                omitir = (
+                    'group-title="portugal"' in texto or
+                    'group-title="polsat"' in texto
+                )
+
+            if not omitir:
+                salida.append(linea)
 
     except Exception as e:
         print(f"Error: {e}")
