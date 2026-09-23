@@ -4,7 +4,6 @@ URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_spain.m3u8",
     "https://www.apsattv.com/rakuten_es.m3u"
-    "https://raw.githubusercontent.com/Traviesoman/Formula_1_TV/refs/heads/main/Canales%20F1%20y%20Deportes"
 ]
 
 salida = [
