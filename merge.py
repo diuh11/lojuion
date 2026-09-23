@@ -25,11 +25,27 @@ for url in URLS:
         for linea in lineas:
 
             if linea.startswith("#EXTINF"):
+
                 texto = linea.lower()
 
                 omitir = (
                     "portugal" in texto or
-                    "polsat" in texto
+                    "polsat" in texto or
+                    "israel" in texto or
+                    "méxico" in texto or
+                    "mexico" in texto or
+                    "izzigo" in texto or
+                    "now tv" in texto or
+                    "viasport" in texto or
+                    "cmore" in texto or
+                    "suecia" in texto or
+                    "noruega" in texto or
+                    "allente" in texto or
+                    "vodafone ru" in texto or
+                    "arena sport" in texto or
+                    "bein sports" in texto or
+                    "sports world" in texto or
+                    "worldcup club" in texto
                 )
 
             if not omitir:
