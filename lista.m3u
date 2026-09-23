@@ -66,15 +66,13 @@ https://d1zpoa0s0okzmu.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 #EXTINF:-1 tvg-id="beIN Sports XTRA" tvg-logo="https://i.ibb.co/44jf5LR/beinxtraes.png" group-title="Sports World",Bein Sports XTRA
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/bein-sports-xtra-en-espanol/playlist.m3u8
 #EXTINF:-1 tvg-id="Peacock TV Premier League" tvg-logo="https://assets-prd.ignimgs.com/2022/09/22/service-peacock-1663819589220.jpg?width=300&auto=webp" group-title="Sports World",Peacock TV Premier League
-#KODIPROP:inputstreamaddon=inputstream.adaptive 
+#KODIPROP:inputstreamaddon=inputstream.adaptive
 #EXTINF:-1  tvg-logo="https://i.pinimg.com/736x/0e/96/3c/0e963cdb5e91944561a6ae37eace1f9c.jpg" group-title="Sports World", HBO BOXING
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
 #EXTINF:-1 tvg-logo="https://cdn.nlziet.nl/static/assets/channels/bbcfour.png" group-title="Sports World",SPSPrime
 https://cdn3.skygo.mn/live/disk1/SPSPrime/DASH-FTA/SPSPrime.mpd
 #EXTINF:-1 group-title="Sports World" tvg-logo="https://i.ibb.co.com/BCHXWWH/Shareext-champion-league.jpg",Premiere Sports 2
 #EXTVLCOPT:http-user-agent=Mozilla/50 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0
-#EXTINF:-1 group-title="Bein Sports" tvg-id="FR | beIN SPORTS MAX 5" tvg-logo="https://www.footaz.fr/img/chaines/600/bein5.jpg",Bein Sports MAX 5
-#KODIPROP:inputstreamaddon=inputstream.adaptive
 #EXTINF:-1 tvg-id="SkySports_MainEventUHD" tvg-name="SkySports_MainEventUHD" tvg-logo="https://i.imgur.com/ETzQJdt.png" group-title="4K UHD",SkySports_MainEventUHD
 https://7pal.short.gy/SSMEuhd
 #EXTINF:-1 tvg-id="TNTSport_Ultimate-4K_HDR" tvg-name="TNTSport_Ultimate-4K_HDR" tvg-logo="https://media.info/l/o/5/5824.1689874022.png" group-title="4K UHD",TNTSport_Ultimate-4K_HDR
