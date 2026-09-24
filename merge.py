@@ -1,6 +1,7 @@
 import requests
 import hashlib
 import re
+from collections import Counter
 
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
@@ -30,41 +31,67 @@ BLOCK_WORDS = [
     "worldcup club"
 ]
 
+FAVORITOS = [
+    "m+ laliga",
+    "m+ liga de campeones",
+    "movistar plus+",
+    "dazn f1",
+    "m+ f1",
+    "la 1",
+    "antena 3",
+    "telecinco"
+]
+
+contador = Counter()
+
 
 def obtener_categoria(extinf):
 
     texto = extinf.lower()
 
-    # FÚTBOL
+    # FAVORITOS
+    if any(x in texto for x in FAVORITOS):
+        return "01 ⭐ Favoritos"
+
+    # DAZN
+    if "dazn" in texto:
+        return "04 🔥 DAZN"
+
+    # MOVISTAR
+    if (
+        "movistar" in texto
+        or "m+" in texto
+    ):
+        return "05 ⭐ Movistar+"
+
+    # FUTBOL
     if any(x in texto for x in [
         "laliga",
         "la liga",
         "champions",
         "liga de campeones",
-        "dazn laliga",
-        "hypermotion",
-        "real madrid",
-        "realmadrid",
-        "copa del rey",
-        "uefa",
         "premier league",
         "bundesliga",
         "serie a",
         "ligue 1",
-        "fútbol",
-        "futbol"
+        "uefa",
+        "realmadrid",
+        "real madrid",
+        "hypermotion",
+        "copa del rey",
+        "futbol",
+        "fútbol"
     ]):
-        return "Fútbol"
+        return "03 ⚽ Fútbol"
 
     # MOTOR
     if any(x in texto for x in [
         "formula 1",
         "f1",
         "motogp",
-        "moto gp",
-        "motor"
+        "moto gp"
     ]):
-        return "Motor"
+        return "06 🏎️ Motor"
 
     # DEPORTES
     if any(x in texto for x in [
@@ -73,22 +100,20 @@ def obtener_categoria(extinf):
         "tennis",
         "nba",
         "nfl",
-        "deportes",
-        "sport tv",
+        "sport",
         "vamos"
     ]):
-        return "Deportes"
+        return "07 🎾 Deportes"
 
     # CINE
     if any(x in texto for x in [
         "cine",
-        "cinema",
         "movie",
         "movies",
-        "hollywood",
+        "cinema",
         "tcm"
     ]):
-        return "Cine"
+        return "08 🎬 Cine"
 
     # SERIES
     if any(x in texto for x in [
@@ -97,22 +122,20 @@ def obtener_categoria(extinf):
         "fox",
         "warner",
         "syfy",
-        "amc",
-        "comedy central"
+        "amc"
     ]):
-        return "Series"
+        return "09 📺 Series"
 
     # DOCUMENTALES
     if any(x in texto for x in [
         "discovery",
-        "historia",
         "history",
-        "national geographic",
+        "historia",
         "nat geo",
-        "odisea",
-        "documental"
+        "national geographic",
+        "odisea"
     ]):
-        return "Documentales"
+        return "10 📚 Documentales"
 
     # INFANTIL
     if any(x in texto for x in [
@@ -121,34 +144,32 @@ def obtener_categoria(extinf):
         "nickelodeon",
         "boing",
         "cartoon",
-        "clan",
-        "baby tv"
+        "clan"
     ]):
-        return "Infantil"
+        return "11 🧒 Infantil"
 
     # NOTICIAS
     if any(x in texto for x in [
+        "cnn",
         "24h",
         "24 horas",
-        "cnn",
-        "bbc news",
         "euronews",
-        "al jazeera",
+        "bbc news",
         "news"
     ]):
-        return "Noticias"
+        return "12 📰 Noticias"
 
-    # MÚSICA
+    # MUSICA
     if any(x in texto for x in [
         "mtv",
         "music",
-        "mezzo",
         "sol musica",
-        "hit tv"
+        "hit tv",
+        "mezzo"
     ]):
-        return "Música"
+        return "13 🎵 Música"
 
-    # GENERALISTAS ESPAÑA
+    # GENERALISTAS
     if any(x in texto for x in [
         "la 1",
         "la1",
@@ -161,9 +182,9 @@ def obtener_categoria(extinf):
         "canal sur",
         "telemadrid"
     ]):
-        return "TV Generalista"
+        return "02 📺 Generalistas"
 
-    return "Otros"
+    return "99 📦 Otros"
 
 
 def limpiar_y_categorizar(extinf):
@@ -174,9 +195,12 @@ def limpiar_y_categorizar(extinf):
         extinf
     )
 
-    categoria = obtener_categoria(
-        extinf
-    )
+    categoria = obtener_categoria(extinf)
+
+    contador[categoria] += 1
+
+    if categoria == "99 📦 Otros":
+        print(f"SIN CLASIFICAR -> {extinf}")
 
     pos = extinf.rfind(",")
 
@@ -205,6 +229,10 @@ for url in URLS:
             url,
             timeout=30
         ).text
+
+        print(
+            f"Bytes descargados: {len(contenido)}"
+        )
 
         lineas = contenido.splitlines()
 
@@ -244,7 +272,7 @@ for url in URLS:
 
 contenido_final = "\n".join(salida)
 
-hash_md5 = hashlib.md5(
+md5 = hashlib.md5(
     contenido_final.encode("utf-8")
 ).hexdigest()
 
@@ -257,8 +285,15 @@ with open(
     f.write(contenido_final)
 
 print()
-print("=" * 50)
-print(f"Total líneas: {len(salida)}")
-print(f"MD5: {hash_md5}")
-print("Lista creada correctamente")
-print("=" * 50)
+print("=" * 60)
+print("RESUMEN DE CATEGORÍAS")
+print("=" * 60)
+
+for categoria, total in sorted(contador.items()):
+    print(f"{categoria}: {total}")
+
+print("=" * 60)
+print(f"Canales: {(len(salida)-1)//2}")
+print(f"MD5: {md5}")
+print("lista.m3u creada correctamente")
+print("=" * 60)
