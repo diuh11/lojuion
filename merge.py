@@ -2,10 +2,6 @@ import requests
 import hashlib
 from collections import defaultdict
 
-# =====================================================
-# FUENTES
-# =====================================================
-
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_spain.m3u8",
@@ -13,10 +9,6 @@ URLS = [
 ]
 
 EPG_URL = "http://143.47.50.252:5000/getEPG"
-
-# =====================================================
-# FILTROS
-# =====================================================
 
 BLOCK_WORDS = [
     "portugal",
@@ -38,10 +30,6 @@ BLOCK_WORDS = [
     "worldcup club"
 ]
 
-# =====================================================
-# CATEGORÍAS
-# =====================================================
-
 CATEGORY_ORDER = [
     "Fútbol",
     "Motor",
@@ -60,136 +48,64 @@ CATEGORY_ORDER = [
     "Otros"
 ]
 
-# =====================================================
-# NORMALIZACIÓN
-# =====================================================
 
-RENAME_RULES = {
-    "Películas Románticas - Rakuten TV":
-        "Películas Románticas",
+def classify_channel(name: str) -> str:
 
-    "Pelis Top - Rakuten TV":
-        "Pelis Top",
+    text = name.lower()
 
-    "Sci-Fi - Rakuten TV":
-        "Sci‑Fi",
+    football_words = [
+        "laliga",
+        "la liga",
+        "champions",
+        "liga de campeones",
+        "premier",
+        "bundesliga",
+        "serie a",
+        "ligue 1",
+        "movistar futbol",
+        "movistar fútbol",
+        "realmadrid",
+        "real madrid",
+        "barça",
+        "barca",
+        "dazn laliga",
+        "futbol",
+        "fútbol"
+    ]
 
-    "Thrillers - Rakuten TV":
-        "Thrillers",
+    motor_words = [
+        "formula 1",
+        "f1",
+        "motogp",
+        "rally",
+        "nascar",
+        "indycar",
+        "racer",
+        "top gear"
+    ]
 
-    "Royalworld - Nobleza y dinastías":
-        "Royalworld",
-}
+    combat_words = [
+        "ufc",
+        "mma",
+        "pfl",
+        "boxing",
+        "combat",
+        "fight"
+    ]
 
-
-def normalize_name(name):
-    name = name.strip()
-    return RENAME_RULES.get(name, name)
-
-
-# =====================================================
-# CLAVES FÚTBOL
-# =====================================================
-
-FOOTBALL_WORDS = [
-    "laliga",
-    "la liga",
-    "champions",
-    "liga de campeones",
-    "premier league",
-    "bundesliga",
-    "serie a",
-    "ligue 1",
-    "football",
-    "soccer",
-    "movistar futbol",
-    "movistar fútbol",
-    "m+ futbol",
-    "m+ fútbol",
-    "realmadrid",
-    "real madrid tv",
-    "barça",
-    "barca",
-    "dazn laliga",
-    "top barça"
-]
-
-# =====================================================
-# MOTOR
-# =====================================================
-
-MOTOR_WORDS = [
-    "f1",
-    "formula 1",
-    "motogp",
-    "nascar",
-    "indycar",
-    "rally",
-    "racer",
-    "motorsport",
-    "motorsports",
-    "top gear"
-]
-
-# =====================================================
-# COMBATE
-# =====================================================
-
-COMBAT_WORDS = [
-    "mma",
-    "ufc",
-    "pfl",
-    "boxing",
-    "combat",
-    "fight",
-    "kickboxing"
-]
-
-# =====================================================
-# CLASIFICACIÓN
-# =====================================================
-
-def classify_channel(name, extinf):
-
-    text = f"{name} {extinf}".lower()
-
-    if any(word in text for word in FOOTBALL_WORDS):
+    if any(x in text for x in football_words):
         return "Fútbol"
 
-    if any(word in text for word in MOTOR_WORDS):
+    if any(x in text for x in motor_words):
         return "Motor"
 
-    if any(word in text for word in COMBAT_WORDS):
+    if any(x in text for x in combat_words):
         return "Combate"
-
-    if "movie" in text or "película" in text:
-        return "Películas"
-
-    if "documentary" in text:
-        return "Documentales"
-
-    if (
-        "music" in text
-        or "stingray" in text
-        or "vevo" in text
-    ):
-        return "Música"
-
-    if "news" in text or "reuters" in text:
-        return "Noticias"
-
-    if "series" in text:
-        return "Series"
 
     return "Otros"
 
 
-# =====================================================
-# PARSEO
-# =====================================================
-
 channels = []
-
 seen_urls = set()
 
 for source in URLS:
@@ -198,10 +114,12 @@ for source in URLS:
 
         print(f"Descargando {source}")
 
-        content = requests.get(
+        response = requests.get(
             source,
             timeout=30
-        ).text
+        )
+
+        content = response.text
 
         lines = content.splitlines()
 
@@ -218,19 +136,15 @@ for source in URLS:
                 i += 1
                 continue
 
-            extinf = line
-
             if i + 1 >= len(lines):
                 break
 
+            extinf = line
             stream_url = lines[i + 1].strip()
 
             text = extinf.lower()
 
-            if any(
-                word in text
-                for word in BLOCK_WORDS
-            ):
+            if any(word in text for word in BLOCK_WORDS):
                 i += 2
                 continue
 
@@ -240,18 +154,11 @@ for source in URLS:
 
             seen_urls.add(stream_url)
 
-            name = normalize_name(
-                extinf.split(",")[-1]
-            )
-
-            category = classify_channel(
-                name,
-                extinf
-            )
+            name = extinf.split(",")[-1].strip()
 
             channels.append({
                 "name": name,
-                "category": category,
+                "category": classify_channel(name),
                 "extinf": extinf,
                 "url": stream_url
             })
@@ -260,22 +167,12 @@ for source in URLS:
 
     except Exception as e:
 
-        print(
-            f"Error en {source}: {e}"
-        )
-
-# =====================================================
-# AGRUPAR
-# =====================================================
+        print(f"Error descargando {source}: {e}")
 
 groups = defaultdict(list)
 
 for channel in channels:
     groups[channel["category"]].append(channel)
-
-# =====================================================
-# GENERAR M3U
-# =====================================================
 
 output = [
     f'#EXTM3U url-tvg="{EPG_URL}"'
@@ -295,24 +192,18 @@ for category in CATEGORY_ORDER:
 
 contenido = "\n".join(output)
 
-# =====================================================
-# GUARDAR
-# =====================================================
-
 with open(
     "lista.m3u",
     "w",
     encoding="utf-8"
 ) as f:
+
     f.write(contenido)
 
 md5 = hashlib.md5(
     contenido.encode("utf-8")
 ).hexdigest()
 
-print()
-print("=" * 50)
 print(f"Canales: {len(channels)}")
 print(f"MD5: {md5}")
 print("lista.m3u generada correctamente")
-print("=" * 50)
