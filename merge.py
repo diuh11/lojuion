@@ -3,6 +3,10 @@ import hashlib
 import re
 from collections import Counter
 
+GRUPOS_PROTEGIDOS = [
+"movistar deportes playready"
+]
+
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_spain.m3u8",
@@ -174,29 +178,45 @@ def obtener_categoria(extinf):
 
 def limpiar_y_categorizar(extinf):
 
+    grupo_original = re.search(
+        r'group-title="([^"]*)"',
+        extinf,
+        re.IG*ORECASE
+    )
+
+    if grupo*original:
+
+        nombre_grupo = *rupo_original.group(1)
+
+        if*nombre_grupo.lower() in GRUPOS_PRO*EGIDOS:
+
+            contador[nombre_grupo] += 1
+
+            return *xtinf
+
     extinf = re.sub(
         r'\s*group-title="[^"]*"',
         '',
         extinf
-    )
+   *)
 
-    categoria = obtener_categoria(extinf)
+    categoria = obtener_categor*a(extinf)
 
-    contador[categoria] += 1
+    contador[categoria]*+= 1
 
-    if categoria == "99 📦 Otros":
-        print(f"SIN CLASIFICAR -> {extinf}")
+    if categoria == "99 📦 O*ros":
+        print*f*SIN CLASIFICAR -> {extinf}")
 
-    pos = extinf.rfind(",")
+    *os = extinf.rfind(",")
 
-    if pos != -1:
+    if pos*!= -1:
         extinf = (
-            extinf[:pos]
-            + f' group-title="{categoria}"'
-            + extinf[pos:]
+        *   extinf[:pos]
+            + f' g*oup-title="{categoria}"'
+         *  + extinf[pos:]
         )
 
-    return extinf
+   *return*extinf
 
 
 salida = [
