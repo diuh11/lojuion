@@ -33,6 +33,72 @@ https://live.euskaltel.com/__cl/cg:live1/__c/Liga_hypermotion_Multi_3/__op/delay
 https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/default/__f/index.m3u8
 #EXTINF:-1 tvg-id="LaLiga Inside" tvg-shift="+2" group-title="Liga Hypermotion" ch-number="52" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/LaLigaInside.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7",LaLiga Inside (-2h)_
 https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/delay-default/__f/index.m3u8
+#EXTINF:-1 tvg-id="Sky Sports 16 MX" tvg-name="Sky Sports 16 MX" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/5/5a/Sky_Sports_LaLiga_II.svg/revision/latest/scale-to-width-down/150?cb=20231120144248" group-title="Sports World" group-logo="https://play-lh.googleusercontent.com/nkg3nSt-FYi98ZNk6ITz6qjbgzUKSaVZn6p-DGu_eTrQ0uPAhlmXDEedOIexAY1NBQ=s48-rw",Sky Sports MX LaLiga
+#EXTVLCOPT:http-user-agent=izzigo/11.6.5(4)_prd izzigo ahh (Linux;Android 16) ExoPlayerLib/2.14.2
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQID-lg2H4PeSDC44affkJIGy6YBioiHxHPJYeP6JgXtig4kzBd6ffa4Y8&s=10" group-title="Sports World",CAZE TV 3 (Liga)
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#EXTINF:-1 tvg-logo="https://thumbor.prod.vidiocdn.com/Bmv3iTkuSqCj3J2swo0flndH8x8=/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/6299/bein-1-60c673.jpg" group-title="Sports World",BEIN SPORTS 1
+#EXTVLCOPT:http-referer=https://www.visionplus.id/
+#EXTINF:-1 tvg-logo="https://thumbor.prod.vidiocdn.com/4Gq0GkWs-JKQ0i7xVY6j7Uap14Y=/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/image/17875/bein-2-e66e44.jpg" group-title="Sports World",BEIN SPORTS 2
+#EXTVLCOPT:http-referrer=https://www.visionplustv.id/
+#EXTINF:-1 tvg-logo="https://sdf-1a81f.kxcdn.com/assets/img/channels/sdf_small2.png" group-title="Sports World",SportDigital Fussball
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/114795/114795_264_live.m3u8
+#EXTINF:-1 tvg-logo="https://sdf-1a81f.kxcdn.com/assets/img/channels/20231011125447_sdf2_logo.png" group-title="Sports World",SportDigital Fussball 2
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/77693/77693_264_live.m3u8
+#EXTINF:-1 tvg-logo="https://sdf-1a81f.kxcdn.com/assets/img/channels/20241025115236_sd1p_small.png" group-title="Sports World",SportDigital 1+
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/102539/102539_264_live.m3u8
+#EXTINF:-1 tvg-logo="https://sdf-1a81f.kxcdn.com/assets/img/channels/20241211100026_scooorefast_channel_logo.png" group-title="Sports World",SportDigital Scooore
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/76321/76321_264_live.m3u8
+#EXTINF:-1 tvg-logo="https://sdf-1a81f.kxcdn.com/assets/img/channels/20241024171942_EDGE_Tans.png" group-title="Sports World",SportDigital Edge
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/13066/13066_264_live.m3u8
+#EXTINF:-1 tvg-logo="https://channel.images.production.web.w4a.tv/white/mysports_Edge.png?dpr=1.5&auto=format&w=160" group-title="Sports World",MySports Edge
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/81991/81991_264_live.m3u8
+#EXTINF:-1 tvg-logo="https://sdf-1a81f.kxcdn.com/assets/img/channels/20241028170439_sdeso_small.png" group-title="Sports World",eSports One
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/102541/102541_264_live.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/9F81DyyN/descarga-37.jpg" group-title="Sports World",My Padel TV
+https://d1zpoa0s0okzmu.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-h7omeoyf2i8uy/live/fast-channel-mypadeltv-c792478d/fast-channel-mypadeltv-c792478d.m3u8
+#EXTINF:-1 tvg-id="Sky Bundesliga 1" group-title="Sports World",Sky Bundesliga 1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/wrhHd3H/tntsports1.jpg" group-title="Sports World",TNT Sports 1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
+#EXTINF:-1 group-title="Sports World" tvg-logo="https://i.postimg.cc/mrD5C6S3/descarga.png" ,TIGO EVENTOS 1
+#EXTVLCOPT:network-caching=1000
+#EXTINF:-1 tvg-id="beIN Sports XTRA" tvg-logo="https://i.ibb.co/44jf5LR/beinxtraes.png" group-title="Sports World",Bein Sports XTRA
+https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/bein-sports-xtra-en-espanol/playlist.m3u8
+#EXTINF:-1 tvg-id="Peacock TV Premier League" tvg-logo="https://assets-prd.ignimgs.com/2022/09/22/service-peacock-1663819589220.jpg?width=300&auto=webp" group-title="Sports World",Peacock TV Premier League
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#EXTINF:-1  tvg-logo="https://i.pinimg.com/736x/0e/96/3c/0e963cdb5e91944561a6ae37eace1f9c.jpg" group-title="Sports World", HBO BOXING
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
+#EXTINF:-1 tvg-logo="https://cdn.nlziet.nl/static/assets/channels/bbcfour.png" group-title="Sports World",SPSPrime
+https://cdn3.skygo.mn/live/disk1/SPSPrime/DASH-FTA/SPSPrime.mpd
+#EXTINF:-1 group-title="Sports World" tvg-logo="https://i.ibb.co.com/BCHXWWH/Shareext-champion-league.jpg",Premiere Sports 2
+#EXTVLCOPT:http-user-agent=Mozilla/50 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0
+#EXTINF:-1 tvg-logo="https://skymediaglobal.b-cdn.net/wp-content/uploads/2020/09/Sky-Sports-Cricket-2020-logo-250.png" group-title="Now TV (UK)",SKY SPORT CRICKET
+http://linear002-gb-dash1-prd-cf.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(sportscricket50)/manifest_1080-plus-120.mpd
+#EXTINF:-1 tvg-logo="https://www.sky.de/static/img/senderlogos_dark/1002_sky_logo_sky-sport-golf-hd_tvguide.png" group-title="Now TV (UK)",SKY SPORT GOLF
+http://linear006-gb-dash1-prd-cf.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(sportsgolf50)/manifest_1080-plus-120.mpd
+#EXTINF:-1 tvg-logo="https://www.sky.de/static/img/senderlogos_dark/1012_sky_logo_sky-sport-tennis-hd_tvguide.png" group-title="Now TV (UK)",SKY SPORT TENNIS
+http://linear015-gb-dash1-prd-cf.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(sportstennis50)/manifest_1080-plus-120.mpd
+#EXTINF:-1 tvg-logo="https://www.sky.de/static/img/senderlogos_dark/1005_sky_logo_sky-sport-mix-hd_tvguide.png" group-title="Now TV (UK)",SKY SPORT MIX
+http://linear031-gb-dash1-prd-ll.cdn.skycdp.com/100e/Content/DASH_003_1080_120/Live/channel(sportsmix50)/manifest_1080-plus-120.mpd
+#EXTINF:-1 tvg-logo="https://archive.org/download/SkySportsAction_201708/sky%20sports%20action.png" group-title="Now TV (UK)",SKY SPORT ACTION
+http://linear030-gb-dash1-prd-cf.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(sportsaction50)/manifest_1080-plus-120.mpd
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/04/Sky_sports_racing.png" group-title="Now TV (UK)",SKY SPORT RACING
+https://linear006-gb-dash1-prd-ak.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(sportsracing50)/manifest_1080-plus.mpd
+#EXTINF:-1 tvg-logo="https://www.sky.de/static/img/senderlogos_dark/17_sky_logo_skysportnewshd_tvguide.png" group-title="Now TV (UK)",SKY SPORT NEWS
+http://linear010-ie-dash1-prd-ll.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(sportsnews50)/manifest_1080.mpd
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/TNT%20Sports%201.png" group-title="Now TV (UK)",TNT Sports 1
+http://linear038-ie-dash1-prd-ll.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(tnt1sport50)/manifest_1080.mpd
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/TNT%20Sports%202.png" group-title="Now TV (UK)",TNT Sports 2
+http://linear034-ie-dash1-prd-ak.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(tnt2sport50)/manifest_1080.mpd
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/TNT%20Sports%203.png" group-title="Now TV (UK)",TNT Sports 3
+http://linear038-ie-dash1-prd-ak.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(tnt3sport50)/manifest_1080.mpd
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/TNT%20Sports%204.png" group-title="Now TV (UK)",TNT Sports 4
+http://linear036-ie-dash1-prd-ll.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(tnt4sport50)/manifest_1080.mpd
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d1/Logo_TV_Premier_Sport_1.png" group-title="Now TV (UK)",Premier Sports 1
+http://linear038-ie-dash1-prd-ll.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(premier1sports50)/manifest_1080.mpd
+#EXTINF:-1 tvg-logo="https://www.premiersport.sk/wp-content/uploads/2023/08/PREMIER-SPORT-2-370x58-1.png" group-title="Now TV (UK)",Premier Sports 2
+http://linear034-ie-dash1-prd-ak.cdn.skycdp.com/016a/Content/DASH_003_1080_120/Live/channel(premier2sports50)/manifest_1080.mpd
 #EXTINF:-1 tvg-id="SkySports_MainEventUHD" tvg-name="SkySports_MainEventUHD" tvg-logo="https://i.imgur.com/ETzQJdt.png" group-title="4K UHD",SkySports_MainEventUHD
 https://7pal.short.gy/SSMEuhd
 #EXTINF:-1 tvg-id="TNTSport_Ultimate-4K_HDR" tvg-name="TNTSport_Ultimate-4K_HDR" tvg-logo="https://media.info/l/o/5/5824.1689874022.png" group-title="4K UHD",TNTSport_Ultimate-4K_HDR
