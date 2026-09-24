@@ -31,17 +31,6 @@ BLOCK_WORDS = [
     "worldcup club"
 ]
 
-FAVORITOS = [
-    "m+ laliga",
-    "m+ liga de campeones",
-    "movistar plus+",
-    "dazn f1",
-    "m+ f1",
-    "la 1",
-    "antena 3",
-    "telecinco"
-]
-
 contador = Counter()
 
 
@@ -49,20 +38,16 @@ def obtener_categoria(extinf):
 
     texto = extinf.lower()
 
-    # FAVORITOS
-    if any(x in texto for x in FAVORITOS):
-        return "01 ⭐ Favoritos"
-
     # DAZN
     if "dazn" in texto:
-        return "04 🔥 DAZN"
+        return "03 🔥 DAZN"
 
     # MOVISTAR
     if (
         "movistar" in texto
         or "m+" in texto
     ):
-        return "05 ⭐ Movistar+"
+        return "04 ⭐ Movistar+"
 
     # FUTBOL
     if any(x in texto for x in [
@@ -82,7 +67,7 @@ def obtener_categoria(extinf):
         "futbol",
         "fútbol"
     ]):
-        return "03 ⚽ Fútbol"
+        return "02 ⚽ Fútbol"
 
     # MOTOR
     if any(x in texto for x in [
@@ -91,7 +76,7 @@ def obtener_categoria(extinf):
         "motogp",
         "moto gp"
     ]):
-        return "06 🏎️ Motor"
+        return "05 🏎️ Motor"
 
     # DEPORTES
     if any(x in texto for x in [
@@ -103,7 +88,7 @@ def obtener_categoria(extinf):
         "sport",
         "vamos"
     ]):
-        return "07 🎾 Deportes"
+        return "06 🎾 Deportes"
 
     # CINE
     if any(x in texto for x in [
@@ -113,7 +98,7 @@ def obtener_categoria(extinf):
         "cinema",
         "tcm"
     ]):
-        return "08 🎬 Cine"
+        return "07 🎬 Cine"
 
     # SERIES
     if any(x in texto for x in [
@@ -124,7 +109,7 @@ def obtener_categoria(extinf):
         "syfy",
         "amc"
     ]):
-        return "09 📺 Series"
+        return "08 📺 Series"
 
     # DOCUMENTALES
     if any(x in texto for x in [
@@ -135,7 +120,7 @@ def obtener_categoria(extinf):
         "national geographic",
         "odisea"
     ]):
-        return "10 📚 Documentales"
+        return "09 📚 Documentales"
 
     # INFANTIL
     if any(x in texto for x in [
@@ -146,7 +131,7 @@ def obtener_categoria(extinf):
         "cartoon",
         "clan"
     ]):
-        return "11 🧒 Infantil"
+        return "10 🧒 Infantil"
 
     # NOTICIAS
     if any(x in texto for x in [
@@ -157,7 +142,7 @@ def obtener_categoria(extinf):
         "bbc news",
         "news"
     ]):
-        return "12 📰 Noticias"
+        return "11 📰 Noticias"
 
     # MUSICA
     if any(x in texto for x in [
@@ -167,7 +152,7 @@ def obtener_categoria(extinf):
         "hit tv",
         "mezzo"
     ]):
-        return "13 🎵 Música"
+        return "12 🎵 Música"
 
     # GENERALISTAS
     if any(x in texto for x in [
@@ -182,7 +167,7 @@ def obtener_categoria(extinf):
         "canal sur",
         "telemadrid"
     ]):
-        return "02 📺 Generalistas"
+        return "01 📺 Generalistas"
 
     return "99 📦 Otros"
 
@@ -205,7 +190,6 @@ def limpiar_y_categorizar(extinf):
     pos = extinf.rfind(",")
 
     if pos != -1:
-
         extinf = (
             extinf[:pos]
             + f' group-title="{categoria}"'
@@ -256,10 +240,7 @@ for url in URLS:
                 )
 
                 if not omitir:
-
-                    linea = limpiar_y_categorizar(
-                        linea
-                    )
+                    linea = limpiar_y_categorizar(linea)
 
             if not omitir:
                 salida.append(linea)
@@ -281,7 +262,6 @@ with open(
     "w",
     encoding="utf-8"
 ) as f:
-
     f.write(contenido_final)
 
 print()
