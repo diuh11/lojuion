@@ -1,4 +1,5 @@
 import requests
+import hashlib
 
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
@@ -10,17 +11,20 @@ salida = [
     '#EXTM3U url-tvg="http://143.47.50.252:5000/getEPG"'
 ]
 
-omitir = False
-
 for url in URLS:
     try:
-        print(f"Descargando {url}")
+        print(f"Descargando: {url}")
+
         contenido = requests.get(url, timeout=30).text
+
+        print(f"Bytes descargados: {len(contenido)}")
 
         lineas = contenido.splitlines()
 
         if lineas and lineas[0].startswith("#EXTM3U"):
             lineas = lineas[1:]
+
+        omitir = False
 
         for linea in lineas:
 
@@ -52,18 +56,13 @@ for url in URLS:
                 salida.append(linea)
 
     except Exception as e:
-        print(f"Error: {e}")
-
-with open("lista.m3u", "w", encoding="utf-8") as f:
-    f.write("\n".join(salida))
-
-print("Lista creada correctamente")
-import hashlib
+        print(f"Error descargando {url}: {e}")
 
 contenido_final = "\n".join(salida)
 
-# Calcular hash MD5 del contenido
-hash_md5 = hashlib.md5(contenido_final.encode("utf-8")).hexdigest()
+hash_md5 = hashlib.md5(
+    contenido_final.encode("utf-8")
+).hexdigest()
 
 print(f"Total líneas generadas: {len(salida)}")
 print(f"Hash MD5: {hash_md5}")
