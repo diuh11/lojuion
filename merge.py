@@ -1,4 +1,5 @@
 import requests
+import hashlib
 
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
@@ -6,7 +7,31 @@ URLS = [
     "https://www.apsattv.com/rakuten_es.m3u"
 ]
 
-salida = ["#EXTM3U"]
+EPG_URL = "http://143.47.50.252:5000/getEPG"
+
+BLOCK_WORDS = [
+    "portugal",
+    "polsat",
+    "israel",
+    "méxico",
+    "mexico",
+    "izzigo",
+    "now tv",
+    "viasport",
+    "cmore",
+    "suecia",
+    "noruega",
+    "allente",
+    "vodafone ru",
+    "arena sport",
+    "bein sports",
+    "sports world",
+    "worldcup club"
+]
+
+salida = [
+    f'#EXTM3U url-tvg="{EPG_URL}"'
+]
 
 for url in URLS:
 
@@ -14,23 +39,14 @@ for url in URLS:
 
         print(f"Descargando: {url}")
 
-        respuesta = requests.get(
+        contenido = requests.get(
             url,
             timeout=30
-        )
-
-        respuesta.raise_for_status()
-
-        contenido = respuesta.text
+        ).text
 
         print(
             f"Bytes descargados: {len(contenido)}"
         )
-
-        if "movistar" in contenido.lower():
-            print(
-                f"MOVISTAR ENCONTRADO EN {url}"
-            )
 
         lineas = contenido.splitlines()
 
@@ -40,7 +56,21 @@ for url in URLS:
         ):
             lineas = lineas[1:]
 
-        salida.extend(lineas)
+        omitir = False
+
+        for linea in lineas:
+
+            if linea.startswith("#EXTINF"):
+
+                texto = linea.lower()
+
+                omitir = any(
+                    palabra in texto
+                    for palabra in BLOCK_WORDS
+                )
+
+            if not omitir:
+                salida.append(linea)
 
     except Exception as e:
 
@@ -48,18 +78,23 @@ for url in URLS:
             f"Error descargando {url}: {e}"
         )
 
+contenido_final = "\n".join(salida)
+
+hash_md5 = hashlib.md5(
+    contenido_final.encode("utf-8")
+).hexdigest()
+
 with open(
     "lista.m3u",
     "w",
     encoding="utf-8"
 ) as f:
 
-    f.write(
-        "\n".join(salida)
-    )
+    f.write(contenido_final)
 
 print()
 print("=" * 50)
-print(f"Lineas generadas: {len(salida)}")
-print("lista.m3u creada correctamente")
+print(f"Total líneas: {len(salida)}")
+print(f"MD5: {hash_md5}")
+print("Lista creada correctamente")
 print("=" * 50)
