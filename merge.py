@@ -58,3 +58,17 @@ with open("lista.m3u", "w", encoding="utf-8") as f:
     f.write("\n".join(salida))
 
 print("Lista creada correctamente")
+import hashlib
+
+contenido_final = "\n".join(salida)
+
+# Calcular hash MD5 del contenido
+hash_md5 = hashlib.md5(contenido_final.encode("utf-8")).hexdigest()
+
+print(f"Total líneas generadas: {len(salida)}")
+print(f"Hash MD5: {hash_md5}")
+
+with open("lista.m3u", "w", encoding="utf-8") as f:
+    f.write(contenido_final)
+
+print("Lista creada correctamente")
