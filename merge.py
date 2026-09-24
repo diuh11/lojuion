@@ -60,4 +60,3 @@ print("MERGE SIN FILTROS")
 print(f"Lineas: {len(salida)}")
 print(f"MD5: {md5}")
 print("=" * 50)
-``
