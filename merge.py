@@ -31,7 +31,142 @@ BLOCK_WORDS = [
 ]
 
 
-def limpiar_grupo(extinf):
+def obtener_categoria(extinf):
+
+    texto = extinf.lower()
+
+    # FÚTBOL
+    if any(x in texto for x in [
+        "laliga",
+        "la liga",
+        "champions",
+        "liga de campeones",
+        "dazn laliga",
+        "hypermotion",
+        "real madrid",
+        "realmadrid",
+        "copa del rey",
+        "uefa",
+        "premier league",
+        "bundesliga",
+        "serie a",
+        "ligue 1",
+        "fútbol",
+        "futbol"
+    ]):
+        return "Fútbol"
+
+    # MOTOR
+    if any(x in texto for x in [
+        "formula 1",
+        "f1",
+        "motogp",
+        "moto gp",
+        "motor"
+    ]):
+        return "Motor"
+
+    # DEPORTES
+    if any(x in texto for x in [
+        "eurosport",
+        "golf",
+        "tennis",
+        "nba",
+        "nfl",
+        "deportes",
+        "sport tv",
+        "vamos"
+    ]):
+        return "Deportes"
+
+    # CINE
+    if any(x in texto for x in [
+        "cine",
+        "cinema",
+        "movie",
+        "movies",
+        "hollywood",
+        "tcm"
+    ]):
+        return "Cine"
+
+    # SERIES
+    if any(x in texto for x in [
+        "series",
+        "axn",
+        "fox",
+        "warner",
+        "syfy",
+        "amc",
+        "comedy central"
+    ]):
+        return "Series"
+
+    # DOCUMENTALES
+    if any(x in texto for x in [
+        "discovery",
+        "historia",
+        "history",
+        "national geographic",
+        "nat geo",
+        "odisea",
+        "documental"
+    ]):
+        return "Documentales"
+
+    # INFANTIL
+    if any(x in texto for x in [
+        "disney",
+        "nick",
+        "nickelodeon",
+        "boing",
+        "cartoon",
+        "clan",
+        "baby tv"
+    ]):
+        return "Infantil"
+
+    # NOTICIAS
+    if any(x in texto for x in [
+        "24h",
+        "24 horas",
+        "cnn",
+        "bbc news",
+        "euronews",
+        "al jazeera",
+        "news"
+    ]):
+        return "Noticias"
+
+    # MÚSICA
+    if any(x in texto for x in [
+        "mtv",
+        "music",
+        "mezzo",
+        "sol musica",
+        "hit tv"
+    ]):
+        return "Música"
+
+    # GENERALISTAS ESPAÑA
+    if any(x in texto for x in [
+        "la 1",
+        "la1",
+        "la 2",
+        "antena 3",
+        "telecinco",
+        "cuatro",
+        "la sexta",
+        "trece",
+        "canal sur",
+        "telemadrid"
+    ]):
+        return "TV Generalista"
+
+    return "Otros"
+
+
+def limpiar_y_categorizar(extinf):
 
     extinf = re.sub(
         r'\s*group-title="[^"]*"',
@@ -39,17 +174,19 @@ def limpiar_grupo(extinf):
         extinf
     )
 
-    if 'group-title=' not in extinf:
+    categoria = obtener_categoria(
+        extinf
+    )
 
-        pos = extinf.rfind(",")
+    pos = extinf.rfind(",")
 
-        if pos != -1:
+    if pos != -1:
 
-            extinf = (
-                extinf[:pos]
-                + ' group-title="General"'
-                + extinf[pos:]
-            )
+        extinf = (
+            extinf[:pos]
+            + f' group-title="{categoria}"'
+            + extinf[pos:]
+        )
 
     return extinf
 
@@ -68,10 +205,6 @@ for url in URLS:
             url,
             timeout=30
         ).text
-
-        print(
-            f"Bytes descargados: {len(contenido)}"
-        )
 
         lineas = contenido.splitlines()
 
@@ -96,7 +229,7 @@ for url in URLS:
 
                 if not omitir:
 
-                    linea = limpiar_grupo(
+                    linea = limpiar_y_categorizar(
                         linea
                     )
 
