@@ -61,6 +61,8 @@
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/ESP" group-title="Movistar Deportes" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4605/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62",Eurosport 1.
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
+#EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/ESP" group-title="Movistar Deportes" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4605/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62",Eurosport 1.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
 #EXTINF:-1 tvg-id="Eurosport 2" tvg-name="Eurosport 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/ESP2" group-title="Movistar Deportes" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4580/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62",Eurosport 2.
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #EXTINF:-1 tvg-id="GOL PLAY" tvg-name="GOL PLAY" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/GOL" group-title="Movistar Deportes" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4577/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62",GOL PLAY.
