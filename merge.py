@@ -1,5 +1,5 @@
-import hashlib
 import requests
+import hashlib
 
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
@@ -7,206 +7,73 @@ URLS = [
     "https://www.apsattv.com/rakuten_es.m3u"
 ]
 
-EPG_URL = "http://143.47.50.252:5000/getEPG"
-
-BLOCK_WORDS = [
-    "portugal",
-    "polsat",
-    "israel",
-    "méxico",
-    "mexico",
-    "izzigo",
-    "now tv",
-    "viasport",
-    "cmore",
-    "suecia",
-    "noruega",
-    "allente",
-    "vodafone ru",
-    "arena sport",
-    "bein sports",
-    "sports world",
-    "worldcup club"
+salida = [
+    '#EXTM3U url-tvg="http://143.47.50.252:5000/getEPG"'
 ]
 
+vistos = set()
 
-def classify_channel(extinf: str) -> str:
-
-    text = extinf.lower()
-
-    football_keywords = [
-        "laliga",
-        "la liga",
-        "champions",
-        "liga de campeones",
-        "premier league",
-        "bundesliga",
-        "serie a",
-        "ligue 1",
-        "movistar fútbol",
-        "movistar futbol",
-        "m+ fútbol",
-        "m+ futbol",
-        "realmadrid",
-        "real madrid",
-        "barça",
-        "barca",
-        "soccer",
-        "football"
-    ]
-
-    motor_keywords = [
-        "formula 1",
-        "f1",
-        "motogp",
-        "nascar",
-        "rally",
-        "racer",
-        "top gear"
-    ]
-
-    combat_keywords = [
-        "mma",
-        "ufc",
-        "pfl",
-        "boxing",
-        "fight"
-    ]
-
-    if any(word in text for word in football_keywords):
-        return "Fútbol"
-
-    if any(word in text for word in motor_keywords):
-        return "Motor"
-
-    if any(word in text for word in combat_keywords):
-        return "Combate"
-
-    return None
-
-
-def add_group(extinf: str, category: str) -> str:
-
-    if category is None:
-        return extinf
-
-    if 'group-title="' in extinf:
-
-        import re
-
-        return re.sub(
-            r'group-title="[^"]*"',
-            f'group-title="{category}"',
-            extinf
-        )
-
-    pos = extinf.rfind(",")
-
-    if pos == -1:
-        return extinf
-
-    return (
-        extinf[:pos]
-        + f' group-title="{category}"'
-        + extinf[pos:]
-    )
-
-
-output = [
-    f'#EXTM3U url-tvg="{EPG_URL}"'
-]
-
-seen_urls = set()
-
-for source in URLS:
+for url in URLS:
 
     try:
 
-        print(f"Descargando {source}")
+        print(f"Descargando: {url}")
 
-        content = requests.get(
-            source,
+        contenido = requests.get(
+            url,
             timeout=30
         ).text
 
-        lines = content.splitlines()
+        lineas = contenido.splitlines()
 
-        if (
-            lines
-            and lines[0].startswith("#EXTM3U")
-        ):
-            lines = lines[1:]
+        if lineas and lineas[0].startswith("#EXTM3U"):
+            lineas = lineas[1:]
 
         i = 0
 
-        while i < len(lines):
+        while i < len(lineas):
 
-            line = lines[i].strip()
+            linea = lineas[i].strip()
 
-            if not line.startswith("#EXTINF"):
+            if not linea.startswith("#EXTINF"):
                 i += 1
                 continue
 
-            if i + 1 >= len(lines):
+            if i + 1 >= len(lineas):
                 break
 
-            extinf = line
-            url = lines[i + 1].strip()
+            extinf = linea
+            stream = lineas[i + 1].strip()
 
-            lower = extinf.lower()
-
-            blocked = any(
-                word in lower
-                for word in BLOCK_WORDS
-            )
-
-            if blocked:
+            if stream in vistos:
                 i += 2
                 continue
 
-            if url in seen_urls:
-                i += 2
-                continue
+            vistos.add(stream)
 
-            seen_urls.add(url)
-
-            category = classify_channel(
-                extinf
-            )
-
-            extinf = add_group(
-                extinf,
-                category
-            )
-
-            output.append(extinf)
-            output.append(url)
+            salida.append(extinf)
+            salida.append(stream)
 
             i += 2
 
     except Exception as e:
 
-        print(
-            f"Error descargando {source}: {e}"
-        )
+        print(f"Error: {e}")
 
-content = "\n".join(output)
+contenido = "\n".join(salida)
+
+md5 = hashlib.md5(
+    contenido.encode("utf-8")
+).hexdigest()
 
 with open(
     "lista.m3u",
     "w",
     encoding="utf-8"
 ) as f:
-    f.write(content)
 
-md5 = hashlib.md5(
-    content.encode("utf-8")
-).hexdigest()
+    f.write(contenido)
 
-print()
-print("=" * 50)
-print(f"Canales: {(len(output)-1)//2}")
 print(f"MD5: {md5}")
-print("lista.m3u generada correctamente")
-print("=" * 50)
+print("OK")
 ``
