@@ -1,5 +1,6 @@
 import requests
 import hashlib
+import re
 
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
@@ -28,6 +29,30 @@ BLOCK_WORDS = [
     "sports world",
     "worldcup club"
 ]
+
+
+def limpiar_grupo(extinf):
+
+    extinf = re.sub(
+        r'\s*group-title="[^"]*"',
+        '',
+        extinf
+    )
+
+    if 'group-title=' not in extinf:
+
+        pos = extinf.rfind(",")
+
+        if pos != -1:
+
+            extinf = (
+                extinf[:pos]
+                + ' group-title="General"'
+                + extinf[pos:]
+            )
+
+    return extinf
+
 
 salida = [
     f'#EXTM3U url-tvg="{EPG_URL}"'
@@ -68,6 +93,12 @@ for url in URLS:
                     palabra in texto
                     for palabra in BLOCK_WORDS
                 )
+
+                if not omitir:
+
+                    linea = limpiar_grupo(
+                        linea
+                    )
 
             if not omitir:
                 salida.append(linea)
