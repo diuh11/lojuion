@@ -522,278 +522,278 @@ https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5313/vxfmt=dp/Manifest%2
 
 
 
-#EXTINF:-1 tvg-id="Movistar Plus" tvg-name="Movistar Plus" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MPLUS" group-title="04 ⭐ Movistar+", Movistar Plus.
+#EXTINF:-1 tvg-id="Movistar Plus" tvg-name="Movistar Plus" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MPLUS", Movistar Plus.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=3bb209e9657e4c11bff0521c3c695e45:172842aefc77fc769372593f6d1be85b
 https://mplus-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Vamos" tvg-name="M+ Vamos" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/VAMOSD" group-title="04 ⭐ Movistar+", M+ Vamos.
+#EXTINF:-1 tvg-id="M+ Vamos" tvg-name="M+ Vamos" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/VAMOSD", M+ Vamos.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=7a82138ce7e5495093c93f15c824a9f4:792659a361f3ff14af569e19696c7770
 https://vamos-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Vamos 2" tvg-name="M+ Vamos 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/VAM2SD" group-title="04 ⭐ Movistar+", M+ Vamos 2.
+#EXTINF:-1 tvg-id="M+ Vamos 2" tvg-name="M+ Vamos 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/VAM2SD", M+ Vamos 2.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=8941608e17764410bd4ab0c5ba93d7e6:136a55356d07cdf3ecd874c4afd4d367
 https://m2vamo-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Vamos 3" tvg-name="M+ Vamos 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MELLAV" group-title="04 ⭐ Movistar+", M+ Vamos 3.
+#EXTINF:-1 tvg-id="M+ Vamos 3" tvg-name="M+ Vamos 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MELLAV", M+ Vamos 3.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=dfad1dcc676a4e61a7b635ab491f5b97:81fccea0d43f20267fd1c4e0609ba956
 https://m3vamo-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="Primera Federación" tvg-name="Primera Federación" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MCOPA" group-title="99 📦 Otros", Primera Federación.
+#EXTINF:-1 tvg-id="Primera Federación" tvg-name="Primera Federación" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MCOPA", Primera Federación.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=cfbcf5072f054cac92b97c899fd8a7e8:a71f06b44caf7f5dc30b8d2a279b7b32
 https://01coparey-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ LALIGA" tvg-name="M+ LALIGA" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGA" group-title="04 ⭐ Movistar+",M+ LALIGA.
+#EXTINF:-1 tvg-id="M+ LALIGA" tvg-name="M+ LALIGA" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGA",M+ LALIGA.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=3fb03257f34c4c69bc78b3048ff12871:3e271876d788c9b6e197db3457a845c9
 https://mlaliga-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN LaLiga" tvg-name="DAZN LaLiga" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZNLI" group-title="03 🔥 DAZN",DAZN LaLiga.
+#EXTINF:-1 tvg-id="DAZN LaLiga" tvg-name="DAZN LaLiga" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZNLI",DAZN LaLiga.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=3edf0437b71e4230ab1b85ba54b30e8e:2d3b517199256facb6762f960168ab7a
 https://01ligdazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="LALIGA TV HYPERMOTION" tvg-name="LALIGA TV HYPERMOTION" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGS" group-title="02 ⚽ Fútbol", LALIGA TV HYPERMOTION.
+#EXTINF:-1 tvg-id="LALIGA TV HYPERMOTION" tvg-name="LALIGA TV HYPERMOTION" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGS", LALIGA TV HYPERMOTION.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=3e3ff720d859449b84b3d5059681dd29:0efa0702d68c7bffbd44a2c50ba5e69f
 https://msegdiv-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ LALIGA 2" tvg-name="M+ LALIGA 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-NEONEGR/wpmos/MLIG1" group-title="04 ⭐ Movistar+",M+ LALIGA 2.
+#EXTINF:-1 tvg-id="M+ LALIGA 2" tvg-name="M+ LALIGA 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-NEONEGR/wpmos/MLIG1",M+ LALIGA 2.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=5ebeffe585b5413a8afe7d0aea8297c5:bf1430fd227252313f16e85cceafe7d0
 https://2liga-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN LaLiga 2" tvg-name="DAZN LaLiga 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZNL2" group-title="03 🔥 DAZN",DAZN LaLiga 2.
+#EXTINF:-1 tvg-id="DAZN LaLiga 2" tvg-name="DAZN LaLiga 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZNL2",DAZN LaLiga 2.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=30f80831898b4e01ba0213d40739483c:0909b2deec3713a7645d3c355911f6f2
 https://02ligdazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="LALIGA TV HYPERMOTION 2" tvg-name="LALIGA TV HYPERMOTION 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGS2" group-title="02 ⚽ Fútbol", LALIGA TV HYPERMOTION 2.
+#EXTINF:-1 tvg-id="LALIGA TV HYPERMOTION 2" tvg-name="LALIGA TV HYPERMOTION 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGS2", LALIGA TV HYPERMOTION 2.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=cc816b27370740b7a20055c0ba8650a0:42a5d71eed1d937df1b326898e773624
 https://2segdiv-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Liga de Campeones" tvg-name="M+ Liga de Campeones" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAPIO" group-title="04 ⭐ Movistar+", M+ Liga de Campeones.
+#EXTINF:-1 tvg-id="M+ Liga de Campeones" tvg-name="M+ Liga de Campeones" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAPIO", M+ Liga de Campeones.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=816b1ba2301c4da0a77661b3e7243b06:43ec0b92347737d046d8f84ba68c7820
 https://mligacampeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Liga de Campeones 2" tvg-name="M+ Liga de Campeones 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP1" group-title="04 ⭐ Movistar+", M+ Liga de Campeones 2.
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 2" tvg-name="M+ Liga de Campeones 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP1", M+ Liga de Campeones 2.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=ab07bda592dd4c4c86d4c5aaedaaed32:f9762f9a360de52deb4efa51ad0e2225
 https://02campeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Liga de Campeones  3" tvg-name="M+ Liga de Campeones  3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP2" group-title="04 ⭐ Movistar+", M+ Liga de Campeones  3.
+#EXTINF:-1 tvg-id="M+ Liga de Campeones  3" tvg-name="M+ Liga de Campeones  3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP2", M+ Liga de Campeones  3.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=6e715eaa90964af2b2735abfeb1372d5:1a00cadc546123072f2a505f88b16d70
 https://03campeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Deportes" tvg-name="M+ Deportes" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CPDEP" group-title="04 ⭐ Movistar+", M+ Deportes.
+#EXTINF:-1 tvg-id="M+ Deportes" tvg-name="M+ Deportes" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CPDEP", M+ Deportes.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=3384d6b1f814435ebbfbb1de7debb73e:5a342a7380c567d2e37fce5237dc87ce
 https://mdeportes-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Deportes 2" tvg-name="M+ Deportes 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/ARTHUR" group-title="04 ⭐ Movistar+", M+ Deportes 2.
+#EXTINF:-1 tvg-id="M+ Deportes 2" tvg-name="M+ Deportes 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/ARTHUR", M+ Deportes 2.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=5c12d7a2a67848158780a9364ad9e167:99e0931bf2a8b3c94cb73ee111a95865
 https://2multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Deportes 3" tvg-name="M+ Deportes 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/USOP2" group-title="04 ⭐ Movistar+", M+ Deportes 3.
+#EXTINF:-1 tvg-id="M+ Deportes 3" tvg-name="M+ Deportes 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/USOP2", M+ Deportes 3.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=77eda2287bfe45a48f8b42d1e428368a:030c6011f3bb9a18d6459faeee0c1935
 https://3multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Baloncesto" tvg-name="M+ Baloncesto" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MBALCT" group-title="04 ⭐ Movistar+", M+ Baloncesto.
+#EXTINF:-1 tvg-id="M+ Baloncesto" tvg-name="M+ Baloncesto" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MBALCT", M+ Baloncesto.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=7a76c791a61a4187938899a1613c2b4a:ddcb1d04602f9f606fc53b734284da4a
 https://1mbasket-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Baloncesto 2" tvg-name="M+ Baloncesto 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MBALC2" group-title="04 ⭐ Movistar+", M+ Baloncesto 2.
+#EXTINF:-1 tvg-id="M+ Baloncesto 2" tvg-name="M+ Baloncesto 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MBALC2", M+ Baloncesto 2.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=b286659277ad4533be3288dfdfbe3c72:382696d43ada9ffbb734771505a37af6
 https://2mbasket-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Baloncesto 3" tvg-name="M+ Baloncesto 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-NEONEGR/wpmos/MBALC3" group-title="04 ⭐ Movistar+", M+ Baloncesto 3.
+#EXTINF:-1 tvg-id="M+ Baloncesto 3" tvg-name="M+ Baloncesto 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-NEONEGR/wpmos/MBALC3", M+ Baloncesto 3.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=a0bd458ccc844e5b9d6e042d108af186:2b8e1781bd218aef5b2f477bfc5849c6
 https://3mbasket-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Golf" tvg-name="M+ Golf" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/GOLF%2B" group-title="04 ⭐ Movistar+", M+ Golf.
+#EXTINF:-1 tvg-id="M+ Golf" tvg-name="M+ Golf" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/GOLF%2B", M+ Golf.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=7a4d2824552d49cc87dd97cf73075f59:d69ab2527bb7ab21bc79d6ee724c0e0f
 https://mgolf-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Golf 2" tvg-name="M+ Golf 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/GOLF2" group-title="04 ⭐ Movistar+", M+ Golf 2.
+#EXTINF:-1 tvg-id="M+ Golf 2" tvg-name="M+ Golf 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/GOLF2", M+ Golf 2.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=efd95c59c9c24742baaa0c75d34acc84:32da4f09073d3abc1a1c460b2ea1dccf
 https://2golf-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN F1" tvg-name="DAZN F1" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MVF1" group-title="03 🔥 DAZN", DAZN F1.
+#EXTINF:-1 tvg-id="DAZN F1" tvg-name="DAZN F1" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MVF1", DAZN F1.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=55e0918f7bb34268803dd66839ee50c8:66325d2c5a48f35c1ff33f0fa12752e5
 https://formula1-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN MotoGP" tvg-name="DAZN MotoGP" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZMOT" group-title="03 🔥 DAZN", DAZN MotoGP.
+#EXTINF:-1 tvg-id="DAZN MotoGP" tvg-name="DAZN MotoGP" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZMOT", DAZN MotoGP.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=19ae8e20e6f54766941c431619483309:c5d14f5c22a735a81a10fc7a468b4310
 https://1motodazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN 1" tvg-name="DAZN 1" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/M1SD" group-title="03 🔥 DAZN", DAZN 1.
+#EXTINF:-1 tvg-id="DAZN 1" tvg-name="DAZN 1" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/M1SD", DAZN 1.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=86bf3c8ec8aa4d45a3f1407647013fda:db5a9fec801e421f7d8cbf49be8d29eb
 https://01dazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN 2" tvg-name="DAZN 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/M2SD" group-title="03 🔥 DAZN", DAZN 2
+#EXTINF:-1 tvg-id="DAZN 2" tvg-name="DAZN 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/M2SD", DAZN 2
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=aeecd27e5c494b9a823897d4a2b348ed:8e930c0c9df63b135f5064337aba09e6
 https://02dazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN Baloncesto" tvg-name="DAZN Baloncesto" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZBA" group-title="03 🔥 DAZN", DAZN Baloncesto.
+#EXTINF:-1 tvg-id="DAZN Baloncesto" tvg-name="DAZN Baloncesto" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZBA", DAZN Baloncesto.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=d240c4cd94044257b090364481157292:0481a29915df7921052d4b5c722c9ed5
 https://1basketdazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN Baloncesto 2" tvg-name="DAZN Baloncesto 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZB2" group-title="03 🔥 DAZN", DAZN Baloncesto 2.
+#EXTINF:-1 tvg-id="DAZN Baloncesto 2" tvg-name="DAZN Baloncesto 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZB2", DAZN Baloncesto 2.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=ac68c0fba82a405a9f44366edc177308:4894586435706d392d4011025dd15f93
 https://2basketdazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN Baloncesto 3" tvg-name="DAZN Baloncesto 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZB3" group-title="03 🔥 DAZN", DAZN Baloncesto 3.
+#EXTINF:-1 tvg-id="DAZN Baloncesto 3" tvg-name="DAZN Baloncesto 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZB3", DAZN Baloncesto 3.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=8e0a23c2181e4648ade4589c11253a21:ac941f7c6616e9ecba7e990fe0a41ae8
 https://3basketdazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/ESP" group-title="06 🎾 Deportes", Eurosport 1.
+#EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/ESP", Eurosport 1.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=3d3c30aa233945b69666df47b0bd9632:4a7b5ad685a3c0fc02b7c5a850f012a3
 https://eurosport1-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="Eurosport 2" tvg-name="Eurosport 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/ESP2" group-title="06 🎾 Deportes", Eurosport 2.
+#EXTINF:-1 tvg-id="Eurosport 2" tvg-name="Eurosport 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/ESP2", Eurosport 2.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=3e924968a70048ff8e67e0705ce17ecd:c9c5547524bd3440b33f0e4d56256cdd
 https://eurosport2-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="GOL" tvg-name="GOL" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/GOL" group-title="99 📦 Otros", GOL.
+#EXTINF:-1 tvg-id="GOL" tvg-name="GOL" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/GOL", GOL.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=6c32e99235e2407ea8b4cb298d497605:c988e560725f2d713bcdd108db19d422
 https://goltv-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="Teledeporte" tvg-name="Teledeporte" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/TDEP" group-title="99 📦 Otros", Teledeporte.
+#EXTINF:-1 tvg-id="Teledeporte" tvg-name="Teledeporte" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/TDEP", Teledeporte.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=3789712b688c40978c52f5e01aaed2ae:7b496d60137587bd2915fca718ba7860
 https://teledeporte-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="Real Madrid TV" tvg-name="Real Madrid TV" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/REALM" group-title="02 ⚽ Fútbol", Real Madrid TV.
+#EXTINF:-1 tvg-id="Real Madrid TV" tvg-name="Real Madrid TV" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/REALM", Real Madrid TV.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=2711efc902814265b198db67f40fbee1:2a8fa00eba42566b9c3e65f213c783b4
 https://realmadrid-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
 
-#EXTINF:-1 tvg-id="M+ LALIGA 3" tvg-name="M+ LALIGA 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIG2" group-title="04 ⭐ Movistar+", M+ LALIGA 3.
+#EXTINF:-1 tvg-id="M+ LALIGA 3" tvg-name="M+ LALIGA 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIG2", M+ LALIGA 3.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=d608c2aae9924372b1c05de63eed9a06:67fc4b46fd0f4c52d45e2517ea7ab5e9
 https://3liga-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ LALIGA 4" tvg-name="M+ LALIGA 4" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIG3" group-title="04 ⭐ Movistar+", M+ LALIGA 4.
+#EXTINF:-1 tvg-id="M+ LALIGA 4" tvg-name="M+ LALIGA 4" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIG3", M+ LALIGA 4.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=6a311d81a63c4e5bbb262d9778f98d98:b9ed089f3c0513b4540179d1964525a2
 https://4liga-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="LALIGA TV HYPERMOTION 3" tvg-name="LALIGA TV HYPERMOTION 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGS3" group-title="02 ⚽ Fútbol", LALIGA TV HYPERMOTION 3.
+#EXTINF:-1 tvg-id="LALIGA TV HYPERMOTION 3" tvg-name="LALIGA TV HYPERMOTION 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGS3", LALIGA TV HYPERMOTION 3.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=ea0f1826a04c4a6dba711d53003df9f9:031b15c3db41bee1672c27a3c55a1c42
 https://3segdiv-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Liga de Campeones  4" tvg-name="M+ Liga de Campeones  4" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP3" group-title="04 ⭐ Movistar+", M+ Liga de Campeones  4.
+#EXTINF:-1 tvg-id="M+ Liga de Campeones  4" tvg-name="M+ Liga de Campeones  4" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP3", M+ Liga de Campeones  4.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=a165d3704ac34cdda4fbbd8fd9bd9888:f7e6b1eee6baa5871f0ddbc2227bb930
 https://04campeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Liga de Campeones 5" tvg-name="M+ Liga de Campeones 5" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP4" group-title="04 ⭐ Movistar+", M+ Liga de Campeones 5.
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 5" tvg-name="M+ Liga de Campeones 5" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP4", M+ Liga de Campeones 5.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=eb7b59646d3a40e2a4a74b5d117d9746:0c8076407f293da8f294f2c2aab37dfb
 https://05campeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Deportes 4" tvg-name="M+ Deportes 4" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/USOP3" group-title="04 ⭐ Movistar+", M+ Deportes 4.
+#EXTINF:-1 tvg-id="M+ Deportes 4" tvg-name="M+ Deportes 4" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/USOP3", M+ Deportes 4.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=454d01289d5a4161acd30023eb7f241d:10609cfb83c5121bb9164adab5b38eb0
 https://4multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Deportes 5" tvg-name="M+ Deportes 5" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/USOP11" group-title="04 ⭐ Movistar+", M+ Deportes 5.
+#EXTINF:-1 tvg-id="M+ Deportes 5" tvg-name="M+ Deportes 5" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/USOP11", M+ Deportes 5.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=f7c727415b7a46dab1c3c16fa76a59ab:97b0171e3ac4b492dc5def57f8e8f521
 https://5multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Deportes 6" tvg-name="M+ Deportes 6" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MULTI8" group-title="04 ⭐ Movistar+", M+ Deportes 6.
+#EXTINF:-1 tvg-id="M+ Deportes 6" tvg-name="M+ Deportes 6" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MULTI8", M+ Deportes 6.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=49c2d5b4bfa944ef8671734253c40391:f533c8e5170c30ba32e7a1c8be62857d
 https://6multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Deportes 7" tvg-name="M+ Deportes 7" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MULTI6" group-title="04 ⭐ Movistar+", M+ Deportes 7.
+#EXTINF:-1 tvg-id="M+ Deportes 7" tvg-name="M+ Deportes 7" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MULTI6", M+ Deportes 7.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=877fc369c6d544c387d71bbd944e9e10:801568108e776f1afa36ee811b46a408
 https://7multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="M+ Deportes 8" tvg-name="M+ Deportes 8" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MULTI9" group-title="04 ⭐ Movistar+", M+ Deportes 8.
+#EXTINF:-1 tvg-id="M+ Deportes 8" tvg-name="M+ Deportes 8" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MULTI9", M+ Deportes 8.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=b2741f5852e04e008bc4b80fcd4c510a:64ea7d76c04f6c67bf290dcb2d4b8f9a
 https://8multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN 3" tvg-name="DAZN 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZN3" group-title="03 🔥 DAZN", DAZN 3.
+#EXTINF:-1 tvg-id="DAZN 3" tvg-name="DAZN 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZN3", DAZN 3.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=7524150b70e746a1977e3ed30a7972e3:0e8b2772faf3a9650ad5ee7605a278a0
 https://dazn3-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 
-#EXTINF:-1 tvg-id="DAZN 4" tvg-name="DAZN 4" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZN4" group-title="03 🔥 DAZN", DAZN 4.
+#EXTINF:-1 tvg-id="DAZN 4" tvg-name="DAZN 4" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZN4", DAZN 4.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=9493bea060764400b35273c4187125a8:408d9109da44481170f75399896b51bb
