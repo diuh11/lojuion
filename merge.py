@@ -42,25 +42,26 @@ FOOTBALL_WORDS = [
     "uefa",
     "football",
     "soccer",
-
     "movistar futbol",
     "movistar fútbol",
     "m+ futbol",
     "m+ fútbol",
-
     "dazn laliga",
     "dazn liga",
-
     "realmadrid",
     "real madrid",
-
     "barça",
     "barca",
-
     "hypermotion",
     "laliga tv",
     "laliga inside",
     "copa del rey"
+]
+
+REMOVE_GROUPS = [
+    "4K UHD",
+    "4K",
+    "UHD"
 ]
 
 
@@ -74,7 +75,20 @@ def is_football_channel(extinf):
     )
 
 
-def force_group(extinf, group_name):
+def get_group(extinf):
+
+    match = re.search(
+        r'group-title="([^"]*)"',
+        extinf
+    )
+
+    if match:
+        return match.group(1)
+
+    return None
+
+
+def set_group(extinf, group_name):
 
     if 'group-title="' in extinf:
 
@@ -94,6 +108,42 @@ def force_group(extinf, group_name):
         + f' group-title="{group_name}"'
         + extinf[pos:]
     )
+
+
+def ensure_group(extinf):
+
+    if 'group-title="' in extinf:
+        return extinf
+
+    pos = extinf.rfind(",")
+
+    if pos == -1:
+        return extinf
+
+    return (
+        extinf[:pos]
+        + ' group-title="Sin categorizar"'
+        + extinf[pos:]
+    )
+
+
+def normalize_group(extinf):
+
+    current = get_group(extinf)
+
+    if current is None:
+        return extinf
+
+    for group in REMOVE_GROUPS:
+
+        if current.lower() == group.lower():
+
+            return set_group(
+                extinf,
+                "Otros"
+            )
+
+    return extinf
 
 
 salida = [
@@ -148,22 +198,42 @@ for url in URLS:
                 i += 2
                 continue
 
-            if stream in vistos:
+            # DEDUPE REAL
+            clave = extinf + stream
+
+            if clave in vistos:
                 i += 2
                 continue
 
-            vistos.add(stream)
+            vistos.add(clave)
 
-            # ==================================================
-            # AGRUPAR FÚTBOL
-            # ==================================================
+            extinf = normalize_group(
+                extinf
+            )
+
+            extinf = ensure_group(
+                extinf
+            )
 
             if is_football_channel(extinf):
 
-                extinf = force_group(
-                    extinf,
-                    "Fútbol"
+                grupo_original = get_group(
+                    extinf
                 )
+
+                if grupo_original:
+
+                    extinf = set_group(
+                        extinf,
+                        f"Fútbol | {grupo_original}"
+                    )
+
+                else:
+
+                    extinf = set_group(
+                        extinf,
+                        "Fútbol"
+                    )
 
             salida.append(extinf)
             salida.append(stream)
