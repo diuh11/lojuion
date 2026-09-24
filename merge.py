@@ -1,6 +1,5 @@
 import requests
 import hashlib
-import re
 from collections import defaultdict
 
 # =====================================================
@@ -40,7 +39,7 @@ BLOCK_WORDS = [
 ]
 
 # =====================================================
-# PRIORIDAD
+# CATEGORÍAS
 # =====================================================
 
 CATEGORY_ORDER = [
@@ -65,65 +64,58 @@ CATEGORY_ORDER = [
 # NORMALIZACIÓN
 # =====================================================
 
+RENAME_RULES = {
+    "Películas Románticas - Rakuten TV":
+        "Películas Románticas",
+
+    "Pelis Top - Rakuten TV":
+        "Pelis Top",
+
+    "Sci-Fi - Rakuten TV":
+        "Sci‑Fi",
+
+    "Thrillers - Rakuten TV":
+        "Thrillers",
+
+    "Royalworld - Nobleza y dinastías":
+        "Royalworld",
+}
+
+
 def normalize_name(name):
-
-    rules = {
-        "Películas Románticas - Rakuten TV":
-            "Películas Románticas",
-
-        "Pelis Top - Rakuten TV":
-            "Pelis Top",
-
-        "Sci-Fi - Rakuten TV":
-            "Sci‑Fi",
-
-        "Thrillers - Rakuten TV":
-            "Thrillers",
-
-        "Royalworld - Nobleza y dinastías":
-            "Royalworld",
-    }
-
-    return rules.get(name.strip(), name.strip())
+    name = name.strip()
+    return RENAME_RULES.get(name, name)
 
 
 # =====================================================
-# FUTBOL
+# CLAVES FÚTBOL
 # =====================================================
 
 FOOTBALL_WORDS = [
-
     "laliga",
     "la liga",
-
     "champions",
     "liga de campeones",
-
     "premier league",
     "bundesliga",
     "serie a",
     "ligue 1",
-
     "football",
     "soccer",
-
     "movistar futbol",
+    "movistar fútbol",
     "m+ futbol",
-    "futbol",
-
+    "m+ fútbol",
     "realmadrid",
     "real madrid tv",
-
     "barça",
     "barca",
-
     "dazn laliga",
-
     "top barça"
 ]
 
 # =====================================================
-# MOTORES
+# MOTOR
 # =====================================================
 
 MOTOR_WORDS = [
@@ -134,9 +126,9 @@ MOTOR_WORDS = [
     "indycar",
     "rally",
     "racer",
-    "top gear",
     "motorsport",
-    "motorsports"
+    "motorsports",
+    "top gear"
 ]
 
 # =====================================================
@@ -161,13 +153,13 @@ def classify_channel(name, extinf):
 
     text = f"{name} {extinf}".lower()
 
-    if any(x in text for x in FOOTBALL_WORDS):
+    if any(word in text for word in FOOTBALL_WORDS):
         return "Fútbol"
 
-    if any(x in text for x in MOTOR_WORDS):
+    if any(word in text for word in MOTOR_WORDS):
         return "Motor"
 
-    if any(x in text for x in COMBAT_WORDS):
+    if any(word in text for word in COMBAT_WORDS):
         return "Combate"
 
     if "movie" in text or "película" in text:
@@ -176,7 +168,11 @@ def classify_channel(name, extinf):
     if "documentary" in text:
         return "Documentales"
 
-    if "music" in text or "stingray" in text or "vevo" in text:
+    if (
+        "music" in text
+        or "stingray" in text
+        or "vevo" in text
+    ):
         return "Música"
 
     if "news" in text or "reuters" in text:
@@ -189,21 +185,21 @@ def classify_channel(name, extinf):
 
 
 # =====================================================
-# PARSEO M3U
+# PARSEO
 # =====================================================
 
 channels = []
 
 seen_urls = set()
 
-for url in URLS:
+for source in URLS:
 
     try:
 
-        print(f"Descargando {url}")
+        print(f"Descargando {source}")
 
         content = requests.get(
-            url,
+            source,
             timeout=30
         ).text
 
@@ -239,7 +235,6 @@ for url in URLS:
                 continue
 
             if stream_url in seen_urls:
-
                 i += 2
                 continue
 
@@ -266,17 +261,21 @@ for url in URLS:
     except Exception as e:
 
         print(
-            f"Error en {url}: {e}"
+            f"Error en {source}: {e}"
         )
 
 # =====================================================
-# GENERAR SALIDA
+# AGRUPAR
 # =====================================================
 
 groups = defaultdict(list)
 
 for channel in channels:
     groups[channel["category"]].append(channel)
+
+# =====================================================
+# GENERAR M3U
+# =====================================================
 
 output = [
     f'#EXTM3U url-tvg="{EPG_URL}"'
@@ -294,30 +293,26 @@ for category in CATEGORY_ORDER:
     for channel in groupsoutput.append(channel["extinf"])
         output.append(channel["url"])
 
-# canales no clasificados
+contenido = "\n".join(output)
 
-for channel in groups["Otros"]:
-
-    output.append(channel["extinf"])
-    output.append(channel["url"])
-
-content = "\n".join(output)
+# =====================================================
+# GUARDAR
+# =====================================================
 
 with open(
     "lista.m3u",
     "w",
     encoding="utf-8"
 ) as f:
-
-    f.write(content)
+    f.write(contenido)
 
 md5 = hashlib.md5(
-    content.encode("utf-8")
+    contenido.encode("utf-8")
 ).hexdigest()
 
 print()
-print("===================================")
+print("=" * 50)
 print(f"Canales: {len(channels)}")
 print(f"MD5: {md5}")
-print("lista.m3u generada")
-print("===================================")
+print("lista.m3u generada correctamente")
+print("=" * 50)
