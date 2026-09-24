@@ -32,6 +32,10 @@ BLOCK_WORDS = [
 ]
 
 contador = Counter()
+GRUPOS_PROTEGIDOS = [
+"movistar deportes playready"
+]
+``
 
 
 def obtener_categoria(extinf):
@@ -173,6 +177,22 @@ def obtener_categoria(extinf):
 
 
 def limpiar_y_categorizar(extinf):
+
+    grupo_original = re.search(
+        r'group-title="([^"]*)"',
+        extinf,
+        re.IGNORECASE
+    )
+
+    if grupo_original:
+
+        nombre_grupo = grupo_original.group(1)
+
+        if nombre_grupo.lower() in GRUPOS_PROTEGIDOS:
+
+            contador[nombre_grupo] += 1
+
+            return extinf
 
     extinf = re.sub(
         r'\s*group-title="[^"]*"',
