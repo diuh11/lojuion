@@ -33,6 +33,8 @@ salida = [
     f'#EXTM3U url-tvg="{EPG_URL}"'
 ]
 
+vistos = set()
+
 for url in URLS:
 
     try:
@@ -44,10 +46,6 @@ for url in URLS:
             timeout=30
         ).text
 
-        print(
-            f"Bytes descargados: {len(contenido)}"
-        )
-
         lineas = contenido.splitlines()
 
         if (
@@ -56,21 +54,45 @@ for url in URLS:
         ):
             lineas = lineas[1:]
 
-        omitir = False
+        i = 0
 
-        for linea in lineas:
+        while i < len(lineas):
 
-            if linea.startswith("#EXTINF"):
+            linea = lineas[i].strip()
 
-                texto = linea.lower()
+            if not linea.startswith("#EXTINF"):
+                i += 1
+                continue
 
-                omitir = any(
-                    palabra in texto
-                    for palabra in BLOCK_WORDS
-                )
+            if i + 1 >= len(lineas):
+                break
 
-            if not omitir:
-                salida.append(linea)
+            extinf = linea
+            stream = lineas[i + 1].strip()
+
+            texto = extinf.lower()
+
+            bloqueado = any(
+                palabra in texto
+                for palabra in BLOCK_WORDS
+            )
+
+            if bloqueado:
+                i += 2
+                continue
+
+            clave = extinf + stream
+
+            if clave in vistos:
+                i += 2
+                continue
+
+            vistos.add(clave)
+
+            salida.append(extinf)
+            salida.append(stream)
+
+            i += 2
 
     except Exception as e:
 
@@ -94,7 +116,7 @@ with open(
 
 print()
 print("=" * 50)
-print(f"Total líneas: {len(salida)}")
+print(f"Canales: {(len(salida)-1)//2}")
 print(f"MD5: {hash_md5}")
 print("Lista creada correctamente")
 print("=" * 50)
