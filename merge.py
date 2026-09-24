@@ -35,7 +35,7 @@ contador = Counter()
 GRUPOS_PROTEGIDOS = [
 "movistar deportes playready"
 ]
-``
+
 
 
 def obtener_categoria(extinf):
