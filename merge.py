@@ -152,7 +152,19 @@ BLOCK_WORDS = [
     "TV1",
     "TV2",
     "Kabel",
-    "SmartBank"
+    "SmartBank",
+    "Fancode",
+    "Sports",
+    "🇧🇷",
+    "Fox",
+    "Boxing",
+    "Fussball",
+    "SPORTS",
+    "BEIN",
+    "Polsat",
+    "SportDigital",
+    "Sport",
+    "Match!"
 ]
 
 contador = Counter()
