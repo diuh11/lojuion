@@ -388,11 +388,10 @@ for url in URLS + URL_ES_ONLY:
 
                 continue
 
-                if linea.startswith("#EXTINF"):
+                            if linea.startswith("#EXTINF"):
 
                 if url in URL_SIN_FILTRO:
 
-                    # Mantener todos los canales
                     omitir = False
                     linea = limpiar_y_categorizar(linea)
 
