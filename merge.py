@@ -390,12 +390,12 @@ def limpiar_y_categorizar(extinf):
 
 
 def contiene_palabra_bloqueada(extinf):
-    # Obtener el nombre del canal
-    nombre = extinf.split(",")[-1].strip()
-    nombre_normalizado = nombre.casefold()
+    # Comprobar la línea EXTINF completa (nombre + atributos:
+    # group-title, tvg-id, tvg-name...), no solo el nombre visible.
+    texto_normalizado = extinf.casefold()
 
     for palabra in BLOCK_WORDS_NORMALIZADAS:
-        if palabra in nombre_normalizado:
+        if palabra in texto_normalizado:
             return palabra
 
     return None
