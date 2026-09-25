@@ -7,6 +7,7 @@ URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_spain.m3u8",
     "https://www.apsattv.com/rakuten_es.m3u"
+    "https://raw.githubusercontent.com/minhtienth15/mynote/main/t04.m3u"
 ]
 
 EPG_URL = "http://143.47.50.252:5000/getEPG"
