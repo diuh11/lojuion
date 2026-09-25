@@ -404,13 +404,16 @@ def limpiar_y_categorizar(extinf):
     return extinf
 
 
-def contiene_palabra_bloqueada(texto):
+def contiene_palabra_bloqueada(extinf):
 
-    texto_normalizado = texto.casefold()
+    # Obtener el nombre del canal
+    nombre = extinf.split(",")[-1].strip()
+
+    nombre_normalizado = nombre.casefold()
 
     for palabra in BLOCK_WORDS_NORMALIZADAS:
 
-        if palabra in texto_normalizado:
+        if palabra in nombre_normalizado:
             return palabra
 
     return None
