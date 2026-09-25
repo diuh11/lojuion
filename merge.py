@@ -38,7 +38,6 @@ BLOCK_WORDS = [
     "bein sports",
     "sports world",
     "worldcup club",
-
     "canal+",
     "france",
     "usa",
