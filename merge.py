@@ -14,6 +14,10 @@ URL_ES_ONLY = [
     "https://raw.githubusercontent.com/tokoblotongan/88/main/z2.m3u"
 ]
 
+URL_SIN_FILTRO = [
+    "https://pastebin.com/raw/hV2z2e9g"
+]
+
 EPG_URL = "http://143.47.50.252:5000/getEPG"
 
 BLOCK_WORDS = [
@@ -384,17 +388,25 @@ for url in URLS + URL_ES_ONLY:
 
                 continue
 
-            if linea.startswith("#EXTINF"):
+                        if linea.startswith("#EXTINF"):
 
-                texto = linea.lower()
+                if url in URL_SIN_FILTRO:
 
-                omitir = any(
-                    palabra in texto
-                    for palabra in BLOCK_WORDS
-                )
-
-                if not omitir:
+                    # Mantener todos los canales
+                    omitir = False
                     linea = limpiar_y_categorizar(linea)
+
+                else:
+
+                    texto = linea.lower()
+
+                    omitir = any(
+                        palabra.lower() in texto
+                        for palabra in BLOCK_WORDS
+                    )
+
+                    if not omitir:
+                        linea = limpiar_y_categorizar(linea)
 
             if not omitir:
                 salida.append(linea)
