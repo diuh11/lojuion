@@ -479,24 +479,32 @@ for url in URLS + URL_ES_ONLY:
 
             # Inicio de un canal nuevo
             if linea.startswith("#EXTINF"):
-
-                palabra_detectada = contiene_palabra_bloqueada(
-                    linea
-                )
-
-                omitir = palabra_detectada is not None
-
-                if omitir:
-
-                    print(
-                        "BLOQUEADO "
-                        f"[{palabra_detectada}] -> {linea}"
-                    )
-
-                else:
-
+            
+                if url in URL_SIN_FILTRO:
+            
+                    # NO FILTRAR ESTA LISTA
+                    omitir = False
                     linea = limpiar_y_categorizar(linea)
-
+            
+                else:
+            
+                    palabra_detectada = contiene_palabra_bloqueada(
+                        linea
+                    )
+            
+                    omitir = palabra_detectada is not None
+            
+                    if omitir:
+            
+                        print(
+                            "BLOQUEADO "
+                            f"[{palabra_detectada}] -> {linea}"
+                        )
+            
+                    else:
+            
+                        linea = limpiar_y_categorizar(linea)
+            
             if not omitir:
                 salida.append(linea)
     except requests.RequestException as error:
