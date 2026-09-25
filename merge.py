@@ -3,7 +3,6 @@ import hashlib
 import re
 from collections import Counter
 
-
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_spain.m3u8",
@@ -11,11 +10,9 @@ URLS = [
     "https://raw.githubusercontent.com/minhtienth15/mynote/main/t04.m3u",
 ]
 
-
 URL_ES_ONLY = [
     "https://raw.githubusercontent.com/tokoblotongan/88/main/z2.m3u",
 ]
-
 
 # Esta lista conservará todos sus canales.
 # No se le aplicarán las palabras bloqueadas, pero sí las categorías.
@@ -23,9 +20,7 @@ URL_SIN_FILTRO = [
     "https://pastebin.com/raw/hV2z2e9g",
 ]
 
-
 EPG_URL = "http://143.47.50.252:5000/getEPG"
-
 
 BLOCK_WORDS = [
     "portugal",
@@ -164,7 +159,6 @@ BLOCK_WORDS = [
     "match!",
 ]
 
-
 # Convertimos una sola vez todas las palabras a formato comparable.
 BLOCK_WORDS_NORMALIZADAS = {
     palabra.strip().casefold()
@@ -172,9 +166,7 @@ BLOCK_WORDS_NORMALIZADAS = {
     if palabra.strip()
 }
 
-
 contador = Counter()
-
 
 GRUPOS_PROTEGIDOS = [
     "movistar deportes playready",
@@ -182,7 +174,6 @@ GRUPOS_PROTEGIDOS = [
 
 
 def obtener_categoria(extinf):
-
     texto = extinf.casefold()
 
     # DAZN
@@ -358,7 +349,6 @@ def obtener_categoria(extinf):
 
 
 def limpiar_y_categorizar(extinf):
-
     grupo_original = re.search(
         r'group-title="([^"]*)"',
         extinf,
@@ -366,9 +356,7 @@ def limpiar_y_categorizar(extinf):
     )
 
     if grupo_original:
-
         nombre_grupo = grupo_original.group(1).strip()
-
         if nombre_grupo.casefold() in {
             grupo.casefold()
             for grupo in GRUPOS_PROTEGIDOS
@@ -385,16 +373,13 @@ def limpiar_y_categorizar(extinf):
     )
 
     categoria = obtener_categoria(extinf)
-
     contador[categoria] += 1
 
     if categoria == "99 📦 Otros":
         print(f"SIN CLASIFICAR -> {extinf}")
 
     pos = extinf.rfind(",")
-
     if pos != -1:
-
         extinf = (
             extinf[:pos]
             + f' group-title="{categoria}"'
@@ -405,14 +390,11 @@ def limpiar_y_categorizar(extinf):
 
 
 def contiene_palabra_bloqueada(extinf):
-
     # Obtener el nombre del canal
     nombre = extinf.split(",")[-1].strip()
-
     nombre_normalizado = nombre.casefold()
 
     for palabra in BLOCK_WORDS_NORMALIZADAS:
-
         if palabra in nombre_normalizado:
             return palabra
 
@@ -423,29 +405,21 @@ salida = [
     f'#EXTM3U url-tvg="{EPG_URL}"'
 ]
 
-
 for url in URLS + URL_ES_ONLY:
-
     try:
-
         print()
         print(f"Descargando: {url}")
-
         respuesta = requests.get(
             url,
             timeout=30,
         )
-
         respuesta.raise_for_status()
-
         contenido = respuesta.text
-
         print(
             f"Bytes descargados: {len(contenido)}"
         )
 
         lineas = contenido.splitlines()
-
         if (
             lineas
             and lineas[0].lstrip("\ufeff").startswith("#EXTM3U")
@@ -455,99 +429,90 @@ for url in URLS + URL_ES_ONLY:
         omitir = False
 
         for linea in lineas:
-
             linea = linea.strip()
-
             if not linea:
                 continue
 
             # Lista que solo conserva entradas marcadas como España
             if url in URL_ES_ONLY:
-
                 if linea.startswith("#EXTINF"):
-
-                    omitir = "┃ES┃".casefold() not in linea.casefold()
-
-                    if not omitir:
-                        linea = limpiar_y_categorizar(linea)
-                    else:
+                    es_espana = "┃ES┃".casefold() in linea.casefold()
+                    if not es_espana:
+                        omitir = True
                         print(
                             f"BLOQUEADO POR NO SER ES -> {linea}"
                         )
+                    else:
+                        # FIX: antes esta rama nunca comprobaba
+                        # BLOCK_WORDS, así que canales marcados
+                        # como ES pero con palabras bloqueadas
+                        # (fox, ziggo, etc.) pasaban sin filtrar.
+                        palabra_detectada = contiene_palabra_bloqueada(
+                            linea
+                        )
+                        omitir = palabra_detectada is not None
+                        if omitir:
+                            print(
+                                "BLOQUEADO "
+                                f"[{palabra_detectada}] -> {linea}"
+                            )
+                        else:
+                            linea = limpiar_y_categorizar(linea)
 
                 if not omitir:
                     salida.append(linea)
-
                 continue
 
             # Inicio de un canal nuevo
             if linea.startswith("#EXTINF"):
-            
                 if url in URL_SIN_FILTRO:
-            
                     # NO FILTRAR ESTA LISTA
                     omitir = False
                     linea = limpiar_y_categorizar(linea)
-            
                 else:
-            
                     palabra_detectada = contiene_palabra_bloqueada(
                         linea
                     )
-            
                     omitir = palabra_detectada is not None
-            
                     if omitir:
-            
                         print(
                             "BLOQUEADO "
                             f"[{palabra_detectada}] -> {linea}"
                         )
-            
                     else:
-            
                         linea = limpiar_y_categorizar(linea)
-            
+
             if not omitir:
                 salida.append(linea)
-    except requests.RequestException as error:
 
+    except requests.RequestException as error:
         print(
             f"Error descargando {url}: {error}"
         )
-
     except Exception as error:
-
         print(
             f"Error procesando {url}: {error}"
         )
 
-
 contenido_final = "\n".join(salida) + "\n"
-
 
 md5 = hashlib.md5(
     contenido_final.encode("utf-8")
 ).hexdigest()
-
 
 with open(
     "lista.m3u",
     "w",
     encoding="utf-8",
 ) as archivo:
-
     archivo.write(contenido_final)
-
 
 print()
 print("=" * 60)
 print("RESUMEN DE CATEGORÍAS")
 print("=" * 60)
-
 for categoria, total in sorted(contador.items()):
     print(f"{categoria}: {total}")
-
 print("=" * 60)
 print(f"Canales procesados: {sum(contador.values())}")
 print(f"MD5: {md5}")
