@@ -10,6 +10,10 @@ URLS = [
     "https://raw.githubusercontent.com/minhtienth15/mynote/main/t04.m3u"
 ]
 
+URL_ES_ONLY = [
+    "https://raw.githubusercontent.com/tokoblotongan/88/main/z2.m3u"
+]
+
 EPG_URL = "http://143.47.50.252:5000/getEPG"
 
 BLOCK_WORDS = [
@@ -224,7 +228,7 @@ salida = [
     f'#EXTM3U url-tvg="{EPG_URL}"'
 ]
 
-for url in URLS:
+for url in URLS + URL_ES_ONLY:
 
     try:
 
@@ -251,20 +255,34 @@ for url in URLS:
 
         for linea in lineas:
 
-            if linea.startswith("#EXTINF"):
+    if url in URL_ES_ONLY:
 
-                texto = linea.lower()
+        if linea.startswith("#EXTINF"):
 
-                omitir = any(
-                    palabra in texto
-                    for palabra in BLOCK_WORDS
-                )
-
-                if not omitir:
-                    linea = limpiar_y_categorizar(linea)
+            omitir = "┃ES┃" not in linea
 
             if not omitir:
-                salida.append(linea)
+                linea = limpiar_y_categorizar(linea)
+
+        if not omitir:
+            salida.append(linea)
+
+        continue
+
+    if linea.startswith("#EXTINF"):
+
+        texto = linea.lower()
+
+        omitir = any(
+            palabra in texto
+            for palabra in BLOCK_WORDS
+        )
+
+        if not omitir:
+            linea = limpiar_y_categorizar(linea)
+
+    if not omitir:
+        salida.append(linea)
 
     except Exception as e:
 
