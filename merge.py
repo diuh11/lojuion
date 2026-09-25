@@ -97,57 +97,57 @@ BLOCK_WORDS = [
     "yes",
     "ziggo",
     "zdf",
-    "18+"
-    "SporTV"
-    "digi"
-    "5Sport4K"
-    "Asia"
-    "TV US"
-    "Channel"
-    "🇧🇷"
-    "Fancode"
-    "FAST+"
-    "Rookie"
-    "Stingray"
-    "That's"
-    "Reuters"
-    "Collective"
-    "Vevo Pop"
-    "Vivir con"
-    "Billiards"
-    "League"
-    "NBA TV"
-    "Boxing"
-    "Sportdigital"
-    "24/7"
-    "MMA"
-    "Soccer"
-    "ECHL"
-    "Alkass One"
-    "Israe"
-    "Sweden"
-    "C More"
-    "Romania"
-    "DSTV"
-    "America"
-    "Greece"
-    "Globo"
-    "Philadelphia"
-    "Sport"
-    "Oxygen"
-    "Football"
-    "Hockey"
-    "TV4"
-    "VICE"
-    "Willow"
-    "Vodafone"
-    "3sat"
-    "Univision"
-    "TRT"
-    "TVP"
-    "TV1"
-    "TV2"
-    "Kabel"
+    "18+",
+    "SporTV",
+    "digi",
+    "5Sport4K",
+    "Asia",
+    "TV US",
+    "Channel",
+    "🇧🇷",
+    "Fancode",
+    "FAST+",
+    "Rookie",
+    "Stingray",
+    "That's",
+    "Reuters",
+    "Collective",
+    "Vevo Pop",
+    "Vivir con",
+    "Billiards",
+    "League",
+    "NBA TV",
+    "Boxing",
+    "Sportdigital",
+    "24/7",
+    "MMA",
+    "Soccer",
+    "ECHL",
+    "Alkass One",
+    "Israe",
+    "Sweden",
+    "C More",
+    "Romania",
+    "DSTV",
+    "America",
+    "Greece",
+    "Globo",
+    "Philadelphia",
+    "Sport",
+    "Oxygen",
+    "Football",
+    "Hockey",
+    "TV4",
+    "VICE",
+    "Willow",
+    "Vodafone",
+    "3sat",
+    "Univision",
+    "TRT",
+    "TVP",
+    "TV1",
+    "TV2",
+    "Kabel",
     "SmartBank"
 ]
 
