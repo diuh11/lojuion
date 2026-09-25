@@ -3,22 +3,29 @@ import hashlib
 import re
 from collections import Counter
 
+
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_spain.m3u8",
     "https://www.apsattv.com/rakuten_es.m3u",
-    "https://raw.githubusercontent.com/minhtienth15/mynote/main/t04.m3u"
+    "https://raw.githubusercontent.com/minhtienth15/mynote/main/t04.m3u",
 ]
+
 
 URL_ES_ONLY = [
-    "https://raw.githubusercontent.com/tokoblotongan/88/main/z2.m3u"
+    "https://raw.githubusercontent.com/tokoblotongan/88/main/z2.m3u",
 ]
 
+
+# Esta lista conservará todos sus canales.
+# No se le aplicarán las palabras bloqueadas, pero sí las categorías.
 URL_SIN_FILTRO = [
-    "https://pastebin.com/raw/hV2z2e9g"
+    "https://pastebin.com/raw/hV2z2e9g",
 ]
+
 
 EPG_URL = "http://143.47.50.252:5000/getEPG"
+
 
 BLOCK_WORDS = [
     "portugal",
@@ -101,81 +108,82 @@ BLOCK_WORDS = [
     "ziggo",
     "zdf",
     "18+",
-    "SporTV",
+    "sportv",
     "digi",
-    "5Sport4K",
-    "Asia",
-    "TV US",
-    "Channel",
+    "5sport4k",
+    "asia",
+    "tv us",
+    "channel",
     "🇧🇷",
-    "Fancode",
-    "FAST+",
-    "Rookie",
-    "Stingray",
-    "That's",
-    "Reuters",
-    "Collective",
-    "Vevo Pop",
-    "Vivir con",
-    "Billiards",
-    "League",
-    "NBA TV",
-    "Boxing",
-    "Sportdigital",
+    "fancode",
+    "fast+",
+    "rookie",
+    "stingray",
+    "that's",
+    "reuters",
+    "collective",
+    "vevo pop",
+    "vivir con",
+    "billiards",
+    "league",
+    "nba tv",
+    "boxing",
+    "sportdigital",
     "24/7",
-    "MMA",
-    "Soccer",
-    "ECHL",
-    "Alkass One",
-    "Israe",
-    "Sweden",
-    "C More",
-    "Romania",
-    "DSTV",
-    "America",
-    "Greece",
-    "Globo",
-    "Philadelphia",
-    "Sport",
-    "Oxygen",
-    "Football",
-    "Hockey",
-    "TV4",
-    "VICE",
-    "Willow",
-    "Vodafone",
+    "mma",
+    "soccer",
+    "echl",
+    "alkass one",
+    "israe",
+    "sweden",
+    "c more",
+    "romania",
+    "dstv",
+    "america",
+    "greece",
+    "globo",
+    "philadelphia",
+    "sport",
+    "oxygen",
+    "football",
+    "hockey",
+    "tv4",
+    "vice",
+    "willow",
+    "vodafone",
     "3sat",
-    "Univision",
-    "TRT",
-    "TVP",
-    "TV1",
-    "TV2",
-    "Kabel",
-    "SmartBank",
-    "Fancode",
-    "Sports",
-    "🇧🇷",
-    "Fox",
-    "Boxing",
-    "Fussball",
-    "SPORTS",
-    "BEIN",
-    "Polsat",
-    "SportDigital",
-    "Sport",
-    "Match!"
+    "univision",
+    "trt",
+    "tvp",
+    "tv1",
+    "tv2",
+    "kabel",
+    "smartbank",
+    "fussball",
+    "bein",
+    "match!",
 ]
+
+
+# Convertimos una sola vez todas las palabras a formato comparable.
+BLOCK_WORDS_NORMALIZADAS = {
+    palabra.strip().casefold()
+    for palabra in BLOCK_WORDS
+    if palabra.strip()
+}
+
 
 contador = Counter()
-GRUPOS_PROTEGIDOS = [
-"movistar deportes playready"
-]
 
+
+GRUPOS_PROTEGIDOS = [
+    "movistar deportes playready",
+]
 
 
 def obtener_categoria(extinf):
 
-    texto = extinf.lower()
+    texto = extinf.casefold()
 
     # DAZN
     if "dazn" in texto:
@@ -188,124 +196,162 @@ def obtener_categoria(extinf):
     ):
         return "04 ⭐ Movistar+"
 
-    # FUTBOL
-    if any(x in texto for x in [
-        "laliga",
-        "la liga",
-        "champions",
-        "liga de campeones",
-        "premier league",
-        "bundesliga",
-        "serie a",
-        "ligue 1",
-        "uefa",
-        "realmadrid",
-        "real madrid",
-        "hypermotion",
-        "copa del rey",
-        "futbol",
-        "fútbol"
-    ]):
+    # FÚTBOL
+    if any(
+        palabra in texto
+        for palabra in [
+            "laliga",
+            "la liga",
+            "champions",
+            "liga de campeones",
+            "premier league",
+            "bundesliga",
+            "serie a",
+            "ligue 1",
+            "uefa",
+            "realmadrid",
+            "real madrid",
+            "hypermotion",
+            "copa del rey",
+            "futbol",
+            "fútbol",
+        ]
+    ):
         return "02 ⚽ Fútbol"
 
     # MOTOR
-    if any(x in texto for x in [
-        "formula 1",
-        "f1",
-        "motogp",
-        "moto gp"
-    ]):
+    if any(
+        palabra in texto
+        for palabra in [
+            "formula 1",
+            "fórmula 1",
+            "f1",
+            "motogp",
+            "moto gp",
+        ]
+    ):
         return "05 🏎️ Motor"
 
     # DEPORTES
-    if any(x in texto for x in [
-        "eurosport",
-        "golf",
-        "tennis",
-        "nba",
-        "nfl",
-        "sport",
-        "vamos"
-    ]):
+    if any(
+        palabra in texto
+        for palabra in [
+            "eurosport",
+            "golf",
+            "tennis",
+            "tenis",
+            "nba",
+            "nfl",
+            "sport",
+            "deporte",
+            "vamos",
+        ]
+    ):
         return "06 🎾 Deportes"
 
     # CINE
-    if any(x in texto for x in [
-        "cine",
-        "movie",
-        "movies",
-        "cinema",
-        "tcm"
-    ]):
+    if any(
+        palabra in texto
+        for palabra in [
+            "cine",
+            "movie",
+            "movies",
+            "cinema",
+            "tcm",
+        ]
+    ):
         return "07 🎬 Cine"
 
     # SERIES
-    if any(x in texto for x in [
-        "series",
-        "axn",
-        "fox",
-        "warner",
-        "syfy",
-        "amc"
-    ]):
+    if any(
+        palabra in texto
+        for palabra in [
+            "series",
+            "axn",
+            "fox",
+            "warner",
+            "syfy",
+            "amc",
+        ]
+    ):
         return "08 📺 Series"
 
     # DOCUMENTALES
-    if any(x in texto for x in [
-        "discovery",
-        "history",
-        "historia",
-        "nat geo",
-        "national geographic",
-        "odisea"
-    ]):
+    if any(
+        palabra in texto
+        for palabra in [
+            "discovery",
+            "history",
+            "historia",
+            "nat geo",
+            "national geographic",
+            "odisea",
+        ]
+    ):
         return "09 📚 Documentales"
 
     # INFANTIL
-    if any(x in texto for x in [
-        "disney",
-        "nick",
-        "nickelodeon",
-        "boing",
-        "cartoon",
-        "clan"
-    ]):
+    if any(
+        palabra in texto
+        for palabra in [
+            "disney",
+            "nick",
+            "nickelodeon",
+            "boing",
+            "cartoon",
+            "clan",
+        ]
+    ):
         return "10 🧒 Infantil"
 
     # NOTICIAS
-    if any(x in texto for x in [
-        "cnn",
-        "24h",
-        "24 horas",
-        "euronews",
-        "bbc news",
-        "news"
-    ]):
+    if any(
+        palabra in texto
+        for palabra in [
+            "cnn",
+            "24h",
+            "24 horas",
+            "euronews",
+            "bbc news",
+            "news",
+        ]
+    ):
         return "11 📰 Noticias"
 
-    # MUSICA
-    if any(x in texto for x in [
-        "mtv",
-        "music",
-        "sol musica",
-        "hit tv",
-        "mezzo"
-    ]):
+    # MÚSICA
+    if any(
+        palabra in texto
+        for palabra in [
+            "mtv",
+            "music",
+            "música",
+            "musica",
+            "sol musica",
+            "sol música",
+            "hit tv",
+            "mezzo",
+        ]
+    ):
         return "12 🎵 Música"
 
     # GENERALISTAS
-    if any(x in texto for x in [
-        "la 1",
-        "la1",
-        "la 2",
-        "antena 3",
-        "telecinco",
-        "cuatro",
-        "la sexta",
-        "trece",
-        "canal sur",
-        "telemadrid"
-    ]):
+    if any(
+        palabra in texto
+        for palabra in [
+            "la 1",
+            "la1",
+            "la 2",
+            "la2",
+            "antena 3",
+            "telecinco",
+            "cuatro",
+            "la sexta",
+            "lasexta",
+            "trece",
+            "canal sur",
+            "telemadrid",
+        ]
+    ):
         return "01 📺 Generalistas"
 
     return "99 📦 Otros"
@@ -316,23 +362,26 @@ def limpiar_y_categorizar(extinf):
     grupo_original = re.search(
         r'group-title="([^"]*)"',
         extinf,
-        re.IGNORECASE
+        re.IGNORECASE,
     )
 
     if grupo_original:
 
-        nombre_grupo = grupo_original.group(1)
+        nombre_grupo = grupo_original.group(1).strip()
 
-        if nombre_grupo.lower() in GRUPOS_PROTEGIDOS:
-
+        if nombre_grupo.casefold() in {
+            grupo.casefold()
+            for grupo in GRUPOS_PROTEGIDOS
+        }:
             contador[nombre_grupo] += 1
-
             return extinf
 
+    # Eliminar la categoría original
     extinf = re.sub(
         r'\s*group-title="[^"]*"',
-        '',
-        extinf
+        "",
+        extinf,
+        flags=re.IGNORECASE,
     )
 
     categoria = obtener_categoria(extinf)
@@ -345,6 +394,7 @@ def limpiar_y_categorizar(extinf):
     pos = extinf.rfind(",")
 
     if pos != -1:
+
         extinf = (
             extinf[:pos]
             + f' group-title="{categoria}"'
@@ -354,20 +404,38 @@ def limpiar_y_categorizar(extinf):
     return extinf
 
 
+def contiene_palabra_bloqueada(texto):
+
+    texto_normalizado = texto.casefold()
+
+    for palabra in BLOCK_WORDS_NORMALIZADAS:
+
+        if palabra in texto_normalizado:
+            return palabra
+
+    return None
+
+
 salida = [
     f'#EXTM3U url-tvg="{EPG_URL}"'
 ]
+
 
 for url in URLS + URL_ES_ONLY:
 
     try:
 
+        print()
         print(f"Descargando: {url}")
 
-        contenido = requests.get(
+        respuesta = requests.get(
             url,
-            timeout=30
-        ).text
+            timeout=30,
+        )
+
+        respuesta.raise_for_status()
+
+        contenido = respuesta.text
 
         print(
             f"Bytes descargados: {len(contenido)}"
@@ -377,7 +445,7 @@ for url in URLS + URL_ES_ONLY:
 
         if (
             lineas
-            and lineas[0].startswith("#EXTM3U")
+            and lineas[0].lstrip("\ufeff").startswith("#EXTM3U")
         ):
             lineas = lineas[1:]
 
@@ -385,22 +453,34 @@ for url in URLS + URL_ES_ONLY:
 
         for linea in lineas:
 
+            linea = linea.strip()
+
+            if not linea:
+                continue
+
+            # Lista que solo conserva entradas marcadas como España
             if url in URL_ES_ONLY:
 
                 if linea.startswith("#EXTINF"):
 
-                    omitir = "┃ES┃" not in linea
+                    omitir = "┃ES┃".casefold() not in linea.casefold()
 
                     if not omitir:
                         linea = limpiar_y_categorizar(linea)
+                    else:
+                        print(
+                            f"BLOQUEADO POR NO SER ES -> {linea}"
+                        )
 
                 if not omitir:
                     salida.append(linea)
 
                 continue
 
+            # Inicio de un canal nuevo
             if linea.startswith("#EXTINF"):
 
+                # La lista protegida conserva todos sus canales
                 if url in URL_SIN_FILTRO:
 
                     omitir = False
@@ -408,37 +488,55 @@ for url in URLS + URL_ES_ONLY:
 
                 else:
 
-                    texto = linea.lower()
-
-                    omitir = any(
-                        palabra.lower() in texto
-                        for palabra in BLOCK_WORDS
+                    palabra_detectada = contiene_palabra_bloqueada(
+                        linea
                     )
 
-                    if not omitir:
+                    omitir = palabra_detectada is not None
+
+                    if omitir:
+
+                        print(
+                            "BLOQUEADO "
+                            f"[{palabra_detectada}] -> {linea}"
+                        )
+
+                    else:
+
                         linea = limpiar_y_categorizar(linea)
 
             if not omitir:
                 salida.append(linea)
 
-    except Exception as e:
+    except requests.RequestException as error:
 
         print(
-            f"Error descargando {url}: {e}"
+            f"Error descargando {url}: {error}"
         )
 
-contenido_final = "\n".join(salida)
+    except Exception as error:
+
+        print(
+            f"Error procesando {url}: {error}"
+        )
+
+
+contenido_final = "\n".join(salida) + "\n"
+
 
 md5 = hashlib.md5(
     contenido_final.encode("utf-8")
 ).hexdigest()
 
+
 with open(
     "lista.m3u",
     "w",
-    encoding="utf-8"
-) as f:
-    f.write(contenido_final)
+    encoding="utf-8",
+) as archivo:
+
+    archivo.write(contenido_final)
+
 
 print()
 print("=" * 60)
@@ -449,7 +547,7 @@ for categoria, total in sorted(contador.items()):
     print(f"{categoria}: {total}")
 
 print("=" * 60)
-print(f"Canales: {(len(salida)-1)//2}")
+print(f"Canales procesados: {sum(contador.values())}")
 print(f"MD5: {md5}")
 print("lista.m3u creada correctamente")
 print("=" * 60)
