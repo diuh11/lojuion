@@ -480,30 +480,23 @@ for url in URLS + URL_ES_ONLY:
             # Inicio de un canal nuevo
             if linea.startswith("#EXTINF"):
 
-                # La lista protegida conserva todos sus canales
-                if url in URL_SIN_FILTRO:
+palabra_detectada = contiene_palabra_bloqueada(
+    linea
+)
 
-                    omitir = False
-                    linea = limpiar_y_categorizar(linea)
+omitir = palabra_detectada is not None
 
-                else:
+if omitir:
 
-                    palabra_detectada = contiene_palabra_bloqueada(
-                        linea
-                    )
+    print(
+        "BLOQUEADO "
+        f"[{palabra_detectada}] -> {linea}"
+    )
 
-                    omitir = palabra_detectada is not None
+else:
 
-                    if omitir:
+    linea = limpiar_y_categorizar(linea)
 
-                        print(
-                            "BLOQUEADO "
-                            f"[{palabra_detectada}] -> {linea}"
-                        )
-
-                    else:
-
-                        linea = limpiar_y_categorizar(linea)
 
             if not omitir:
                 salida.append(linea)
