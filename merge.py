@@ -253,36 +253,36 @@ for url in URLS + URL_ES_ONLY:
 
         omitir = False
 
-                for linea in lineas:
+        for linea in lineas:
 
-                    if url in URL_ES_ONLY:
-        
-                        if linea.startswith("#EXTINF"):
-        
-                            omitir = "┃ES┃" not in linea
-        
-                            if not omitir:
-                                linea = limpiar_y_categorizar(linea)
-        
-                        if not omitir:
-                            salida.append(linea)
-        
-                        continue
-        
-                    if linea.startswith("#EXTINF"):
-        
-                        texto = linea.lower()
-        
-                        omitir = any(
-                            palabra in texto
-                            for palabra in BLOCK_WORDS
-                        )
-        
-                        if not omitir:
-                            linea = limpiar_y_categorizar(linea)
-        
+            if url in URL_ES_ONLY:
+
+                if linea.startswith("#EXTINF"):
+
+                    omitir = "┃ES┃" not in linea
+
                     if not omitir:
-                        salida.append(linea)
+                        linea = limpiar_y_categorizar(linea)
+
+                if not omitir:
+                    salida.append(linea)
+
+                continue
+
+            if linea.startswith("#EXTINF"):
+
+                texto = linea.lower()
+
+                omitir = any(
+                    palabra in texto
+                    for palabra in BLOCK_WORDS
+                )
+
+                if not omitir:
+                    linea = limpiar_y_categorizar(linea)
+
+            if not omitir:
+                salida.append(linea)
 
     except Exception as e:
 
