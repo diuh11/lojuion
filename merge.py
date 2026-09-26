@@ -429,12 +429,25 @@ def limpiar_y_categorizar(extinf):
     return extinf
 
 
+def _quitar_urls_de_atributos(extinf):
+    """Elimina el contenido de tvg-logo y catchup-source antes de aplicar
+    cualquier filtro de palabras. Estas URLs a veces reutilizan logos e
+    imágenes de otros países/canales (ej. una carpeta "USA/Fox Network/"
+    para un logo genérico de "M+ Estrenos"), y si se dejan en el texto
+    provocan bloqueos falsos por palabras como "usa", "fox" o "network"
+    que en realidad no describen el canal, sino la ruta de una imagen."""
+    texto = re.sub(r'tvg-logo="[^"]*"', '', extinf, flags=re.IGNORECASE)
+    texto = re.sub(r'catchup-source="[^"]*"', '', texto, flags=re.IGNORECASE)
+    return texto
+
+
 def contiene_palabra_bloqueada(extinf):
-    """Comprueba la línea EXTINF completa (nombre + atributos: group-title,
+    """Comprueba la línea EXTINF (nombre + atributos: group-title,
     tvg-id, tvg-name...) buscando alguna BLOCK_WORD como PALABRA COMPLETA.
     Esto evita falsos positivos como 'star' dentro de 'movistar' o 'sport'
-    dentro de 'eurosport'."""
-    texto_normalizado = extinf.casefold()
+    dentro de 'eurosport'. Las URLs de tvg-logo/catchup-source se excluyen
+    primero para no bloquear canales por culpa de un logo mal etiquetado."""
+    texto_normalizado = _quitar_urls_de_atributos(extinf).casefold()
     coincidencia = PATRON_BLOCK_WORDS.search(texto_normalizado)
     return coincidencia.group(0) if coincidencia else None
 
@@ -476,7 +489,7 @@ for url in URLS + URL_ES_ONLY:
                 continue
 
             if linea.startswith("#EXTINF"):
-                texto = linea.casefold()
+                texto = _quitar_urls_de_atributos(linea).casefold()
 
                 # Si la fuente es "solo España", primero comprobamos la
                 # marca ┃ES┃; si no la lleva, se descarta directamente.
