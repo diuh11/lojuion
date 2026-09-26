@@ -194,6 +194,14 @@ PATRON_BLOCK_WORDS = re.compile(
     "|".join(_patron_para_palabra(palabra) for palabra in BLOCK_WORDS_NORMALIZADAS)
 )
 
+# Marcas que identifican un canal como "España / Movistar+" dentro de las
+# fuentes marcadas como URL_ES_ONLY. Se acepta si contiene [ES], ┃ES┃ o M+
+# (por ejemplo "M+ ESTRENOS 1 HD" o "M+ LIGA DE CAMPEONES 1 HD").
+PATRON_ES_ONLY = re.compile(
+    r"\[es\]|┃es┃|" + re.escape("m+"),
+    re.IGNORECASE,
+)
+
 contador = Counter()
 
 GRUPOS_PROTEGIDOS = [
@@ -473,16 +481,12 @@ for url in URLS + URL_ES_ONLY:
                 # Si la fuente es "solo España", primero comprobamos la
                 # marca ┃ES┃; si no la lleva, se descarta directamente.
                 if url in URL_ES_ONLY:
-                    es_valido = (
-                        "┃es┃" in texto
-                        or "m+" in texto
-                        or "movistar" in texto
-                    )
+                    es_valido = bool(PATRON_ES_ONLY.search(texto))
 
                     if not es_valido:
                         omitir = True
                         print(
-                            f"BLOQUEADO POR NO SER ES/MOVISTAR -> {linea}"
+                            f"BLOQUEADO POR NO SER [ES]/┃ES┃/M+ -> {linea}"
                         )
                         continue
 
