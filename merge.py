@@ -12,6 +12,7 @@ URLS = [
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_spain.m3u8",
     "https://www.apsattv.com/rakuten_es.m3u",
     "https://raw.githubusercontent.com/minhtienth15/mynote/main/t04.m3u",
+    "https://raw.githubusercontent.com/tranhoanglanldt-cloud/HLKVN/refs/heads/main/GIAI%20TRI",
 ]
 
 # Esta lista solo conserva canales marcados como España (┃ES┃),
