@@ -471,15 +471,20 @@ for url in URLS + URL_ES_ONLY:
                 # Si la fuente es "solo España", primero comprobamos la
                 # marca ┃ES┃; si no la lleva, se descarta directamente.
                 if url in URL_ES_ONLY:
-                    es_espana = "┃ES┃".casefold() in linea.casefold()
-                    if not es_espana:
-                        omitir = True
-                        print(
-                            f"BLOQUEADO POR NO SER ES -> {linea}"
-                        )
-                        if not omitir:
-                            salida.append(linea)
-                        continue
+                    texto = linea.casefold()
+                
+                        es_valido = (
+                            "┃es┃" in texto
+                            or "m+" in texto
+                            or "movistar" in texto
+                )
+            
+                if not es_valido:
+                    omitir = True
+                    print(
+                        f"BLOQUEADO POR NO SER ES/MOVISTAR -> {linea}"
+                    )
+                    continue
 
                 # A partir de aquí, TODAS las fuentes pasan por el mismo
                 # filtro de BLOCK_WORDS, sin excepciones.
