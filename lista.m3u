@@ -1162,6 +1162,16 @@ http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=894992&e
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=894993&extension=ts&play_token=7fzOE9SdxH
 #EXTINF:-1 tvg-id="" tvg-name="┃UCL┃ M+ LIGA DE CAMPEONES 6 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/NEDERLAND/ChampionsLeague.png" group-title="04 ⭐ Movistar+",┃UCL┃ M+ LIGA DE CAMPEONES 6 HD [ES]
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=894994&extension=ts&play_token=Zni50zvdC4
+#EXTINF:-1 tvg-id="" tvg-name="┃WC┃ DAZN MUNDIAL 1 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/WORLD CUP 2026/WORLD CUP 2026.png" group-title="03 🔥 DAZN",┃WC┃ DAZN MUNDIAL 1 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1745110&extension=ts&play_token=6S42gXo4bK
+#EXTINF:-1 tvg-id="" tvg-name="┃WC┃ DAZN MUNDIAL 2 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/WORLD CUP 2026/WORLD CUP 2026.png" group-title="03 🔥 DAZN",┃WC┃ DAZN MUNDIAL 2 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1745111&extension=ts&play_token=gDqrN4Hmyv
+#EXTINF:-1 tvg-id="" tvg-name="┃WC┃ DAZN MUNDIAL 3 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/WORLD CUP 2026/WORLD CUP 2026.png" group-title="03 🔥 DAZN",┃WC┃ DAZN MUNDIAL 3 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1745112&extension=ts&play_token=ixeuOUJBjI
+#EXTINF:-1 tvg-id="" tvg-name="┃WC┃ DAZN MUNDIAL 4 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/WORLD CUP 2026/WORLD CUP 2026.png" group-title="03 🔥 DAZN",┃WC┃ DAZN MUNDIAL 4 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1745113&extension=ts&play_token=eqsi3F6e0o
+#EXTINF:-1 tvg-id="" tvg-name="┃F1 TV┃ F1 TV PRO [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/NEDERLAND/F1HD.png" group-title="05 🏎️ Motor",┃F1 TV┃ F1 TV PRO [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1160325&extension=ts&play_token=8aIAWG2gr3
 #EXTINF:-1 tvg-id="movistardeportes.es" tvg-name="┃ES┃ M+ DEPORTES HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/MPLUSDEPORTES.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ DEPORTES HD
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=897428&extension=ts&play_token=ekh1icEsLi
 #EXTINF:-1 tvg-id="vamos.es" tvg-name="┃ES┃ M+ #VAMOS HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/Vamos_por_Movistar_Plus+_2023_Logo.svg.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ #VAMOS HD
@@ -1354,6 +1364,14 @@ http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=895801&e
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=895882&extension=ts&play_token=4s7dFoH16R
 #EXTINF:-1 tvg-id="Torolé TV" tvg-name="┃ES┃ TOROLE HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/Torole tv.png" group-title="99 📦 Otros",┃ES┃ TOROLE HD
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=896306&extension=ts&play_token=aMnGcRDoTF
+#EXTINF:-1 tvg-id="" tvg-name="┃WC┃ DAZN MUNDIAL 1 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/WORLD CUP 2026/WORLD CUP 2026.png" group-title="03 🔥 DAZN",┃WC┃ DAZN MUNDIAL 1 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1745110&extension=ts&play_token=cUCBitwlif
+#EXTINF:-1 tvg-id="" tvg-name="┃WC┃ DAZN MUNDIAL 2 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/WORLD CUP 2026/WORLD CUP 2026.png" group-title="03 🔥 DAZN",┃WC┃ DAZN MUNDIAL 2 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1745111&extension=ts&play_token=EhtXJ3uZk0
+#EXTINF:-1 tvg-id="" tvg-name="┃WC┃ DAZN MUNDIAL 3 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/WORLD CUP 2026/WORLD CUP 2026.png" group-title="03 🔥 DAZN",┃WC┃ DAZN MUNDIAL 3 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1745112&extension=ts&play_token=ky5LOQqw7W
+#EXTINF:-1 tvg-id="" tvg-name="┃WC┃ DAZN MUNDIAL 4 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/WORLD CUP 2026/WORLD CUP 2026.png" group-title="03 🔥 DAZN",┃WC┃ DAZN MUNDIAL 4 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1745113&extension=ts&play_token=WilYykizlb
 #EXTINF:-1 tvg-id="BOM Cine" tvg-name="┃ES┃ BOM CINE" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/BOMCINE.png" group-title="07 🎬 Cine",┃ES┃ BOM CINE
 http://line.mag7070.eu:80/play/live.php?mac=00:1A:79:1A:6B:0E&stream=895875&extension=ts&play_token=LYyiabSBmv
 #EXTINF:-1 tvg-id="BOM Cine" tvg-name="┃ES┃ BOM CINE FHD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/BOMCINE.png" group-title="07 🎬 Cine",┃ES┃ BOM CINE FHD
