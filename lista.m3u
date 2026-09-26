@@ -1150,6 +1150,18 @@ https://easyproxy-latest-9tiz.onrender.com/proxy/manifest.m3u8?url=https%3A%2F%2
 https://easyproxy-latest-9tiz.onrender.com/proxy/manifest.m3u8?url=https%3A%2F%2Fdlhd.st%2Fwatch.php%3Fid%3D212
 #EXTINF:-1 group-title="99 📦 Otros",Swimming | College Swimming : Indiana vs Purdue (03:00)
 https://easyproxy-latest-9tiz.onrender.com/proxy/manifest.m3u8?url=https%3A%2F%2Fdlhd.st%2Fwatch.php%3Fid%3D234
+#EXTINF:-1 tvg-id="" tvg-name="┃UCL┃ M+ LIGA DE CAMPEONES 1 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/NEDERLAND/ChampionsLeague.png" group-title="04 ⭐ Movistar+",┃UCL┃ M+ LIGA DE CAMPEONES 1 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=894989&extension=ts&play_token=ygMz5F7X8a
+#EXTINF:-1 tvg-id="" tvg-name="┃UCL┃ M+ LIGA DE CAMPEONES 2 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/NEDERLAND/ChampionsLeague.png" group-title="04 ⭐ Movistar+",┃UCL┃ M+ LIGA DE CAMPEONES 2 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=894990&extension=ts&play_token=TDAyCECzcV
+#EXTINF:-1 tvg-id="" tvg-name="┃UCL┃ M+ LIGA DE CAMPEONES 3 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/NEDERLAND/ChampionsLeague.png" group-title="04 ⭐ Movistar+",┃UCL┃ M+ LIGA DE CAMPEONES 3 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=894991&extension=ts&play_token=Ag8ZsRdG9B
+#EXTINF:-1 tvg-id="" tvg-name="┃UCL┃ M+ LIGA DE CAMPEONES 4 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/NEDERLAND/ChampionsLeague.png" group-title="04 ⭐ Movistar+",┃UCL┃ M+ LIGA DE CAMPEONES 4 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=894992&extension=ts&play_token=5JPezLz6l2
+#EXTINF:-1 tvg-id="" tvg-name="┃UCL┃ M+ LIGA DE CAMPEONES 5 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/NEDERLAND/ChampionsLeague.png" group-title="04 ⭐ Movistar+",┃UCL┃ M+ LIGA DE CAMPEONES 5 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=894993&extension=ts&play_token=7fzOE9SdxH
+#EXTINF:-1 tvg-id="" tvg-name="┃UCL┃ M+ LIGA DE CAMPEONES 6 HD [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/NEDERLAND/ChampionsLeague.png" group-title="04 ⭐ Movistar+",┃UCL┃ M+ LIGA DE CAMPEONES 6 HD [ES]
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=894994&extension=ts&play_token=Zni50zvdC4
 #EXTINF:-1 tvg-id="movistardeportes.es" tvg-name="┃ES┃ M+ DEPORTES HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/MPLUSDEPORTES.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ DEPORTES HD
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=897428&extension=ts&play_token=ekh1icEsLi
 #EXTINF:-1 tvg-id="vamos.es" tvg-name="┃ES┃ M+ #VAMOS HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/Vamos_por_Movistar_Plus+_2023_Logo.svg.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ #VAMOS HD
