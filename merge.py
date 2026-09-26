@@ -12,13 +12,20 @@ URLS = [
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_spain.m3u8",
     "https://www.apsattv.com/rakuten_es.m3u",
     "https://raw.githubusercontent.com/minhtienth15/mynote/main/t04.m3u",
-    "https://raw.githubusercontent.com/tranhoanglanldt-cloud/HLKVN/refs/heads/main/GIAI%20TRI",
 ]
 
 # Esta lista solo conserva canales marcados como España (┃ES┃),
 # y SÍ se le aplican las BLOCK_WORDS igual que a las demás.
 URL_ES_ONLY = [
     "https://raw.githubusercontent.com/tokoblotongan/88/main/z2.m3u",
+]
+
+# Esta lista solo conserva canales cuyo NOMBRE termina en "ES" (como
+# palabra suelta, ej. "TVE ES", no "Deportes") o que EMPIEZAN por
+# "MOVISTAR". El resto de canales de esta fuente se descarta.
+# También pasa por BLOCK_WORDS igual que las demás.
+URL_ES_SUFIJO_O_MOVISTAR = [
+    "https://raw.githubusercontent.com/tranhoanglanldt-cloud/HLKVN/refs/heads/main/GIAI%20TRI",
 ]
 
 EPG_URL = "http://143.47.50.252:5000/getEPG"
@@ -231,6 +238,11 @@ PATRON_ES_ONLY = re.compile(
     r"\[es\]|┃es┃|" + re.escape("m+"),
     re.IGNORECASE,
 )
+
+# Patrón para la nueva regla: nombre de canal que TERMINA en "ES" como
+# palabra suelta (con un límite de palabra antes, para no colar cosas
+# como "Deportes", que también termina en "es" pero pegado a la palabra).
+PATRON_TERMINA_EN_ES = re.compile(r"\bES\s*$", re.IGNORECASE)
 
 contador = Counter()
 
@@ -482,6 +494,27 @@ def contiene_palabra_bloqueada(extinf):
     return coincidencia.group(0) if coincidencia else None
 
 
+def _nombre_canal(extinf):
+    """Devuelve el nombre visible del canal: el texto que va después de
+    la última coma de la línea #EXTINF."""
+    pos = extinf.rfind(",")
+    if pos == -1:
+        return extinf.strip()
+    return extinf[pos + 1:].strip()
+
+
+def cumple_es_o_movistar(extinf):
+    """Para las fuentes de URL_ES_SUFIJO_O_MOVISTAR: se acepta el canal
+    si su nombre termina en "ES" como palabra suelta (ej. "TVE ES", no
+    "Deportes") o si el nombre empieza por "MOVISTAR"."""
+    nombre = _nombre_canal(extinf)
+    if PATRON_TERMINA_EN_ES.search(nombre):
+        return True
+    if nombre.strip().casefold().startswith("movistar"):
+        return True
+    return False
+
+
 # ---------------------------------------------------------------------------
 # PROCESO PRINCIPAL
 # ---------------------------------------------------------------------------
@@ -490,7 +523,7 @@ salida = [
     f'#EXTM3U url-tvg="{EPG_URL}"'
 ]
 
-for url in URLS + URL_ES_ONLY:
+for url in URLS + URL_ES_ONLY + URL_ES_SUFIJO_O_MOVISTAR:
     try:
         print()
         print(f"Descargando: {url}")
@@ -518,6 +551,14 @@ for url in URLS + URL_ES_ONLY:
             if not linea:
                 continue
 
+            # Las etiquetas #EXTGRP (usadas por algunas fuentes, p.ej.
+            # GIAI TRI) sustituyen al group-title en muchos reproductores
+            # y generaban categorías fantasma (como "SPORTS") que no
+            # pasaban por BLOCK_WORDS ni por la categorización. Se
+            # descartan siempre, para todas las fuentes.
+            if linea.startswith("#EXTGRP"):
+                continue
+
             if linea.startswith("#EXTINF"):
                 texto = _quitar_urls_de_atributos(linea).casefold()
 
@@ -530,6 +571,18 @@ for url in URLS + URL_ES_ONLY:
                         omitir = True
                         print(
                             f"BLOQUEADO POR NO SER [ES]/┃ES┃/M+ -> {linea}"
+                        )
+                        continue
+
+                # Si la fuente solo admite canales acabados en "ES" o que
+                # empiecen por "MOVISTAR" (p.ej. GIAI TRI), el resto se
+                # descarta directamente.
+                if url in URL_ES_SUFIJO_O_MOVISTAR:
+                    if not cumple_es_o_movistar(linea):
+                        omitir = True
+                        print(
+                            "BLOQUEADO POR NO ACABAR EN 'ES' NI EMPEZAR "
+                            f"POR 'MOVISTAR' -> {linea}"
                         )
                         continue
 
