@@ -657,6 +657,11 @@ https://dazn3-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=9493bea060764400b35273c4187125a8:408d9109da44481170f75399896b51bb
 https://dazn4-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="LaLiga TV Bar" tvg-name="LaLiga TV Bar" tvg-logo="https://static.masmediatv.com/channel_logos/gnZg4NkBEYlDEslkFBcBOWsqWFcvHAtA.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/d/dd/DAZN_BoxedLogo_01_RGB.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" catchup-type="default" catchup-source="http://vfpc.gb.vodafone.es/sdash/LIVE$CUP038/2.mpd/Manifest.mpd?start=LIVE&end=END&device=PLAYOUT02&start={utc:Y-m-dTH:M:S}Z&end={utcend:Y-m-dTH:M:S}Z&device=DASH_XDSL_SSP_ENC_LIVE" catchup-days="150" group-title="03 🔥 DAZN",LaLiga TV Bar
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=1fdd37d8ede64c9b943c8752532d2e46:8fc8dc7dc42db2bf93000ce13f4d3a1d
+http://vfpc.gb.vodafone.es/sdash/LIVE$CUP038/2.mpd/Manifest.mpd?start=LIVE&end=END&device=PLAYOUT02
 #EXTINF:-1 tvg-id="DAZN LaLiga" tvg-name="DAZN LaLiga" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Logo_DAZN_LALIGA.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-r4/__c/DAZN_LALIGA1/__op/dash-wv/__f/manifest.mpd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" group-title="03 🔥 DAZN",DAZN LaLiga
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -777,6 +782,11 @@ https://7pal.short.gy/nesnuhd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=479e04f3d12d112b5c04c9ee67e4b1e6:48a98cfdea9a952e24b949fae4f692f3
 https://live.onetoro.transparentedge.io/onetoro/index.mpd
+#EXTINF:-1 tvg-id="Onetoro" tvg-name="Onetoro" tvg-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" catchup-type="default" catchup-source="http://vfott2cdn.gb.vodafone.es/sdash/LIVE$CUP052/2.mpd/Manifest.mpd?device_profile=DASH_XDSL_SSP_ENC_LIVE&start={utc:Y-m-dTH:M:S}Z&end={utcend:Y-m-dTH:M:S}Z&device=DASH_XDSL_SSP_ENC_LIVE" catchup-days="150" group-title="99 📦 Otros",OneToro TV
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e9ea64457ac54e8b810882bf8154ca5e:6460093b52241504709d89f62124098f
+http://vfott2cdn.gb.vodafone.es/sdash/LIVE$CUP052/2.mpd/Manifest.mpd?start=LIVE&end=END&device=DASH_XDSL_SSP_ENC_LIVE
 #EXTINF:-1 tvg-id="Onetoro" tvg-name="Onetoro" tvg-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" group-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" group-title="99 📦 Otros",OneToro TV - Zapi TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -1172,6 +1182,40 @@ http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1745112&
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1745113&extension=ts&play_token=eqsi3F6e0o
 #EXTINF:-1 tvg-id="" tvg-name="┃F1 TV┃ F1 TV PRO [ES]" tvg-logo="http://picon.tivi-ott.net:25461/picon/NEDERLAND/F1HD.png" group-title="05 🏎️ Motor",┃F1 TV┃ F1 TV PRO [ES]
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:00:26:D1&stream=1160325&extension=ts&play_token=8aIAWG2gr3
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 10 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 10 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935636&extension=ts&play_token=W4GP4VkwsS
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 11 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 11 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935635&extension=ts&play_token=B2u1PL9O35
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 12 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 12 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935634&extension=ts&play_token=LSHmQtXlIR
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 13 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 13 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935633&extension=ts&play_token=bloOuB4ajx
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 14 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 14 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935632&extension=ts&play_token=5GihdqGbqT
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 15 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 15 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935631&extension=ts&play_token=GyKjR9tm7P
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 16 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 16 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935630&extension=ts&play_token=21nGZRFZbH
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 3 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 3 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935643&extension=ts&play_token=OUoTjCmPAP
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 2 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 2 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935644&extension=ts&play_token=YTYfR3upxu
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 4 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 4 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935642&extension=ts&play_token=B1xKWPvEyc
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 7 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 7 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935639&extension=ts&play_token=YZXn4a7HgU
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 8 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 8 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935638&extension=ts&play_token=lEh6Hy4SXo
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 5 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 5 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935641&extension=ts&play_token=20Cfc8MWrw
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 9 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 9 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935637&extension=ts&play_token=lw92HKmMJw
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 6 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 6 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935640&extension=ts&play_token=cxJXQySQq2
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS INFO HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS INFO HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935646&extension=ts&play_token=ogGZGT5sII
+#EXTINF:-1 tvg-id="" tvg-name="┃ES┃ M+ ESTRENOS 1 HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/USA/M+ ESTRENOS/M+ ESTRENOS.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ ESTRENOS 1 HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=935645&extension=ts&play_token=KNExTG3Kc8
 #EXTINF:-1 tvg-id="movistardeportes.es" tvg-name="┃ES┃ M+ DEPORTES HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/MPLUSDEPORTES.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ DEPORTES HD
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=897428&extension=ts&play_token=ekh1icEsLi
 #EXTINF:-1 tvg-id="vamos.es" tvg-name="┃ES┃ M+ #VAMOS HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/Vamos_por_Movistar_Plus+_2023_Logo.svg.png" group-title="04 ⭐ Movistar+",┃ES┃ M+ #VAMOS HD
@@ -1258,6 +1302,10 @@ http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=895922&e
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=895921&extension=ts&play_token=iKQctknEGo
 #EXTINF:-1 tvg-id="Enfamilia" tvg-name="┃ES┃ ENFAMILIA HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/Enfamiiia.png" group-title="99 📦 Otros",┃ES┃ ENFAMILIA HD
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=896314&extension=ts&play_token=o88Jg9mOca
+#EXTINF:-1 tvg-id="DBike" tvg-name="┃ES┃ DBIKE" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/D Bike TV Channel.png" group-title="99 📦 Otros",┃ES┃ DBIKE
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=897442&extension=ts&play_token=nrfVOhrSDA
+#EXTINF:-1 tvg-id="DBike" tvg-name="┃ES┃ DBIKE HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/D Bike TV Channel.png" group-title="99 📦 Otros",┃ES┃ DBIKE HD
+http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=897441&extension=ts&play_token=wWhYZxAhHu
 #EXTINF:-1 tvg-id="divinity.es" tvg-name="┃ES┃ DIVINITY" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/Divinity.svg.png" group-title="99 📦 Otros",┃ES┃ DIVINITY
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:1E:1E&stream=896291&extension=ts&play_token=SKsgaIlQ1R
 #EXTINF:-1 tvg-id="divinity.es" tvg-name="┃ES┃ DIVINITY HD" tvg-logo="http://picon.tivi-ott.net:25461/picon/SPAIN/Divinity.svg.png" group-title="99 📦 Otros",┃ES┃ DIVINITY HD
