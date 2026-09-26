@@ -3,6 +3,10 @@ import hashlib
 import re
 from collections import Counter
 
+# ---------------------------------------------------------------------------
+# FUENTES
+# ---------------------------------------------------------------------------
+
 URLS = [
     "https://pastebin.com/raw/hV2z2e9g",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_spain.m3u8",
@@ -10,17 +14,23 @@ URLS = [
     "https://raw.githubusercontent.com/minhtienth15/mynote/main/t04.m3u",
 ]
 
+# Esta lista solo conserva canales marcados como España (┃ES┃),
+# y SÍ se le aplican las BLOCK_WORDS igual que a las demás.
 URL_ES_ONLY = [
     "https://raw.githubusercontent.com/tokoblotongan/88/main/z2.m3u",
 ]
 
-# Esta lista conservará todos sus canales.
-# No se le aplicarán las palabras bloqueadas, pero sí las categorías.
-URL_SIN_FILTRO = [
-    "https://pastebin.com/raw/hV2z2e9g",
-]
-
 EPG_URL = "http://143.47.50.252:5000/getEPG"
+
+# ---------------------------------------------------------------------------
+# PALABRAS BLOQUEADAS
+# ---------------------------------------------------------------------------
+# Se aplican a TODAS las fuentes por igual, sin excepciones.
+# La coincidencia es por PALABRA COMPLETA (word boundaries), no por
+# substring, para evitar falsos positivos como:
+#   "star"  dentro de "movistar"   -> NO coincide
+#   "sport" dentro de "eurosport"  -> NO coincide
+#   "nl"    dentro de "online"     -> NO coincide
 
 BLOCK_WORDS = [
     "portugal",
@@ -159,12 +169,30 @@ BLOCK_WORDS = [
     "match!",
 ]
 
-# Convertimos una sola vez todas las palabras a formato comparable.
-BLOCK_WORDS_NORMALIZADAS = {
-    palabra.strip().casefold()
-    for palabra in BLOCK_WORDS
-    if palabra.strip()
-}
+# Convertimos una sola vez todas las palabras a formato comparable y
+# compilamos un único patrón con límites de palabra (\b) para evitar
+# falsos positivos por coincidencia parcial dentro de otra palabra.
+
+
+def _patron_para_palabra(palabra):
+    """Construye el fragmento de regex para una palabra bloqueada,
+    añadiendo \\b solo en los extremos que empiezan/terminan en un
+    carácter alfanumérico (para no romper palabras como '18+' o
+    'match!', que tienen símbolos en el borde)."""
+    prefijo = r"\b" if palabra[0].isalnum() else ""
+    sufijo = r"\b" if palabra[-1].isalnum() else ""
+    return prefijo + re.escape(palabra) + sufijo
+
+
+BLOCK_WORDS_NORMALIZADAS = sorted(
+    {palabra.strip().casefold() for palabra in BLOCK_WORDS if palabra.strip()},
+    key=len,
+    reverse=True,
+)
+
+PATRON_BLOCK_WORDS = re.compile(
+    "|".join(_patron_para_palabra(palabra) for palabra in BLOCK_WORDS_NORMALIZADAS)
+)
 
 contador = Counter()
 
@@ -172,6 +200,10 @@ GRUPOS_PROTEGIDOS = [
     "movistar deportes playready",
 ]
 
+
+# ---------------------------------------------------------------------------
+# CATEGORIZACIÓN
+# ---------------------------------------------------------------------------
 
 def obtener_categoria(extinf):
     texto = extinf.casefold()
@@ -390,16 +422,18 @@ def limpiar_y_categorizar(extinf):
 
 
 def contiene_palabra_bloqueada(extinf):
-    # Comprobar la línea EXTINF completa (nombre + atributos:
-    # group-title, tvg-id, tvg-name...), no solo el nombre visible.
+    """Comprueba la línea EXTINF completa (nombre + atributos: group-title,
+    tvg-id, tvg-name...) buscando alguna BLOCK_WORD como PALABRA COMPLETA.
+    Esto evita falsos positivos como 'star' dentro de 'movistar' o 'sport'
+    dentro de 'eurosport'."""
     texto_normalizado = extinf.casefold()
+    coincidencia = PATRON_BLOCK_WORDS.search(texto_normalizado)
+    return coincidencia.group(0) if coincidencia else None
 
-    for palabra in BLOCK_WORDS_NORMALIZADAS:
-        if palabra in texto_normalizado:
-            return palabra
 
-    return None
-
+# ---------------------------------------------------------------------------
+# PROCESO PRINCIPAL
+# ---------------------------------------------------------------------------
 
 salida = [
     f'#EXTM3U url-tvg="{EPG_URL}"'
@@ -433,54 +467,31 @@ for url in URLS + URL_ES_ONLY:
             if not linea:
                 continue
 
-            # Lista que solo conserva entradas marcadas como España
-            if url in URL_ES_ONLY:
-                if linea.startswith("#EXTINF"):
+            if linea.startswith("#EXTINF"):
+                # Si la fuente es "solo España", primero comprobamos la
+                # marca ┃ES┃; si no la lleva, se descarta directamente.
+                if url in URL_ES_ONLY:
                     es_espana = "┃ES┃".casefold() in linea.casefold()
                     if not es_espana:
                         omitir = True
                         print(
                             f"BLOQUEADO POR NO SER ES -> {linea}"
                         )
-                    else:
-                        # FIX: antes esta rama nunca comprobaba
-                        # BLOCK_WORDS, así que canales marcados
-                        # como ES pero con palabras bloqueadas
-                        # (fox, ziggo, etc.) pasaban sin filtrar.
-                        palabra_detectada = contiene_palabra_bloqueada(
-                            linea
-                        )
-                        omitir = palabra_detectada is not None
-                        if omitir:
-                            print(
-                                "BLOQUEADO "
-                                f"[{palabra_detectada}] -> {linea}"
-                            )
-                        else:
-                            linea = limpiar_y_categorizar(linea)
+                        if not omitir:
+                            salida.append(linea)
+                        continue
 
-                if not omitir:
-                    salida.append(linea)
-                continue
-
-            # Inicio de un canal nuevo
-            if linea.startswith("#EXTINF"):
-                if url in URL_SIN_FILTRO:
-                    # NO FILTRAR ESTA LISTA
-                    omitir = False
-                    linea = limpiar_y_categorizar(linea)
-                else:
-                    palabra_detectada = contiene_palabra_bloqueada(
-                        linea
+                # A partir de aquí, TODAS las fuentes pasan por el mismo
+                # filtro de BLOCK_WORDS, sin excepciones.
+                palabra_detectada = contiene_palabra_bloqueada(linea)
+                omitir = palabra_detectada is not None
+                if omitir:
+                    print(
+                        "BLOQUEADO "
+                        f"[{palabra_detectada}] -> {linea}"
                     )
-                    omitir = palabra_detectada is not None
-                    if omitir:
-                        print(
-                            "BLOQUEADO "
-                            f"[{palabra_detectada}] -> {linea}"
-                        )
-                    else:
-                        linea = limpiar_y_categorizar(linea)
+                else:
+                    linea = limpiar_y_categorizar(linea)
 
             if not omitir:
                 salida.append(linea)
