@@ -742,20 +742,6 @@ https://live.euskaltel.com/__cl/cg:live1/__c/Liga_hypermotion_Multi_3/__op/delay
 https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/default/__f/index.m3u8
 #EXTINF:-1 tvg-id="LaLiga Inside" tvg-shift="+2" ch-number="52" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/LaLigaInside.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga Inside (-2h)_
 https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/delay-default/__f/index.m3u8
-#EXTINF:-1 tvg-id="SkySports_MainEventUHD" tvg-name="SkySports_MainEventUHD" tvg-logo="https://i.imgur.com/ETzQJdt.png" group-title="06 🎾 Deportes",SkySports_MainEventUHD
-https://7pal.short.gy/SSMEuhd
-#EXTINF:-1 tvg-id="TNTSport_Ultimate-4K_HDR" tvg-name="TNTSport_Ultimate-4K_HDR" tvg-logo="https://media.info/l/o/5/5824.1689874022.png" group-title="06 🎾 Deportes",TNTSport_Ultimate-4K_HDR
-https://7pal.short.gy/TNTUltimate
-#EXTINF:-1 tvg-id="Digi4K" tvg-name="Digi4K" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/57/DIGI_4K.jpg" group-title="99 📦 Otros",Digi4K
-https://7pal.short.gy/digi4k
-#EXTINF:-1 tvg-id="ElevenSport1-4K" tvg-name="ElevenSport1-4K" tvg-logo="https://i.imgur.com/PUaJPaE.png" group-title="06 🎾 Deportes",ElevenSport1-4K
-https://7pal.short.gy/11sports1
-#EXTINF:-1 tvg-id="SkySportsF1UHD" tvg-name="SkySportsF1UHD" tvg-logo="https://i.imgur.com/9wrgXyy.png" group-title="05 🏎️ Motor",SkySportsF1UHD
-https://7pal.short.gy/SSF1uhd
-#EXTINF:-1 tvg-id="SkySport_BundesligaUHD.de" tvg-name="SkySport_BundesligaUHD.de" tvg-logo="https://i.imgur.com/wgvrku8.png" group-title="02 ⚽ Fútbol",SkySport_BundesligaUHD.de
-https://7pal.short.gy/ssblgde
-#EXTINF:-1 tvg-id="EuroSport4K " tvg-name="EuroSport4K " tvg-logo="https://i.imgur.com/APE7FAm.jpg" group-title="06 🎾 Deportes",EuroSport4K
-https://7pal.short.gy/eusport4k
 #EXTINF:-1 tvg-id="Onetoro" tvg-name="Onetoro" tvg-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" group-logo="https://play-lh.googleusercontent.com/ZDSjarTntWnvUp47rSsoVwbT7PU-FqDHSkzQ5nc0CTlAbujoKUQr2_jw7QBbMF2hmQ=w480-h960-rw" catchup-type="default" catchup-source="https://live.onetoro.transparentedge.io/onetoro/index-${start}-${duration}.mpd" catchup-days="7" group-title="99 📦 Otros",OneToro TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
