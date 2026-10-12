@@ -10,10 +10,17 @@ from urllib.parse import urljoin
 # ---------------------------------------------------------------------------
 
 COMPROBAR_CANALES = True   # False = no comprobar nada (como antes)
-HILOS = 30                 # comprobaciones simultáneas
-CONNECT_TIMEOUT = 5        # segundos para conectar
-READ_TIMEOUT = 10          # segundos esperando datos
-REINTENTOS = 1             # reintentos extra antes de dar un canal por caído
+HILOS = 20                 # comprobaciones simultáneas (menos = menos bloqueos)
+CONNECT_TIMEOUT = 8        # segundos para conectar
+READ_TIMEOUT = 15          # segundos esperando datos
+REINTENTOS = 2             # reintentos extra ante fallos dudosos
+
+# Qué hacer con los canales "dudosos" (timeout, 403, 429, 5xx, HTML...):
+#   False -> se quedan en su categoría normal (recomendado, evita falsos
+#            "No funcionan"). Solo van a "No funcionan" los fallos
+#            DEFINITIVOS (404/410, dominio inexistente, conexión rechazada).
+#   True  -> también van a "No funcionan".
+DUDOSOS_COMO_CAIDOS = False
 
 HEADERS_STREAM = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -538,82 +545,160 @@ def cumple_es_o_movistar(extinf):
 # COMPROBACIÓN DE CANALES (¿FUNCIONA EL STREAM?)
 # ---------------------------------------------------------------------------
 
-def _comprobar_una_vez(url):
-    """Un único intento. Devuelve True si el stream parece vivo."""
+# Estados posibles de una comprobación
+ESTADO_OK = "ok"
+ESTADO_CAIDO = "caido"      # fallo DEFINITIVO (404, DNS inexistente...)
+ESTADO_DUDOSO = "dudoso"    # no se puede asegurar (timeout, 403, 429, 5xx...)
+
+_ERRORES_DEFINITIVOS = (
+    "name or service not known",
+    "nodename nor servname",
+    "getaddrinfo failed",
+    "name resolution",
+    "temporary failure in name resolution",
+    "connection refused",
+)
+
+
+def _preparar_stream(entrada):
+    """Devuelve (url_real, headers) para comprobar el canal, aprovechando
+    lo que la propia lista indica: líneas #EXTVLCOPT (user-agent, referrer)
+    y la sintaxis estilo Kodi 'url|User-Agent=...&Referer=...'."""
+    headers = dict(HEADERS_STREAM)
+    url = entrada["url"]
+
+    for l in entrada["lines"]:
+        m = re.match(r"#EXTVLCOPT:http-user-agent=(.+)", l, re.IGNORECASE)
+        if m:
+            headers["User-Agent"] = m.group(1).strip()
+        m = re.match(r"#EXTVLCOPT:http-referr?er=(.+)", l, re.IGNORECASE)
+        if m:
+            headers["Referer"] = m.group(1).strip()
+        m = re.match(r"#EXTVLCOPT:http-origin=(.+)", l, re.IGNORECASE)
+        if m:
+            headers["Origin"] = m.group(1).strip()
+
+    if "|" in url:
+        url, _, extra = url.partition("|")
+        for par in extra.split("&"):
+            if "=" not in par:
+                continue
+            clave, _, valor = par.partition("=")
+            clave = clave.strip().casefold()
+            if clave == "user-agent":
+                headers["User-Agent"] = valor
+            elif clave in ("referer", "referrer"):
+                headers["Referer"] = valor
+            elif clave == "origin":
+                headers["Origin"] = valor
+            elif clave == "cookie":
+                headers["Cookie"] = valor
+
+    return url, headers
+
+
+def _probar(url, headers, nivel=0):
+    """Un intento. Devuelve (estado, motivo)."""
     with requests.get(
         url,
-        headers=HEADERS_STREAM,
+        headers=headers,
         stream=True,
         timeout=(CONNECT_TIMEOUT, READ_TIMEOUT),
         allow_redirects=True,
     ) as r:
-        if r.status_code >= 400:
-            return False
+        codigo = r.status_code
+        if codigo in (404, 410):
+            return ESTADO_CAIDO, f"HTTP {codigo}" + (" (segmento)" if nivel else "")
+        if codigo >= 400:
+            # 401/403/429/5xx: puede ser geobloqueo, límite de peticiones
+            # o fallo temporal. No lo damos por muerto.
+            return ESTADO_DUDOSO, f"HTTP {codigo}" + (" (segmento)" if nivel else "")
 
-        ctype = r.headers.get("Content-Type", "").casefold()
-        # Una página web (error, login, etc.) no es un stream de vídeo.
-        if "text/html" in ctype:
-            return False
+        primer = next(r.iter_content(32768), b"")
+        if not primer:
+            return ESTADO_DUDOSO, "respuesta vacía"
 
-        es_hls = ".m3u8" in url.casefold() or "mpegurl" in ctype
-
-        if es_hls:
-            cuerpo = next(r.iter_content(65536), b"")
-            texto = cuerpo.decode("utf-8", "ignore")
-            if "#EXTM3U" not in texto:
-                return False
-
-            # Buscamos el primer segmento / sub-lista y comprobamos
-            # que también responde (muchos canales caídos tienen la
-            # lista viva pero los segmentos devuelven 404/403).
-            primera = None
+        # --- HLS: seguimos hasta 2 niveles (master -> variante -> segmento)
+        if primer.lstrip()[:7] == b"#EXTM3U":
+            if nivel >= 2:
+                return ESTADO_OK, "hls"
+            texto = primer.decode("utf-8", "ignore")
+            siguiente = None
             for l in texto.splitlines():
                 l = l.strip()
                 if l and not l.startswith("#"):
-                    primera = urljoin(r.url, l)
+                    siguiente = urljoin(r.url, l)
                     break
-            if primera is None:
-                return False
+            if siguiente is None:
+                return ESTADO_DUDOSO, "playlist sin entradas"
+            return _probar(siguiente, headers, nivel + 1)
 
-            with requests.get(
-                primera,
-                headers=HEADERS_STREAM,
-                stream=True,
-                timeout=(CONNECT_TIMEOUT, READ_TIMEOUT),
-                allow_redirects=True,
-            ) as r2:
-                if r2.status_code >= 400:
-                    return False
-                return bool(next(r2.iter_content(1024), b""))
+        # --- DASH (.mpd)
+        if b"<MPD" in primer[:4096]:
+            return ESTADO_OK, "dash"
 
-        # Streams directos (.ts, mp4, etc.): basta con recibir datos.
-        return bool(next(r.iter_content(2048), b""))
+        # --- HTML en vez de vídeo: normalmente una página de error o de
+        # bloqueo, pero no es seguro, así que lo marcamos como dudoso.
+        if primer.lstrip()[:1] == b"<":
+            return ESTADO_DUDOSO, "HTML en vez de vídeo"
+
+        return ESTADO_OK, "stream"
 
 
-def canal_funciona(url):
-    # Protocolos que requests no sabe probar (rtmp, udp, rtsp...):
-    # no podemos comprobarlos, así que los damos por buenos.
+def canal_funciona(url, headers):
+    """Devuelve (estado, motivo). Solo marca CAIDO ante fallos definitivos;
+    ante cualquier duda devuelve DUDOSO."""
     if not url.lower().startswith(("http://", "https://")):
-        return True
+        return ESTADO_OK, "no comprobable (protocolo no HTTP)"
 
+    ultimo = (ESTADO_DUDOSO, "sin resultado")
     for _ in range(REINTENTOS + 1):
         try:
-            if _comprobar_una_vez(url):
-                return True
-        except Exception:
-            pass
-    return False
+            estado, motivo = _probar(url, headers)
+        except requests.exceptions.Timeout:
+            estado, motivo = ESTADO_DUDOSO, "timeout"
+        except requests.exceptions.SSLError as error:
+            estado, motivo = ESTADO_DUDOSO, f"SSL: {str(error)[:60]}"
+        except requests.exceptions.ConnectionError as error:
+            texto = str(error).casefold()
+            if any(m in texto for m in _ERRORES_DEFINITIVOS):
+                estado, motivo = ESTADO_CAIDO, "DNS/conexión rechazada"
+            else:
+                estado, motivo = ESTADO_DUDOSO, f"conexión: {str(error)[:60]}"
+        except Exception as error:
+            estado, motivo = ESTADO_DUDOSO, f"error: {str(error)[:60]}"
+
+        if estado == ESTADO_OK:
+            return estado, motivo
+        ultimo = (estado, motivo)
+        # Un 404/410 o un DNS inexistente no mejora reintentando
+        if estado == ESTADO_CAIDO:
+            return ultimo
+    return ultimo
 
 
-def comprobar_urls(urls):
-    """Comprueba en paralelo un conjunto de URLs y devuelve
-    {url: True/False}."""
-    urls = list(urls)
+def comprobar_entradas(entradas):
+    """Comprueba en paralelo todas las entradas (sin repetir URLs
+    idénticas) y asigna e['estado'] y e['motivo']."""
+    trabajos = {}
+    for e in entradas:
+        url_real, headers = _preparar_stream(e)
+        clave = (url_real, tuple(sorted(headers.items())))
+        e["_clave"] = clave
+        trabajos[clave] = (url_real, headers)
+
+    claves = list(trabajos)
     print()
-    print(f"Comprobando {len(urls)} streams ({HILOS} a la vez)...")
+    print(f"Comprobando {len(claves)} streams ({HILOS} a la vez)...")
+
+    def _ejecutar(clave):
+        return canal_funciona(*trabajos[clave])
+
     with ThreadPoolExecutor(max_workers=HILOS) as pool:
-        resultados = list(pool.map(canal_funciona, urls))
-    return dict(zip(urls, resultados))
+        resultados = dict(zip(claves, pool.map(_ejecutar, claves)))
+
+    for e in entradas:
+        e["estado"], e["motivo"] = resultados[e["_clave"]]
 
 
 # ---------------------------------------------------------------------------
@@ -724,15 +809,24 @@ entradas = [e for e in entradas if e["url"]]
 # ---------------------------------------------------------------------------
 
 if COMPROBAR_CANALES:
-    estado = comprobar_urls({e["url"] for e in entradas})
-    vivos = 0
+    comprobar_entradas(entradas)
+    n_ok = n_dudosos = n_caidos = 0
     for e in entradas:
-        e["caido"] = not estado.get(e["url"])
-        if e["caido"]:
-            print(f"CAÍDO -> {e['lines'][0]}")
+        if e["estado"] == ESTADO_OK:
+            e["caido"] = False
+            n_ok += 1
+        elif e["estado"] == ESTADO_DUDOSO:
+            e["caido"] = DUDOSOS_COMO_CAIDOS
+            n_dudosos += 1
+            print(f"DUDOSO [{e['motivo']}] -> {e['lines'][0]}")
         else:
-            vivos += 1
-    print(f"Canales vivos: {vivos} / {len(entradas)}")
+            e["caido"] = True
+            n_caidos += 1
+            print(f"CAÍDO [{e['motivo']}] -> {e['lines'][0]}")
+    print(
+        f"OK: {n_ok} | Dudosos: {n_dudosos} | Caídos: {n_caidos} "
+        f"(de {len(entradas)})"
+    )
 
 # ---------------------------------------------------------------------------
 # SALIDA: categorizamos solo los canales que funcionan
