@@ -262,18 +262,37 @@ GRUPOS_PROTEGIDOS = [
 # CATEGORIZACIÓN
 # ---------------------------------------------------------------------------
 
+def _sin_urls(extinf):
+    """Quita los atributos cuyo valor es una URL (tvg-logo, group-logo,
+    catchup-source...). Esas rutas suelen contener palabras como
+    "movistar" que describen la imagen o el servidor, no el canal."""
+    return re.sub(r'[\w-]+="https?://[^"]*"', "", extinf, flags=re.IGNORECASE)
+
+
+# "movistar" al inicio de palabra, o "m+" suelto (no pegado a otra letra o
+# número, para no coger cosas como "Premium+" o "Crime+").
+PATRON_MOVISTAR = re.compile(r"\bmovistar|(?<![a-z0-9])m\+")
+
+
+def _es_movistar(extinf):
+    """Un canal es Movistar+ solo si su NOMBRE (o su tvg-name) lo indica,
+    no por lo que aparezca en otros atributos (ids, logos, grupos...)."""
+    nombres = [_nombre_canal(extinf).casefold()]
+    tvg_name = re.search(r'tvg-name="([^"]*)"', extinf, re.IGNORECASE)
+    if tvg_name:
+        nombres.append(tvg_name.group(1).casefold())
+    return any(PATRON_MOVISTAR.search(n) for n in nombres)
+
+
 def obtener_categoria(extinf):
-    texto = extinf.casefold()
+    texto = _sin_urls(extinf).casefold()
 
     # DAZN
     if "dazn" in texto:
         return "03 🔥 DAZN"
 
-    # MOVISTAR
-    if (
-        "movistar" in texto
-        or "m+" in texto
-    ):
+    # MOVISTAR (solo por el nombre del canal)
+    if _es_movistar(extinf):
         return "04 ⭐ Movistar+"
 
     # FÚTBOL
