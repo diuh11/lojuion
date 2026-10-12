@@ -11,16 +11,24 @@ from urllib.parse import urljoin
 
 COMPROBAR_CANALES = True   # False = no comprobar nada (como antes)
 HILOS = 20                 # comprobaciones simultáneas (menos = menos bloqueos)
-CONNECT_TIMEOUT = 8        # segundos para conectar
-READ_TIMEOUT = 15          # segundos esperando datos
-REINTENTOS = 2             # reintentos extra ante fallos dudosos
+CONNECT_TIMEOUT = 6        # segundos para conectar
+READ_TIMEOUT = 8           # segundos esperando datos
+REINTENTOS = 1             # reintentos extra ante fallos dudosos
 
-# Qué hacer con los canales "dudosos" (timeout, 403, 429, 5xx, HTML...):
-#   False -> se quedan en su categoría normal (recomendado, evita falsos
-#            "No funcionan"). Solo van a "No funcionan" los fallos
-#            DEFINITIVOS (404/410, dominio inexistente, conexión rechazada).
-#   True  -> también van a "No funcionan".
+# Este script se ejecuta en GitHub Actions, que sale a internet con IPs de
+# EE. UU. Desde ahí, un canal español puede fallar (403, timeout, HTML)
+# aunque funcione perfectamente en España, así que esos fallos NO son
+# fiables. Solo son fiables los fallos definitivos (404/410, dominio
+# inexistente, conexión rechazada), que no dependen del país.
+#   False -> solo los fallos definitivos van a "No funcionan" (RECOMENDADO
+#            en GitHub Actions: no manda canales buenos a "No funcionan").
+#   True  -> también los dudosos (solo fiable ejecutando desde España).
 DUDOSOS_COMO_CAIDOS = False
+
+# Motivos dudosos que NUNCA se mandan a "No funcionan" aunque lo anterior
+# sea True, porque no indican que el canal esté muerto (p.ej. 429 = te
+# están limitando las peticiones). Se compara con el inicio del motivo.
+MOTIVOS_PERDONADOS = ("HTTP 429",)
 
 HEADERS_STREAM = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -843,9 +851,13 @@ if COMPROBAR_CANALES:
             e["caido"] = False
             n_ok += 1
         elif e["estado"] == ESTADO_DUDOSO:
-            e["caido"] = DUDOSOS_COMO_CAIDOS
+            perdonado = any(
+                e["motivo"].startswith(m) for m in MOTIVOS_PERDONADOS
+            )
+            e["caido"] = DUDOSOS_COMO_CAIDOS and not perdonado
             n_dudosos += 1
-            print(f"DUDOSO [{e['motivo']}] -> {e['lines'][0]}")
+            etiqueta = "CAÍDO (dudoso)" if e["caido"] else "DUDOSO"
+            print(f"{etiqueta} [{e['motivo']}] -> {e['lines'][0]}")
         else:
             e["caido"] = True
             n_caidos += 1
@@ -854,6 +866,15 @@ if COMPROBAR_CANALES:
         f"OK: {n_ok} | Dudosos: {n_dudosos} | Caídos: {n_caidos} "
         f"(de {len(entradas)})"
     )
+    # Reparto de motivos de fallo, para ver QUÉ está fallando
+    motivos = Counter(
+        re.sub(r"\s*\(segmento\)", "", e["motivo"])
+        for e in entradas
+        if e["estado"] != ESTADO_OK
+    )
+    print("Motivos de fallo:")
+    for motivo, total in motivos.most_common():
+        print(f"  {total:5d}  {motivo}")
 
 # ---------------------------------------------------------------------------
 # SALIDA: categorizamos solo los canales que funcionan
