@@ -657,7 +657,7 @@ https://dazn3-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
 #KODIPROP:inputstream.adaptive.license_key=9493bea060764400b35273c4187125a8:408d9109da44481170f75399896b51bb
 https://dazn4-pry-movistarplus.emisiondof6.com/index.isml/Manifest
-#EXTINF:-1 tvg-id="LaLiga TV Bar" tvg-name="LaLiga TV Bar" tvg-logo="https://static.masmediatv.com/channel_logos/gnZg4NkBEYlDEslkFBcBOWsqWFcvHAtA.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/d/dd/DAZN_BoxedLogo_01_RGB.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" catchup-type="default" catchup-source="http://vfpc.gb.vodafone.es/sdash/LIVE$CUP038/2.mpd/Manifest.mpd?start=LIVE&end=END&device=PLAYOUT02&start={utc:Y-m-dTH:M:S}Z&end={utcend:Y-m-dTH:M:S}Z&device=DASH_XDSL_SSP_ENC_LIVE" catchup-days="150" group-title="98 ❌ No funcionan",LaLiga TV Bar
+#EXTINF:-1 tvg-id="LaLiga TV Bar" tvg-name="LaLiga TV Bar" tvg-logo="https://static.masmediatv.com/channel_logos/gnZg4NkBEYlDEslkFBcBOWsqWFcvHAtA.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/d/dd/DAZN_BoxedLogo_01_RGB.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" catchup-type="default" catchup-source="http://vfpc.gb.vodafone.es/sdash/LIVE$CUP038/2.mpd/Manifest.mpd?start=LIVE&end=END&device=PLAYOUT02&start={utc:Y-m-dTH:M:S}Z&end={utcend:Y-m-dTH:M:S}Z&device=DASH_XDSL_SSP_ENC_LIVE" catchup-days="150" group-title="03 🔥 DAZN",LaLiga TV Bar
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=1fdd37d8ede64c9b943c8752532d2e46:8fc8dc7dc42db2bf93000ce13f4d3a1d
@@ -742,12 +742,12 @@ https://live.euskaltel.com/__cl/cg:live1/__c/Liga_hypermotion_Multi_3/__op/delay
 https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/default/__f/index.m3u8
 #EXTINF:-1 tvg-id="LaLiga Inside" tvg-shift="+2" ch-number="52" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/LaLigaInside.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga Inside (-2h)_
 https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/delay-default/__f/index.m3u8
-#EXTINF:-1 tvg-id="Onetoro" tvg-name="Onetoro" tvg-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" group-logo="https://play-lh.googleusercontent.com/ZDSjarTntWnvUp47rSsoVwbT7PU-FqDHSkzQ5nc0CTlAbujoKUQr2_jw7QBbMF2hmQ=w480-h960-rw" catchup-type="default" catchup-source="https://live.onetoro.transparentedge.io/onetoro/index-${start}-${duration}.mpd" catchup-days="7" group-title="98 ❌ No funcionan",OneToro TV
+#EXTINF:-1 tvg-id="Onetoro" tvg-name="Onetoro" tvg-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" group-logo="https://play-lh.googleusercontent.com/ZDSjarTntWnvUp47rSsoVwbT7PU-FqDHSkzQ5nc0CTlAbujoKUQr2_jw7QBbMF2hmQ=w480-h960-rw" catchup-type="default" catchup-source="https://live.onetoro.transparentedge.io/onetoro/index-${start}-${duration}.mpd" catchup-days="7" group-title="99 📦 Otros",OneToro TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=479e04f3d12d112b5c04c9ee67e4b1e6:48a98cfdea9a952e24b949fae4f692f3
 https://live.onetoro.transparentedge.io/onetoro/index.mpd
-#EXTINF:-1 tvg-id="Onetoro" tvg-name="Onetoro" tvg-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" catchup-type="default" catchup-source="http://vfott2cdn.gb.vodafone.es/sdash/LIVE$CUP052/2.mpd/Manifest.mpd?device_profile=DASH_XDSL_SSP_ENC_LIVE&start={utc:Y-m-dTH:M:S}Z&end={utcend:Y-m-dTH:M:S}Z&device=DASH_XDSL_SSP_ENC_LIVE" catchup-days="150" group-title="98 ❌ No funcionan",OneToro TV
+#EXTINF:-1 tvg-id="Onetoro" tvg-name="Onetoro" tvg-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" catchup-type="default" catchup-source="http://vfott2cdn.gb.vodafone.es/sdash/LIVE$CUP052/2.mpd/Manifest.mpd?device_profile=DASH_XDSL_SSP_ENC_LIVE&start={utc:Y-m-dTH:M:S}Z&end={utcend:Y-m-dTH:M:S}Z&device=DASH_XDSL_SSP_ENC_LIVE" catchup-days="150" group-title="99 📦 Otros",OneToro TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=e9ea64457ac54e8b810882bf8154ca5e:6460093b52241504709d89f62124098f
