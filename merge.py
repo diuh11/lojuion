@@ -25,10 +25,16 @@ REINTENTOS = 2             # reintentos extra antes de dar un canal por caído
 DUDOSOS_COMO_CAIDOS = True
 
 # Motivos que NUNCA se mandan a "No funcionan" porque no prueban que el
-# canal esté muerto (geobloqueo, acceso restringido, límite de peticiones).
+# canal esté muerto: el servidor está RECHAZANDO nuestra petición (por país,
+# por cabeceras, por falta de token...), no diciendo que el canal no exista.
+# Según el log real de GitHub Actions: 400 (Cuatro, Telecinco, La Sexta...),
+# 403 (La 1, La 2...), 405 (DAZN Mundial), 407 (M+ ...), 412 (DAZN LaLiga...).
 # Se compara con el inicio del motivo, así que "HTTP 403" también cubre
 # "HTTP 403 (segmento)". Quita alguno de la lista para ser más estricto.
-MOTIVOS_PERDONADOS = ("HTTP 401", "HTTP 403", "HTTP 429", "HTTP 451")
+MOTIVOS_PERDONADOS = (
+    "HTTP 400", "HTTP 401", "HTTP 403", "HTTP 405",
+    "HTTP 407", "HTTP 412", "HTTP 429", "HTTP 451",
+)
 
 HEADERS_STREAM = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
