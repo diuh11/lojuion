@@ -677,11 +677,33 @@ def canal_funciona(url, headers):
     return ultimo
 
 
+def _es_protegido(entrada):
+    """Canales que NO se pueden comprobar con una petición HTTP normal:
+    los de los GRUPOS_PROTEGIDOS (p.ej. Movistar PlayReady, que solo
+    reproducen apps concretas como OTT Future Player) y los que declaran
+    licencia DRM (#KODIPROP ... license). Se dejan tal cual."""
+    extinf = entrada["lines"][0]
+    m = re.search(r'group-title="([^"]*)"', extinf, re.IGNORECASE)
+    if m and m.group(1).strip().casefold() in {
+        g.casefold() for g in GRUPOS_PROTEGIDOS
+    }:
+        return True
+    for l in entrada["lines"][1:]:
+        if l.upper().startswith("#KODIPROP") and "license" in l.casefold():
+            return True
+    return False
+
+
 def comprobar_entradas(entradas):
     """Comprueba en paralelo todas las entradas (sin repetir URLs
     idénticas) y asigna e['estado'] y e['motivo']."""
     trabajos = {}
     for e in entradas:
+        if _es_protegido(e):
+            e["_clave"] = None
+            e["estado"] = ESTADO_OK
+            e["motivo"] = "protegido (DRM), no comprobado"
+            continue
         url_real, headers = _preparar_stream(e)
         clave = (url_real, tuple(sorted(headers.items())))
         e["_clave"] = clave
@@ -689,7 +711,11 @@ def comprobar_entradas(entradas):
 
     claves = list(trabajos)
     print()
-    print(f"Comprobando {len(claves)} streams ({HILOS} a la vez)...")
+    n_prot = sum(1 for e in entradas if e["_clave"] is None)
+    print(
+        f"Comprobando {len(claves)} streams ({HILOS} a la vez); "
+        f"{n_prot} canales protegidos/DRM se saltan la comprobación..."
+    )
 
     def _ejecutar(clave):
         return canal_funciona(*trabajos[clave])
@@ -698,7 +724,8 @@ def comprobar_entradas(entradas):
         resultados = dict(zip(claves, pool.map(_ejecutar, claves)))
 
     for e in entradas:
-        e["estado"], e["motivo"] = resultados[e["_clave"]]
+        if e["_clave"] is not None:
+            e["estado"], e["motivo"] = resultados[e["_clave"]]
 
 
 # ---------------------------------------------------------------------------
