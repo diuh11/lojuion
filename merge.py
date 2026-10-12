@@ -2,6 +2,24 @@ import requests
 import hashlib
 import re
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
+from urllib.parse import urljoin
+
+# ---------------------------------------------------------------------------
+# AJUSTES DE COMPROBACIÓN DE CANALES
+# ---------------------------------------------------------------------------
+
+COMPROBAR_CANALES = True   # False = no comprobar nada (como antes)
+HILOS = 30                 # comprobaciones simultáneas
+CONNECT_TIMEOUT = 5        # segundos para conectar
+READ_TIMEOUT = 10          # segundos esperando datos
+REINTENTOS = 1             # reintentos extra antes de dar un canal por caído
+
+HEADERS_STREAM = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/124.0 Safari/537.36"
+}
 
 # ---------------------------------------------------------------------------
 # FUENTES
@@ -240,7 +258,7 @@ PATRON_ES_ONLY = re.compile(
     re.IGNORECASE,
 )
 
-# Patrón para la nueva regla: nombre de canal que TERMINA en "ES" como
+# Patrón para la regla: nombre de canal que TERMINA en "ES" como
 # palabra suelta (con un límite de palabra antes, para no colar cosas
 # como "Deportes", que también termina en "es" pero pegado a la palabra).
 PATRON_TERMINA_EN_ES = re.compile(r"\bES\s*$", re.IGNORECASE)
@@ -517,12 +535,93 @@ def cumple_es_o_movistar(extinf):
 
 
 # ---------------------------------------------------------------------------
+# COMPROBACIÓN DE CANALES (¿FUNCIONA EL STREAM?)
+# ---------------------------------------------------------------------------
+
+def _comprobar_una_vez(url):
+    """Un único intento. Devuelve True si el stream parece vivo."""
+    with requests.get(
+        url,
+        headers=HEADERS_STREAM,
+        stream=True,
+        timeout=(CONNECT_TIMEOUT, READ_TIMEOUT),
+        allow_redirects=True,
+    ) as r:
+        if r.status_code >= 400:
+            return False
+
+        ctype = r.headers.get("Content-Type", "").casefold()
+        # Una página web (error, login, etc.) no es un stream de vídeo.
+        if "text/html" in ctype:
+            return False
+
+        es_hls = ".m3u8" in url.casefold() or "mpegurl" in ctype
+
+        if es_hls:
+            cuerpo = next(r.iter_content(65536), b"")
+            texto = cuerpo.decode("utf-8", "ignore")
+            if "#EXTM3U" not in texto:
+                return False
+
+            # Buscamos el primer segmento / sub-lista y comprobamos
+            # que también responde (muchos canales caídos tienen la
+            # lista viva pero los segmentos devuelven 404/403).
+            primera = None
+            for l in texto.splitlines():
+                l = l.strip()
+                if l and not l.startswith("#"):
+                    primera = urljoin(r.url, l)
+                    break
+            if primera is None:
+                return False
+
+            with requests.get(
+                primera,
+                headers=HEADERS_STREAM,
+                stream=True,
+                timeout=(CONNECT_TIMEOUT, READ_TIMEOUT),
+                allow_redirects=True,
+            ) as r2:
+                if r2.status_code >= 400:
+                    return False
+                return bool(next(r2.iter_content(1024), b""))
+
+        # Streams directos (.ts, mp4, etc.): basta con recibir datos.
+        return bool(next(r.iter_content(2048), b""))
+
+
+def canal_funciona(url):
+    # Protocolos que requests no sabe probar (rtmp, udp, rtsp...):
+    # no podemos comprobarlos, así que los damos por buenos.
+    if not url.lower().startswith(("http://", "https://")):
+        return True
+
+    for _ in range(REINTENTOS + 1):
+        try:
+            if _comprobar_una_vez(url):
+                return True
+        except Exception:
+            pass
+    return False
+
+
+def comprobar_urls(urls):
+    """Comprueba en paralelo un conjunto de URLs y devuelve
+    {url: True/False}."""
+    urls = list(urls)
+    print()
+    print(f"Comprobando {len(urls)} streams ({HILOS} a la vez)...")
+    with ThreadPoolExecutor(max_workers=HILOS) as pool:
+        resultados = list(pool.map(canal_funciona, urls))
+    return dict(zip(urls, resultados))
+
+
+# ---------------------------------------------------------------------------
 # PROCESO PRINCIPAL
 # ---------------------------------------------------------------------------
 
-salida = [
-    f'#EXTM3U url-tvg="{EPG_URL}"'
-]
+# Cada entrada: {"lines": [#EXTINF, (#EXTVLCOPT...), url], "url": url}
+entradas = []
 
 for url in URLS + URL_ES_ONLY + URL_ES_SUFIJO_O_MOVISTAR:
     try:
@@ -545,7 +644,7 @@ for url in URLS + URL_ES_ONLY + URL_ES_SUFIJO_O_MOVISTAR:
         ):
             lineas = lineas[1:]
 
-        omitir = False
+        entrada_actual = None
 
         for linea in lineas:
             linea = linea.strip()
@@ -561,15 +660,13 @@ for url in URLS + URL_ES_ONLY + URL_ES_SUFIJO_O_MOVISTAR:
                 continue
 
             if linea.startswith("#EXTINF"):
+                entrada_actual = None
                 texto = _quitar_urls_de_atributos(linea).casefold()
 
                 # Si la fuente es "solo España", primero comprobamos la
                 # marca ┃ES┃; si no la lleva, se descarta directamente.
                 if url in URL_ES_ONLY:
-                    es_valido = bool(PATRON_ES_ONLY.search(texto))
-
-                    if not es_valido:
-                        omitir = True
+                    if not PATRON_ES_ONLY.search(texto):
                         print(
                             f"BLOQUEADO POR NO SER [ES]/┃ES┃/M+ -> {linea}"
                         )
@@ -580,7 +677,6 @@ for url in URLS + URL_ES_ONLY + URL_ES_SUFIJO_O_MOVISTAR:
                 # descarta directamente.
                 if url in URL_ES_SUFIJO_O_MOVISTAR:
                     if not cumple_es_o_movistar(linea):
-                        omitir = True
                         print(
                             "BLOQUEADO POR NO ACABAR EN 'ES' NI EMPEZAR "
                             f"POR 'MOVISTAR' -> {linea}"
@@ -590,17 +686,26 @@ for url in URLS + URL_ES_ONLY + URL_ES_SUFIJO_O_MOVISTAR:
                 # A partir de aquí, TODAS las fuentes pasan por el mismo
                 # filtro de BLOCK_WORDS, sin excepciones.
                 palabra_detectada = contiene_palabra_bloqueada(linea)
-                omitir = palabra_detectada is not None
-                if omitir:
+                if palabra_detectada is not None:
                     print(
                         "BLOQUEADO "
                         f"[{palabra_detectada}] -> {linea}"
                     )
-                else:
-                    linea = limpiar_y_categorizar(linea)
+                    continue
 
-            if not omitir:
-                salida.append(linea)
+                # Canal aceptado: abrimos una entrada nueva. Todavía NO
+                # se categoriza; eso se hace solo si el canal funciona.
+                entrada_actual = {"lines": [linea], "url": None}
+                entradas.append(entrada_actual)
+                continue
+
+            # Líneas que siguen a un #EXTINF (opciones, URL del stream...)
+            if entrada_actual is None:
+                continue
+
+            entrada_actual["lines"].append(linea)
+            if not linea.startswith("#") and entrada_actual["url"] is None:
+                entrada_actual["url"] = linea
 
     except requests.RequestException as error:
         print(
@@ -610,6 +715,62 @@ for url in URLS + URL_ES_ONLY + URL_ES_SUFIJO_O_MOVISTAR:
         print(
             f"Error procesando {url}: {error}"
         )
+
+# Entradas sin URL de stream: no sirven para nada
+entradas = [e for e in entradas if e["url"]]
+
+# ---------------------------------------------------------------------------
+# FILTRO DE CANALES CAÍDOS
+# ---------------------------------------------------------------------------
+
+if COMPROBAR_CANALES:
+    estado = comprobar_urls({e["url"] for e in entradas})
+    vivos = 0
+    for e in entradas:
+        e["caido"] = not estado.get(e["url"])
+        if e["caido"]:
+            print(f"CAÍDO -> {e['lines'][0]}")
+        else:
+            vivos += 1
+    print(f"Canales vivos: {vivos} / {len(entradas)}")
+
+# ---------------------------------------------------------------------------
+# SALIDA: categorizamos solo los canales que funcionan
+# ---------------------------------------------------------------------------
+
+salida = [
+    f'#EXTM3U url-tvg="{EPG_URL}"'
+]
+
+CATEGORIA_CAIDOS = "98 ❌ No funcionan"
+
+
+def marcar_como_caido(extinf):
+    """Sustituye el group-title (sea el que sea, incluidos los grupos
+    protegidos) por la categoría de canales que no funcionan."""
+    extinf = re.sub(
+        r'\s*group-title="[^"]*"',
+        "",
+        extinf,
+        flags=re.IGNORECASE,
+    )
+    contador[CATEGORIA_CAIDOS] += 1
+    pos = extinf.rfind(",")
+    if pos != -1:
+        extinf = (
+            extinf[:pos]
+            + f' group-title="{CATEGORIA_CAIDOS}"'
+            + extinf[pos:]
+        )
+    return extinf
+
+
+for e in entradas:
+    if e.get("caido"):
+        e["lines"][0] = marcar_como_caido(e["lines"][0])
+    else:
+        e["lines"][0] = limpiar_y_categorizar(e["lines"][0])
+    salida.extend(e["lines"])
 
 contenido_final = "\n".join(salida) + "\n"
 
