@@ -8,9 +8,9 @@ from collections import Counter
 # ---------------------------------------------------------------------------
 
 URLS = [
+    "https://raw.githubusercontent.com/carmenchica3636/listas-iptv/refs/heads/main/lista_movistar.m3u",
     "https://raw.githubusercontent.com/Free-TV/IPTV/refs/heads/master/playlists/playlist_spain.m3u8",
     "https://www.apsattv.com/rakuten_es.m3u",
-    "https://raw.githubusercontent.com/carmenchica3636/listas-iptv/refs/heads/main/lista_movistar.m3u",
     "https://raw.githubusercontent.com/minhtienth15/mynote/main/t04.m3u",
 ]
 
