@@ -11,24 +11,24 @@ from urllib.parse import urljoin
 
 COMPROBAR_CANALES = True   # False = no comprobar nada (como antes)
 HILOS = 20                 # comprobaciones simultáneas (menos = menos bloqueos)
-CONNECT_TIMEOUT = 6        # segundos para conectar
-READ_TIMEOUT = 8           # segundos esperando datos
-REINTENTOS = 1             # reintentos extra ante fallos dudosos
+CONNECT_TIMEOUT = 8        # segundos para conectar
+READ_TIMEOUT = 15          # segundos esperando datos
+REINTENTOS = 2             # reintentos extra antes de dar un canal por caído
 
-# Este script se ejecuta en GitHub Actions, que sale a internet con IPs de
-# EE. UU. Desde ahí, un canal español puede fallar (403, timeout, HTML)
-# aunque funcione perfectamente en España, así que esos fallos NO son
-# fiables. Solo son fiables los fallos definitivos (404/410, dominio
-# inexistente, conexión rechazada), que no dependen del país.
-#   False -> solo los fallos definitivos van a "No funcionan" (RECOMENDADO
-#            en GitHub Actions: no manda canales buenos a "No funcionan").
-#   True  -> también los dudosos (solo fiable ejecutando desde España).
-DUDOSOS_COMO_CAIDOS = False
+# Este script se ejecuta en GitHub Actions (IPs de EE. UU.). Desde ahí:
+#  - Un canal geobloqueado suele responder 401/403/451 (bloqueo por país o
+#    por acceso). Eso es AMBIGUO: puede funcionar en España -> se perdona.
+#  - Un canal realmente muerto suele dar 404/410, dominio inexistente,
+#    conexión rechazada, timeout (el servidor ya no responde), errores 5xx,
+#    respuesta vacía o una página HTML en vez de vídeo -> se manda a
+#    "No funcionan".
+DUDOSOS_COMO_CAIDOS = True
 
-# Motivos dudosos que NUNCA se mandan a "No funcionan" aunque lo anterior
-# sea True, porque no indican que el canal esté muerto (p.ej. 429 = te
-# están limitando las peticiones). Se compara con el inicio del motivo.
-MOTIVOS_PERDONADOS = ("HTTP 429",)
+# Motivos que NUNCA se mandan a "No funcionan" porque no prueban que el
+# canal esté muerto (geobloqueo, acceso restringido, límite de peticiones).
+# Se compara con el inicio del motivo, así que "HTTP 403" también cubre
+# "HTTP 403 (segmento)". Quita alguno de la lista para ser más estricto.
+MOTIVOS_PERDONADOS = ("HTTP 401", "HTTP 403", "HTTP 429", "HTTP 451")
 
 HEADERS_STREAM = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
