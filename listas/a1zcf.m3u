@@ -187,12 +187,12 @@ https://3segdiv-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 #EXTINF:-1 tvg-id="M+ Liga de Campeones  4" tvg-name="M+ Liga de Campeones  4" group-title="00 ⭐ Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP3", M+ Liga de Campeones  4.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
-#KODIPROP:inputstream.adaptive.license_key=a165d3704ac34cdda4fbbd8fd9bd9888:f7e6b1eee6baa5871f0ddbc2227bb930
+#KODIPROP:inputstream.adaptive.license_key=84e9540b85ae4ebb9b4147b3a91105d8:0a272106490444e23d00e3f77d30aeb0
 https://04campeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 #EXTINF:-1 tvg-id="M+ Liga de Campeones 5" tvg-name="M+ Liga de Campeones 5" group-title="00 ⭐ Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP4", M+ Liga de Campeones 5.
 #KODIPROP:inputstream.adaptive.license_type=playready
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
-#KODIPROP:inputstream.adaptive.license_key=eb7b59646d3a40e2a4a74b5d117d9746:0c8076407f293da8f294f2c2aab37dfb
+#KODIPROP:inputstream.adaptive.license_key=3eb5b88a1a1947378a4b88a78a2793a4:5ce1809dca51385b84e6f0b3f2533710
 https://05campeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 #EXTINF:-1 tvg-id="M+ Deportes 4" tvg-name="M+ Deportes 4" group-title="00 ⭐ Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/USOP3", M+ Deportes 4.
 #KODIPROP:inputstream.adaptive.license_type=playready
@@ -2050,6 +2050,11 @@ https://1uhd-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGc
 #KODIPROP:inputstream.adaptive.license_key=8dc22d6aeabf41808df715808a823204:80bc99dd365f4d1e5e6ca1aab813a7c7
 #EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
 https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5313/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LALIGA" tvg-logo="https://estatico.emisiondof6.com/recorte/m-NEONEGR/wpmos/MLIGA" group-title="04 ⭐ Movistar+",M+ LALIGA. Opcion 2
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=5202b8b80bd14b83aed390e158405a05:1a0ba78fb438b3669e66ef4f03522f7c
+https://skam-pry-movistarplus.emisiondof6.com/index.isml/Manifest
 #EXTINF:-1 tvg-id="LaLiga TV Bar" tvg-name="LaLiga TV Bar" tvg-logo="https://static.masmediatv.com/channel_logos/gnZg4NkBEYlDEslkFBcBOWsqWFcvHAtA.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/d/dd/DAZN_BoxedLogo_01_RGB.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" catchup-type="default" catchup-source="http://vfpc.gb.vodafone.es/sdash/LIVE$CUP038/2.mpd/Manifest.mpd?start=LIVE&end=END&device=PLAYOUT02&start={utc:Y-m-dTH:M:S}Z&end={utcend:Y-m-dTH:M:S}Z&device=DASH_XDSL_SSP_ENC_LIVE" catchup-days="150" group-title="02 ⚽ Fútbol",LaLiga TV Bar
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
