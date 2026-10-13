@@ -17,17 +17,24 @@ jobs:
         with:
           ref: main
 
-      - name: Crear 30 copias
+      - name: Crear 100 copias con nombre aleatorio
         run: |
-          TOTAL=30
-
+          TOTAL=100
           mkdir -p listas
-          rm -f listas/*.m3u
 
-          for i in $(seq 1 $TOTAL); do
-            DESTINO="listas/dispositivo$i.m3u"
-            cp lista.m3u "$DESTINO"
-            echo "dispositivo$i: https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/$DESTINO"
+          # Los nombres se generan UNA sola vez y se guardan,
+          # para que las URLs no cambien en cada ejecución.
+          touch listas/nombres.txt
+          while [ "$(wc -l < listas/nombres.txt)" -lt "$TOTAL" ]; do
+            N=$(openssl rand -base64 60 | tr -dc 'a-z0-9' | cut -c1-5)
+            [ ${#N} -eq 5 ] || continue
+            grep -qx "$N" listas/nombres.txt || echo "$N" >> listas/nombres.txt
+          done
+
+          rm -f listas/*.m3u
+          head -n "$TOTAL" listas/nombres.txt | while read NOMBRE; do
+            cp lista.m3u "listas/$NOMBRE.m3u"
+            echo "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/listas/$NOMBRE.m3u"
           done
 
       - name: Subir cambios
