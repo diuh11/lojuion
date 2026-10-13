@@ -1,0 +1,59 @@
+name: Copias por TV
+
+on:
+  workflow_run:
+    workflows: ["Actualizar"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  copias:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Crear una copia por TV
+        run: |
+          SECRETO='6##9##6##69##62###38'
+
+          # Una TV por línea:  nombre  fecha-de-caducidad (AAAA-MM-DD)
+          cat > dispositivos.txt <<'EOF'
+          salon 2027-10-13
+          cocina 2027-10-13
+          habitacion 2027-10-13
+          EOF
+
+          mkdir -p listas
+          rm -f listas/*.m3u
+          HOY=$(date +%F)
+
+          while read NOMBRE CADUCA; do
+            [ -z "$NOMBRE" ] && continue
+            TOKEN=$(echo -n "$SECRETO$NOMBRE" | sha256sum | cut -c1-10)
+            DESTINO="listas/${NOMBRE}_${TOKEN}.m3u"
+
+            if [[ "$HOY" > "$CADUCA" ]]; then
+              printf '#EXTM3U\n#EXTINF:-1,Lista caducada\nhttps://example.com/caducada.mp4\n' > "$DESTINO"
+              ESTADO="CADUCADA"
+            else
+              cp lista.m3u "$DESTINO"
+              ESTADO="caduca $CADUCA"
+            fi
+
+            echo "$NOMBRE [$ESTADO]: https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/$DESTINO"
+          done < dispositivos.txt
+
+          rm dispositivos.txt
+
+      - name: Subir cambios
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add listas
+          git commit -m "Copias por TV actualizadas" || exit 0
+          git push
