@@ -257,6 +257,10 @@ GRUPOS_PROTEGIDOS = [
     "movistar deportes playready",
 ]
 
+# Prefijo que se añade al nombre de los grupos protegidos para que
+# aparezcan los primeros en la app (antes de "01 ...").
+PREFIJO_GRUPO_PRIORITARIO = "00 ⭐ "
+
 
 # ---------------------------------------------------------------------------
 # CATEGORIZACIÓN
@@ -469,8 +473,17 @@ def limpiar_y_categorizar(extinf):
             grupo.casefold()
             for grupo in GRUPOS_PROTEGIDOS
         }:
-            contador[nombre_grupo] += 1
-            return extinf
+            # Grupo protegido: se conserva el nombre original, pero con
+            # un prefijo "00" para que la app lo muestre el primero.
+            nuevo_nombre = PREFIJO_GRUPO_PRIORITARIO + nombre_grupo
+            contador[nuevo_nombre] += 1
+            return re.sub(
+                r'group-title="[^"]*"',
+                lambda m: f'group-title="{nuevo_nombre}"',
+                extinf,
+                count=1,
+                flags=re.IGNORECASE,
+            )
 
     # Eliminar la categoría original
     extinf = re.sub(
@@ -495,6 +508,12 @@ def limpiar_y_categorizar(extinf):
         )
 
     return extinf
+
+
+def _es_prioritario(extinf):
+    """True si la línea EXTINF pertenece a un grupo protegido que ya
+    lleva el prefijo prioritario en su group-title."""
+    return f'group-title="{PREFIJO_GRUPO_PRIORITARIO}' in extinf
 
 
 def _quitar_urls_de_atributos(extinf):
@@ -545,9 +564,13 @@ def cumple_es_o_movistar(extinf):
 # PROCESO PRINCIPAL
 # ---------------------------------------------------------------------------
 
-salida = [
-    f'#EXTM3U url-tvg="{EPG_URL}"'
-]
+cabecera = f'#EXTM3U url-tvg="{EPG_URL}"'
+
+# Los canales de grupos protegidos (movistar deportes playready) van a
+# una lista aparte para escribirlos los PRIMEROS en lista.m3u.
+salida_prioritaria = []
+salida = []
+destino = salida
 
 for url in URLS + URL_ES_ONLY + URL_ES_SUFIJO_O_MOVISTAR + URL_ULTIMA:
     try:
@@ -623,9 +646,14 @@ for url in URLS + URL_ES_ONLY + URL_ES_SUFIJO_O_MOVISTAR + URL_ULTIMA:
                     )
                 else:
                     linea = limpiar_y_categorizar(linea)
+                    destino = (
+                        salida_prioritaria
+                        if _es_prioritario(linea)
+                        else salida
+                    )
 
             if not omitir:
-                salida.append(linea)
+                destino.append(linea)
 
     except requests.RequestException as error:
         print(
@@ -636,7 +664,10 @@ for url in URLS + URL_ES_ONLY + URL_ES_SUFIJO_O_MOVISTAR + URL_ULTIMA:
             f"Error procesando {url}: {error}"
         )
 
-contenido_final = "\n".join(salida) + "\n"
+# Cabecera + canales prioritarios + resto de canales
+contenido_final = "\n".join(
+    [cabecera] + salida_prioritaria + salida
+) + "\n"
 
 md5 = hashlib.md5(
     contenido_final.encode("utf-8")
