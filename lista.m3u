@@ -1392,3 +1392,761 @@ http://lutik.kazaktelekom.com/iptv/5UVGP564T2GFDE/31867/index.m3u8
 http://lutik.kazaktelekom.com/iptv/5UVGP564T2GFDE/31874/index.m3u8
 #EXTINF:0 tvg-rec="0" group-title="04 ⭐ Movistar+",M+ Golf 2 HD ES
 http://lutik.kazaktelekom.com/iptv/5UVGP564T2GFDE/31878/index.m3u8
+#EXTINF:-1 tvg-id="Movistar Plus" tvg-name="Movistar Plus" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MPLUS" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5240/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",Movistar Plus+.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=8468eebb95d8418ca85df6a2381fb64d:008748a6acbbb3491bf5dd49355d8207
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5240/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Vamos" tvg-name="M+ Vamos" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/VAMOSD" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4767/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Vamos.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=77b7e5e8b6354bf8925af0ddd24afebd:635ed494d990466029b9681c7d981143
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4767/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Vamos 2" tvg-name="M+ Vamos 2" tvg-logo="https://www.movistarplus.es/recorte/m-NEO/canal/VAM2SD.png" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/5490/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Vamos 2.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"96a14dfe48c64a8ba57065c5f1ffaca3": "0383e84e01fb200b4e7d9247564baefa", "be3c836fe07144f6b9e81c80dc2bf913": "ac8ae88fa726a6328cc092175580c784","085364687da44f9fb406d3afc1e1f170": "5a1007728801876541b60c4cce2c7be2"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5490/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Vamos 3" tvg-name="M+ Vamos 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MELLAV" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5093/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Vamos 3.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"3429df35566d4b7c8c166e288d8a5223:99c3cb0bf50f758c2c29bf71b75cac3f", "ada0feea773e4c63a565009240eb6dd7:b5be7fd20a239c7f1cb708faca6946c9","bc457d13e8354e3ba3fe467dfe5315ed:3abb7fb8106da89825dab57fd1c2e24e"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5093/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga HDR" tvg-name="M+ LaLiga HDR" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIGUH" catchup-source="https://stover-wp19.cdn.telefonica.com/5077/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ LaLiga TV HDR
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"2e0bb7fb0aa441758a91e758bf30d829": "e0b47b64161c8f96933d4e828b0e8a7e", "3e81e7e074c44f14852a996968378f4d": "e6260663029c62c97fa6f43f1620dc50", "39d712255fe54f41b6b9587d45e3c5a8": "3471f707aad517e2aa718dd04e416e07"}
+https://stover-wp19.cdn.telefonica.com/5077/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga HD" tvg-name="M+ LaLiga HD" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIGA" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4882/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ LaLiga TV.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"9fca0ab86d2243e3a1f610bdc0bfd5d9": "838237f2314eff8dddc8dff8b533e40c", "ac21797938094449917d18ed2a302b6d": "f56b00d9e8abc67877f83645734924da", "ec2846d2c0e04531be5100e0c4c7decd": "f28fd5016a9117604330220c0ad086aa"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4882/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN LaLiga" tvg-name="DAZN LaLiga" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/DAZNLI" catchup-source="https://stover-wp19.cdn.telefonica.com/5119/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN LaLiga
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"d026b5b9a57f46ec8d080f792ecbc1c0": "dc02a224dce8b8e7a2aa25b2793079c0", "fbdbae53354a43918bdd15523272b9f4": "490b90b11282aa1f73c2ceed7558759a", "a55325eb5c18439ba55a2dc999853da8": "47ece1f49eb66d17a7e82a9e68461ae8"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5119/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN LaLiga 2" tvg-name="DAZN LaLiga 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/DAZNL2" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/5120/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN LaLiga 2
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"5c2338f9f7224f659b6650930c966888": "aefa97690fdea5e660ffc93e8a9e08c2", "5b972fa88d0a468baea398dbbc505c46": "e61ae4674634e6337319ea0b84a394ac", "520694a52df3478fa4b2a4296bba3534": "2efa17ae63ef83cc021bcea4f52991be"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5120/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="LaLiga TV Hypermotion" tvg-name="LaLiga TV Hypermotion" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIGS" catchup-source="https://stover-wp19.cdn.telefonica.com/5124/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="02 ⚽ Fútbol",LaLiga TV Hypermotion.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"314e5e72af354a37878def9bdae09751:e5a4c1c47e8c1293d4a51fcbf51f53d8", "e0e190dbfc3e4ee59429ec2827e55905:64f18827ac5f92d3c95035297b836939", "3424056a1fa446ef9f91b39c58d52231:57893b8e1af56f70a6c787412d8c826b"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5124/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 2" tvg-name="M+ LaLiga 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIUHD" catchup-source="https://stover-wp19.cdn.telefonica.com/5474/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ LaLiga TV 2. HDR
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"0ed554eb6edd4846bfb9d1eeb8d91bf0": "b637af2db44769d356877bc5d659b343", "511e0d01448e45e5b782010fecd2a5c0": "62e9ff3639e363775c65e84b89eb755a", "8bae99b0d2b941239ad0f463380478c0": "d7c37abab21bd2cdade05cf31c612554"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5474/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 2" tvg-name="M+ LaLiga 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIG1" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4833/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ LaLiga TV 2.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"0ed554eb6edd4846bfb9d1eeb8d91bf0": "b637af2db44769d356877bc5d659b343", "616f9ac066f1426eb3906aa36374fdde": "40f67a8ef6afed540bb819ea9cf2ed7f", "8bb75a997650482fbf730639175a4d03": "3d872a5e78e7138e921e12c386d025a2"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4833/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Liga de Campeones" tvg-name="M+ Liga de Campeones" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAPIO" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4594/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Liga de Campeones
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"c067cb8d7357499f94599a607b85f9d3": "da6ae5a046a56ee684fa8359dbe0c1fd", "1151074e93874e36946707b94bde751f": "baf422db26287202bd4759c4a76a8f92", "933432671f6546e78275b4e8f78a2f63": "fc7e7a3e482bc3301912e35d71145d23"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4594/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 2" tvg-name="M+ Liga de Campeones 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP1" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4581/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 2
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"c0890637e2af46d497b5620cc88919ab": "d321758640c54446306c6285ac0607f0", "2766b0a9d2af4bb38ff33ef44214dc73": "5db6f9aca59aeb1ea7606e3e207cf09b", "c789051a95d845e193e1ed15978c7c2d": "40b0856dd174ff011836e0ece10b9e94"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4581/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 3" tvg-name="M+ Liga de Campeones 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP2" catchup-type="default" catchup-source="https://stover-wp0.cdn.telefonica.com/4564/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 3.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"9878583b43714da68b4c1bbfc7642ee3": "777e2a87439c1b28c9015fca5bffa264", "0046c5afb62c48b0b6b4d004d9a613c0": "bae6953fae4365f9001e7660d67d521b", "d7e0d0bb52ca43488321b67ec58840d5": "e5e5f44f7d97b218ca32e45c5d9c0a7b"}
+https://stover-wp0.cdn.telefonica.com/4564/vxfmt=dp/Manifest.mpd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Copa del Rey" tvg-name="M+ Copa del Rey" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MCOPA" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/5355/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Copa del Rey / Primera federacion
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=37ff0f9bde3045c8a3a421cac241ff49:4d3bfff8d009a77ce9ef3a9302baa064
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5355/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Deportes" tvg-name="M+ Deportes" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CPDEP" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4592/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Deportes
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=f18c39b70f8146d9a79e9dc0c329464d:646fd34f890a5cdb655bf9a97af06d47
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4592/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Deportes 2" tvg-name="M+ Deportes 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/ARTHUR" catchup-type="default" catchup-source="https://stover%68csmno-wp0.cdn.telefonica.com/4585/vxfmt=dp/Manifest.mpd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Deportes 2
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=950ea23dbe3a4fde87568e21de5db567:ba466109f142e2ad4df606379a8e2aa0
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68csmno-wp0.cdn.telefonica.com/4585/vxfmt=dp/Manifest.mpd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Deportes 3" tvg-name="M+ Deportes 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/USOP2" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4556/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Deportes 3
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=13770bb91478480d8805a8d800a001f9:2b6236a5edc2894a972c0791932f3b4e
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4556/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Golf" tvg-name="M+ Golf" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/GOLF%2B" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4584/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Golf
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=ff9f96b0f764421fb84df9e6babe45e8:5d95b15a3e821d733d09aa82faacfbdb
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4584/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN F1" tvg-name="DAZN F1" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MVF1" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4608/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN F1.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=413b3adb78dd4684a7866819786b8836:92d6e5cfbe02fef2e09e27617e3b9403
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4608/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN MotoGP" tvg-name="DAZN MotoGP" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/wpmos/DAZMOT" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/5523/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN MotoGP.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"aecc0a846e2340148d1091a29d14f73c": "01bfbd6bd2696fd019e5e839fc3d840f", "7d344cf9a59141588640d7858947d6f9": "102e9ee2b40fc94f4ddbcc14ff35f19d", "490c1784e23a481b9472fb64066b0b7e": "8bf74f39919aab23fec19fbae0e8da42"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5523/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN 1" tvg-name="DAZN 1" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/M1SD" catchup-source="https://stover-wp19.cdn.telefonica.com/4949/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN 1.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"be55ca2023d646d2909637a6f344e172": "a654880f5535ef3e6644a41cf1f8f25c", "091d996297be4998ae9405617463efa1": "26d95b9e9e1d88b492c857cea3665afa", "895ccbb1e5bd4ae2bc5a0e5613c8dbae": "7adb0de35b30071bfc24a45ab10c74c8"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4949/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN 2" tvg-name="DAZN 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/M2SD" catchup-source="https://stover-wp19.cdn.telefonica.com/4950/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN 2.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"645d756483f543d3b433f8989a570b39": "825abbe13521db2aea119e1531d891cb", "f96d1d1467a94905b056d59c7c2cc7f8": "92338e6262a1ceb677b5c32d21860a2a", "ab771447adf1411d958290eb305f9666": "6890d02e8d74987cdceabafb8f935227"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4950/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN Baloncesto" tvg-name="DAZN Baloncesto" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/M2SD" catchup-source="https://stover-wp19.cdn.telefonica.com/5499/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN Baloncesto
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"ad63200d3b0d40f68ff161293596ced9": "99af6ebd08f81e45b2e62089d1ce38fd", "d79a1ae19d1f41b7828b7fcc2d15fc3c": "7b57214a86f650323e1590b59cce6a8a", "ec39badce7064483be595219ca308256": "e11a1e4f615805f11f9bb210f439e657"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5499/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN Baloncesto 2" tvg-name="DAZN Baloncesto 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/M2SD" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5503/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN Baloncesto 2.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"eee8b27561af407f82d311b444df2c32": "bd68ac3d4c1648ee44aebce76a7ef35e", "04ff25127643407080fa7cd88a89cb7c": "913657ae0e6c341dc956a96261e8f0ab", "b3d1af1332554436887e3c53e3cad964": "f74382e044a09e0321196ba9ab5bf6d6"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5503/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN Baloncesto 3" tvg-name="DAZN Baloncesto 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/M2SD" catchup-source="https://stover-wp19.cdn.telefonica.com/5506/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN Baloncesto 3
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"824ae25dd0aa474ea91cf3c3cec8d937": "6ab5e93334195b0367ff9ce74433f9c7", "ad57d05b783a4202ba323d6f42cf14b4": "73bc3abe946384ed8d59e3afbd21b990", "8b9615745d0a458b86bf4dad34f32285": "f998439208a572ae9b9770252bc5955d"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5506/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Baloncesto" tvg-name="M+ Baloncesto" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MBALCT" catchup-source="https://stover-wp19.cdn.telefonica.com/5536/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Baloncesto.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+#KODIPROP:inputstream.adaptive.license_key={"8cf1dda3d6c642bf8788d5848a28ca9a":"eb3b16e9e3075ae02cf89d77166b7e3c"}
+https://stover-wp19.cdn.telefonica.com/5536/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Baloncesto 2" tvg-name="M+ Baloncesto 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MBALC2" catchup-source="https://stover-wp19.cdn.telefonica.com/5539/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Baloncesto 2.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+#KODIPROP:inputstream.adaptive.license_key={"75fa613409dd4b1294e3bfdb025dd9f9":"ce5ed9fbcf7853460c3d07998bc1c1de"}
+https://stover-wp19.cdn.telefonica.com/5539/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Baloncesto 3" tvg-name="M+ Baloncesto 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MBALC3" catchup-source="https://stover-wp19.cdn.telefonica.com/5566/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Baloncesto 3.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+#KODIPROP:inputstream.adaptive.license_key={"657f620885f04ed793212b21f2044f0b:d93318f9cbc0d9aae4630a5c21e0aecf"}
+https://stover-wp19.cdn.telefonica.com/5566/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Wimbledon UHD" tvg-name="M+ Wimbledon UHD" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/POPUHD" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/5313/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Wimbledon 4K.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=8dc22d6aeabf41808df715808a823204:80bc99dd365f4d1e5e6ca1aab813a7c7
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5313/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/ESP" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4605/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="06 🎾 Deportes",Eurosport 1.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=33218b521f0e447a935adc991554c66b:f36cd41061ee87411b41db9ec3ad8796
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4605/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/ESP" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4605/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="06 🎾 Deportes",Eurosport 1.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=33218b521f0e447a935adc991554c66b:f36cd41061ee87411b41db9ec3ad8796
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4605/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="Eurosport 2" tvg-name="Eurosport 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/ESP2" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4580/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="06 🎾 Deportes",Eurosport 2.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=16fe5ae7946b4197b2411c9fff61d228:66446cc9b6b9c6943c6b09fabef57bf1
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4580/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="GOL PLAY" tvg-name="GOL PLAY" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/GOL" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4577/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="99 📦 Otros",GOL PLAY.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"928c0c4fe697488caf522ecbc7a38825": "5265e6af222f85f523ea646b83e8a362", "da89bec98537435196aa3cfd79ad2d98": "bc0cdb2577d16233706258d65df08831", "0bb175618a8743629cf18a6830f6f6ba": "30c9965e794a2f239a26b850fbc313c8"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4577/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="Teledeporte" tvg-name="Teledeporte" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/TDEP" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4504/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="06 🎾 Deportes",Teledeporte.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=82fce7e54aba4ba5a08bf4a3c2abc744:20f57ed82917d9538d0192314e61ca7b
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4504/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="Real Madrid TV" tvg-name="Real Madrid TV" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/REALM" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/5198/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="02 ⚽ Fútbol",Real Madrid TV.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c1a47794fbcc415693b765899460e639:6a55c23eebf1286d28d53eb94d640d78
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5198/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 3" tvg-name="M+ LaLiga 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIG2" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4834/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ LaLiga TV 3.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"c886aeebfd5e40f088e696cf71a086a8": "4ff18dee04058f015a18cd2002f70b0d", "84c51f1ade2e4d49825639914d836622": "7f086ba34dafe23e2051d58411a172da", "f0efb2353a724567b20c9cf99d8960d0": "da8df9698f81cf4972b40115ea8f3716"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4834/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 4" tvg-name="M+ LaLiga 4" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIG3" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4835/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ LaLiga TV 4.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"9f45d81ea0704913b2dddfe934ddc225": "423fba9e60232ff62c5346f983fa0a34", "ae5fa6260ca140d1a65792f7323395dc": "0b8ec32ae486e6fd6bf6c19168ea9b83", "3cb1d2f2c3e14fa98692110dd1604bbc": "86a23888fba0582be2af7db26c01d945"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4835/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 5" tvg-name="M+ LaLiga 5" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIG4" group-title="04 ⭐ Movistar+",M+ LaLiga TV 5.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"1b2b964968f740ff81be30add6cedbcd:4caaec509e86bbdc667a3d1ab08616ec", "8bcdc215de7e4671b16ebb5a202d3033:77b60fe7d8bee11dc355c26fb259f490", "60350c66bf734c4da3bfa0611bafc451:7a302740cb819769bf4a45a72b2db442"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4835/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 6" tvg-name="M+ LaLiga 6" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIG5" group-title="04 ⭐ Movistar+",M+ LaLiga TV 6.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=1aaf44a637af4da1957bb0962bcfd506:1765a7a2dcb247583014913d6c9c9608
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4836/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 7" tvg-name="M+ LaLiga 7" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIG6" group-title="04 ⭐ Movistar+",M+ LaLiga TV 7.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=dc3a7027da9c4431b0aba3dc6ce7ee30:abbb363d08e9d5a67e3b79305e0e04e2
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4837/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 8" tvg-name="M+ LaLiga 8" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIG7" group-title="04 ⭐ Movistar+",M+ LaLiga TV 8.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=dc3a7027da9c4431b0aba3dc6ce7ee30:abbb363d08e9d5a67e3b79305e0e04e2
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4837/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 9" tvg-name="M+ LaLiga 9" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIG8" group-title="04 ⭐ Movistar+",M+ LaLiga TV 9.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=dc3a7027da9c4431b0aba3dc6ce7ee30:abbb363d08e9d5a67e3b79305e0e04e2
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4838/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 10" tvg-name="M+ LaLiga 10" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIG9" group-title="04 ⭐ Movistar+",M+ LaLiga TV 10.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=dc3a7027da9c4431b0aba3dc6ce7ee30:abbb363d08e9d5a67e3b79305e0e04e2
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4839/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ LaLiga 11" tvg-name="M+ LaLiga 11" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIG10" group-title="04 ⭐ Movistar+",M+ LaLiga TV 11.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=dc3a7027da9c4431b0aba3dc6ce7ee30:abbb363d08e9d5a67e3b79305e0e04e2
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4840/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="LaLiga TV Hypermotion 2" tvg-name="LaLiga TV Hypermotion 2" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIGS2" catchup-source="https://stover-wp19.cdn.telefonica.com/5127/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="02 ⚽ Fútbol",LaLiga TV Hypermotion 2.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"b882ee858e284ae7872d68e3dac0eec4:e73a33bb1e89f5edf4c4b9c9fc1714f0", "40e57a39767f4286988dd06173d0fb7a:33d17d1e108855ba72b67c2c718cbbd6", "2fc77c5e033f45ca874fdc0f28e79200:31052a3d0c5cd70934e5139ae5790235"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/5127/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="LaLiga TV Hypermotion 3" tvg-name="LaLiga TV Hypermotion 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIGS3" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5137/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="02 ⚽ Fútbol",LaLiga TV Hypermotion 3.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"256c388668ed4575a3528bcfc8c39d7e:f86b75e0f0eb771dbf5de41f13f802dd", "48c5b68486d847c0baedfad4d6eb5c03:4a5c313d3ffb15fac5bd7325d4d3460a", "8726ee7d09dc41a688ada5df49c08ea1:8ce090ab40e5af32015422775fb1bc5c"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5137/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 4" tvg-name="M+ Liga de Campeones 4" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP3" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4565/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 4.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"68cdb7d1cad64977a5abd94a214b3e31": "1b227005d4c3efd148780296bf4d75fe", "22482d7091ab4f63b28a5fa0ccedc864": "9bc561827a46627bb7ed0dae4292d276", "3f944a5504d94410b31a50a2403ebfd6": "a337d720743a4fc77ace4f2ce896189b"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4565/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 5" tvg-name="M+ Liga de Campeones 5" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP4" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 5.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"02ea7dfe72d049e89c8f8e1d79aebfb8": "758b9b273b17c9a9407410ab03780eb3", "8a069f2a799847ff976991e3ab0a5cf6": "f5dba93a55b50c313bdcd48d93d1d66d", "98a14d5bd47c42c69884ba78e49afea3": "cd7cf2f413dacf52d809d2df664db338"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4568/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 6" tvg-name="M+ Liga de Campeones 6" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP5" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 6.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"a880681bf75f455294ad32b1177b1d50": "30cd45ad64a375dbc0abe729aaf4ed09", "6e7e7460655f496ca7b8c2d2058a4a1b": "47f223abc6e5b36728158f2db7302489", "7d97f219a1b142edaddc3eb522fe50e5": "959dcf59e38cb5826e8418d27c89f059"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/4568/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 7" tvg-name="M+ Liga de Campeones 7" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP6" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 7.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"2510794e9fac4719ba5fdcfd40bb2bd8": "ea50b2fb9edd318eb88c640f98d0c478", "0dc7e039119140ec80dc434835e61073": "6d5981543f204b6854b2df2129bd413e", "bc4ccd0933a64d7d8c0ea4dd252366f0": "9b9123603e74ef255be84f25622bfb45"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://07campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 8" tvg-name="M+ Liga de Campeones 8" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP7" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 8.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"b0bf4c0bff6d4ea9ad5ea72a6d4dc9ee": "90935c2f1bb4b608e27157eaed9e30df", "063be2946bdb4de8b06cdaab96b79e2e": "79966530f1332e8da93661265fc3247e", "dcac940a6f644b5284593c4d2b4f5769": "3748bd6f27c4aa2bbe8134bc9b62ca52"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://08campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 9" tvg-name="M+ Liga de Campeones 9" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP8" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 9.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"2e1efda12a6c4ce1a0e54d4dbd45affc": "d512c2291ea628b12ef9e222abf3adfb", "2109e625aa4142dfb4775a26835bf7d5": "544a131f02f9e71334842c1c065abfec", "5c62a50bca564aa8beac3f3ceaa15590": "127bbea72177d3e57f97f5ac8984da3b"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://09campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 10" tvg-name="M+ Liga de Campeones 10" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP9" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 10.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"ddb0f615e0274f049fb0ccc8bae93f3b": "16a739053f0689b337a505d17e9b33ba", "127ee8c0e90443ac9d5cb929e77d532d": "4e203fc6dc0d15ed2bd7efe0f59139fa", "5350468d8bb444c09160f16b3ffd8a2b": "19f7d99a9ab7864b772467645994314c"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://10campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 11" tvg-name="M+ Liga de Campeones 11" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP10" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 11.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"de22428cd02c427197e2afca61051615": "220ea6b2e765f54e28fbd47445049659", "2960809614ee413e89ec2e17d8ce13fe": "ab5eea1a819d7e632a6c0dcf53bd70a5", "94a6745b6b8f45e6a332bd4bcb5133d4": "5dd88314e6ccc7deb6998677c946c33d"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://11campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 12" tvg-name="M+ Liga de Campeones 12" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP11" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 12.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"a3e272c1143a4c67811cc49e7a2408e2": "54ce61965bcb66652ca87d1f4a8f2d8c", "5b7227136c5648eabb7e7df557bdcb87": "cefe5e8d42f52d87f51b3dbcf739fe87", "fb81efa0bb0b41a6a0f8a86603351808": "f319316fd4686f351036afa6b1c3a32e"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://12campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 13" tvg-name="M+ Liga de Campeones 13" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP12" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 13.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"40881bea8d274d948e12806bff0d4b1e": "2c5070dfbe12f3879f0577c4eab13e56", "04287ef30f6f49eab489843fdd7eeab3": "240927504e287b570b91a94769979c13", "8e0c173af69d4f96bee063506d8e703f": "8c4c1fbc2e0c83063376f27eac605966"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://13campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 14" tvg-name="M+ Liga de Campeones 14" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP13" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 14.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=599f4a42681e47dbae61f8787b6937ee:cc4e347800cc407acfb4c5b4a193edff
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://14campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 15" tvg-name="M+ Liga de Campeones 15" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP14" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 15.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=219886d081b641c3a7ff629285a8f424:26df42847064f44e4136cc34d60988d6
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://15campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw"&User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 16" tvg-name="M+ Liga de Campeones 16" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP15" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 16.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=eb73c76ad5e94594b7c21873e69ed861:8c6168b7b3be97fb73e03ddb11c19f3c
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://16campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 17" tvg-name="M+ Liga de Campeones 17" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/CHAP16" group-title="04 ⭐ Movistar+",M+ Liga de Campeones 17.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=7a269d28686f451db913ccadef58e9ac:8f72a76b699a2a5ff35058f36c14b421
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://17campeones-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Deportes 4" tvg-name="M+ Deportes 4" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/USOP3" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4561/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Deportes 4.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=f3bdb1e5ba384cfa86b7431d5b76af0a:31f48c32e7c204e080f3d8b1a9d5d17f
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4561/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Deportes 5" tvg-name="M+ Deportes 5" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/USOP11" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4562/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Deportes 5.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9aa45540f9a44a9782ed5d09ecaf25f9:dae69d47171bf1247220a1ea1e97385e
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4562/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Deportes 6" tvg-name="M+ Deportes 6" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MULTI8" catchup-source="https://stover-wp19.cdn.telefonica.com/4566/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Deportes 6.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=2fe1eb28667e4fc396f1532f3abd6a37:1f2daf34eed9b667e702ce16baece0c7
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4566/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Deportes 7" tvg-name="M+ Deportes 7" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MULTI6" catchup-source="https://stover-wp19.cdn.telefonica.com/4569/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Deportes 7.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b460369baa24719b2bdcfc0a4bd978a:2189232c870323e05eee0c84bf02082a
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4569/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="M+ Deportes 8" tvg-name="M+ Deportes 8" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MULTI9" catchup-source="https://stover-wp19.cdn.telefonica.com/4769/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Deportes 8.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=767258fc8dcf40a1a6dcf957e635fbe4:fcfb6ecf33cc76009ef024a0ed643655
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4769/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN LaLiga 3" tvg-name="DAZN LaLiga 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/DAZNL3" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5209/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN LaLiga 3.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"1e8f4c3bf8d84935ac3efbe60c1a5a4a": "8d4f6582aedd72ba0d18e1e3391c59ff", "9ddd3d0217904aaf9ed051da729f9904": "0cb22ceae3da08ad64f6bfbfc463fd2b", "304ab899312242aab437897f5f4650a5": "3660076b5117cd08b364ba975ff9a659"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5209/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN LaLiga 4" tvg-name="DAZN LaLiga 4" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/DAZNL4" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5213/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN LaLiga 4.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"cae1a4500d5e4e9dacb1e27f86639ae5": "1696763664e40fef89ed92bc28a883ec", "0a8feb4f5c0244b4b53c50175bedebb1": "5374c3674edb286e6c931982aa56b4c0", "51472b00b33b4ae68535b61c463c1ed5": "375d3c1a5e76b7ae8c0795362884ffc9"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5213/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN 3" tvg-name="DAZN 3" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/DAZN3" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4961/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN 3.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"b4641842b5824390a7fe8d4ec781031d": "cd156815ef05dcc9fcc3626e7d52db79", "72e08cac5c604a3bb01d979ec52c452d": "490e31672fd8f11759c66e9279adb2f4", "2e83b2200f704b6facff89a8750a5d8d": "f06a007f09bcb5e79ec6c3e02b82f3ee"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4961/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="DAZN 4" tvg-name="DAZN 4" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/DAZN4" catchup-type="default" catchup-source="https://stover-wp19.cdn.telefonica.com/4962/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="03 🔥 DAZN",DAZN 4.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"436c2164392e460dae41420f53f9f396": "8e0ea1289135355f0aef59266bd0070e", "fe90ea215ae94d4ea4cd1dcb5b35fdfe": "0280c1d8f44e9f0577dfb9b230a98f64", "e0499c622f594909a75f3723eec73221": "d27f10759592b7720ca11921684f5691"}
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover-wp19.cdn.telefonica.com/4962/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="" tvg-name="Test UHD 1" tvg-logo="http://www.movistarplus.es/recorte/m-DPBLAN/sammos/TESUHD" group-title="99 📦 Otros",Test UHD 50FPS.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=50318f5383ba4a318e7949ebb08a0ba7:1681fcc4f1cfed25d21128f0e4574dce
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://1uhd-dash-movistarplus.emisiondof6.com/manifest.mpd|x-tcdn-token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI1OGNhNGM0NGFiOTQ0Y2FiY2U4N2FjNGJmZmI4MDNkIn0.eyJpYXQiOjE3ODY3MDI0NTQsInN1YiI6Ino5V2NHUGJYSHpmOWppR1k3U3IzYWc9PSIsImlkcCI6Im1vdmlzdGFyKyIsImF1dGhfdGltZSI6MTc4NjcwMjQ1NCwibmJmIjoxNzg2NzAyNDU0LCJleHAiOjE3ODY3NDU2NTQsImlzcyI6Imh0dHBzOi8vc290ZXItcGYuc3ZlLnZpZGVvLnRlbGVmb25pY2FzZXJ2aWNlcy5jb20vc2VydmljZS90Y2RuaWRzZXJ2ZXIiLCJzY29wZSI6ImNkbiIsImF1ZCI6InRjZG4iLCJjbGllbnRfaWQiOiJtb3Zpc3RhcnBsdXMiLCJqdGkiOiJDMTQ0NEI2RDIyRkY2QTZGQUFENzk1RDNBQzVDMjA4QiIsInVpZCI6InVGdzQ4TnBWT1FvTHFLSzFGT2VhNlc3SUZidzl2dTRBRzJVSktDOXFic3c9IiwiYWNjIjoiSFVQTFVLTG9ZNS82K0NrMk5ocElBblBrbkRuSEFjcWJuREdVcE0vMEZsST0iLCJzIjoiMTQwIiwiY2hwIjpmYWxzZX0.xYzLXj8T6qMbzo-sMtaQxVVZH_98_fXoJLe78krIcZBymmDeAPptj51Nd8Nx6p0pPq1psr6U1adJAae77qeClw
+#EXTINF:-1 tvg-id="M+ Wimbledon UHD" tvg-name="M+ Wimbledon UHD" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/POPUHD" catchup-type="default" catchup-source="https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5313/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" catchup-days="62" group-title="04 ⭐ Movistar+",M+ Wimbledon.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=8dc22d6aeabf41808df715808a823204:80bc99dd365f4d1e5e6ca1aab813a7c7
+#EXTHTTP:{"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+https://stover%68%63%73%6D%6E%6F-wp0.cdn.telefonica.com/5313/vxfmt=dp/Manifest%2empd?device_profile=DASH_TV_WIDEVINE&start_time=&start_time=2028-01-01T18:21:00Z&end_time=2028-01-01T19:01:08Z
+#EXTINF:-1 tvg-id="Movistar Plus" tvg-name="Movistar Plus" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MPLUS", Movistar Plus.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=3bb209e9657e4c11bff0521c3c695e45:172842aefc77fc769372593f6d1be85b
+https://mplus-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Vamos" tvg-name="M+ Vamos" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/VAMOSD", M+ Vamos.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=7a82138ce7e5495093c93f15c824a9f4:792659a361f3ff14af569e19696c7770
+https://vamos-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Vamos 2" tvg-name="M+ Vamos 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/VAM2SD", M+ Vamos 2.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=8941608e17764410bd4ab0c5ba93d7e6:136a55356d07cdf3ecd874c4afd4d367
+https://m2vamo-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Vamos 3" tvg-name="M+ Vamos 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MELLAV", M+ Vamos 3.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=dfad1dcc676a4e61a7b635ab491f5b97:81fccea0d43f20267fd1c4e0609ba956
+https://m3vamo-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="Primera Federación" tvg-name="Primera Federación" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MCOPA", Primera Federación.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=cfbcf5072f054cac92b97c899fd8a7e8:a71f06b44caf7f5dc30b8d2a279b7b32
+https://01coparey-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ LALIGA" tvg-name="M+ LALIGA" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGA",M+ LALIGA.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=3fb03257f34c4c69bc78b3048ff12871:3e271876d788c9b6e197db3457a845c9
+https://mlaliga-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN LaLiga" tvg-name="DAZN LaLiga" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZNLI",DAZN LaLiga.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=3edf0437b71e4230ab1b85ba54b30e8e:2d3b517199256facb6762f960168ab7a
+https://01ligdazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="LALIGA TV HYPERMOTION" tvg-name="LALIGA TV HYPERMOTION" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGS", LALIGA TV HYPERMOTION.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=3e3ff720d859449b84b3d5059681dd29:0efa0702d68c7bffbd44a2c50ba5e69f
+https://msegdiv-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ LALIGA 2" tvg-name="M+ LALIGA 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-NEONEGR/wpmos/MLIG1",M+ LALIGA 2.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=5ebeffe585b5413a8afe7d0aea8297c5:bf1430fd227252313f16e85cceafe7d0
+https://2liga-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN LaLiga 2" tvg-name="DAZN LaLiga 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZNL2",DAZN LaLiga 2.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=30f80831898b4e01ba0213d40739483c:0909b2deec3713a7645d3c355911f6f2
+https://02ligdazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="LALIGA TV HYPERMOTION 2" tvg-name="LALIGA TV HYPERMOTION 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGS2", LALIGA TV HYPERMOTION 2.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=cc816b27370740b7a20055c0ba8650a0:42a5d71eed1d937df1b326898e773624
+https://2segdiv-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Liga de Campeones" tvg-name="M+ Liga de Campeones" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAPIO", M+ Liga de Campeones.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=816b1ba2301c4da0a77661b3e7243b06:43ec0b92347737d046d8f84ba68c7820
+https://mligacampeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 2" tvg-name="M+ Liga de Campeones 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP1", M+ Liga de Campeones 2.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=ab07bda592dd4c4c86d4c5aaedaaed32:f9762f9a360de52deb4efa51ad0e2225
+https://02campeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Liga de Campeones  3" tvg-name="M+ Liga de Campeones  3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP2", M+ Liga de Campeones  3.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=6e715eaa90964af2b2735abfeb1372d5:1a00cadc546123072f2a505f88b16d70
+https://03campeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Deportes" tvg-name="M+ Deportes" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CPDEP", M+ Deportes.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=3384d6b1f814435ebbfbb1de7debb73e:5a342a7380c567d2e37fce5237dc87ce
+https://mdeportes-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Deportes 2" tvg-name="M+ Deportes 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/ARTHUR", M+ Deportes 2.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=5c12d7a2a67848158780a9364ad9e167:99e0931bf2a8b3c94cb73ee111a95865
+https://2multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Deportes 3" tvg-name="M+ Deportes 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/USOP2", M+ Deportes 3.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=77eda2287bfe45a48f8b42d1e428368a:030c6011f3bb9a18d6459faeee0c1935
+https://3multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Baloncesto" tvg-name="M+ Baloncesto" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MBALCT", M+ Baloncesto.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=7a76c791a61a4187938899a1613c2b4a:ddcb1d04602f9f606fc53b734284da4a
+https://1mbasket-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Baloncesto 2" tvg-name="M+ Baloncesto 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MBALC2", M+ Baloncesto 2.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=b286659277ad4533be3288dfdfbe3c72:382696d43ada9ffbb734771505a37af6
+https://2mbasket-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Baloncesto 3" tvg-name="M+ Baloncesto 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-NEONEGR/wpmos/MBALC3", M+ Baloncesto 3.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=a0bd458ccc844e5b9d6e042d108af186:2b8e1781bd218aef5b2f477bfc5849c6
+https://3mbasket-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Golf" tvg-name="M+ Golf" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/GOLF%2B", M+ Golf.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=7a4d2824552d49cc87dd97cf73075f59:d69ab2527bb7ab21bc79d6ee724c0e0f
+https://mgolf-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Golf 2" tvg-name="M+ Golf 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/GOLF2", M+ Golf 2.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=efd95c59c9c24742baaa0c75d34acc84:32da4f09073d3abc1a1c460b2ea1dccf
+https://2golf-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN F1" tvg-name="DAZN F1" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MVF1", DAZN F1.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=55e0918f7bb34268803dd66839ee50c8:66325d2c5a48f35c1ff33f0fa12752e5
+https://formula1-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN MotoGP" tvg-name="DAZN MotoGP" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZMOT", DAZN MotoGP.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=19ae8e20e6f54766941c431619483309:c5d14f5c22a735a81a10fc7a468b4310
+https://1motodazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN 1" tvg-name="DAZN 1" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/M1SD", DAZN 1.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=86bf3c8ec8aa4d45a3f1407647013fda:db5a9fec801e421f7d8cbf49be8d29eb
+https://01dazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN 2" tvg-name="DAZN 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/M2SD", DAZN 2
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=aeecd27e5c494b9a823897d4a2b348ed:8e930c0c9df63b135f5064337aba09e6
+https://02dazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN Baloncesto" tvg-name="DAZN Baloncesto" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZBA", DAZN Baloncesto.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=d240c4cd94044257b090364481157292:0481a29915df7921052d4b5c722c9ed5
+https://1basketdazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN Baloncesto 2" tvg-name="DAZN Baloncesto 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZB2", DAZN Baloncesto 2.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=ac68c0fba82a405a9f44366edc177308:4894586435706d392d4011025dd15f93
+https://2basketdazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN Baloncesto 3" tvg-name="DAZN Baloncesto 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZB3", DAZN Baloncesto 3.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=8e0a23c2181e4648ade4589c11253a21:ac941f7c6616e9ecba7e990fe0a41ae8
+https://3basketdazn-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/ESP", Eurosport 1.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=3d3c30aa233945b69666df47b0bd9632:4a7b5ad685a3c0fc02b7c5a850f012a3
+https://eurosport1-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="Eurosport 2" tvg-name="Eurosport 2" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/ESP2", Eurosport 2.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=3e924968a70048ff8e67e0705ce17ecd:c9c5547524bd3440b33f0e4d56256cdd
+https://eurosport2-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="GOL" tvg-name="GOL" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/GOL", GOL.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=6c32e99235e2407ea8b4cb298d497605:c988e560725f2d713bcdd108db19d422
+https://goltv-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="Teledeporte" tvg-name="Teledeporte" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/TDEP", Teledeporte.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=3789712b688c40978c52f5e01aaed2ae:7b496d60137587bd2915fca718ba7860
+https://teledeporte-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="Real Madrid TV" tvg-name="Real Madrid TV" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/REALM", Real Madrid TV.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=2711efc902814265b198db67f40fbee1:2a8fa00eba42566b9c3e65f213c783b4
+https://realmadrid-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ LALIGA 3" tvg-name="M+ LALIGA 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIG2", M+ LALIGA 3.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=d608c2aae9924372b1c05de63eed9a06:67fc4b46fd0f4c52d45e2517ea7ab5e9
+https://3liga-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ LALIGA 4" tvg-name="M+ LALIGA 4" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIG3", M+ LALIGA 4.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=6a311d81a63c4e5bbb262d9778f98d98:b9ed089f3c0513b4540179d1964525a2
+https://4liga-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="LALIGA TV HYPERMOTION 3" tvg-name="LALIGA TV HYPERMOTION 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MLIGS3", LALIGA TV HYPERMOTION 3.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=ea0f1826a04c4a6dba711d53003df9f9:031b15c3db41bee1672c27a3c55a1c42
+https://3segdiv-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Liga de Campeones  4" tvg-name="M+ Liga de Campeones  4" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP3", M+ Liga de Campeones  4.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=a165d3704ac34cdda4fbbd8fd9bd9888:f7e6b1eee6baa5871f0ddbc2227bb930
+https://04campeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Liga de Campeones 5" tvg-name="M+ Liga de Campeones 5" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/CHAP4", M+ Liga de Campeones 5.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=eb7b59646d3a40e2a4a74b5d117d9746:0c8076407f293da8f294f2c2aab37dfb
+https://05campeones-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Deportes 4" tvg-name="M+ Deportes 4" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/USOP3", M+ Deportes 4.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=454d01289d5a4161acd30023eb7f241d:10609cfb83c5121bb9164adab5b38eb0
+https://4multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Deportes 5" tvg-name="M+ Deportes 5" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/USOP11", M+ Deportes 5.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=f7c727415b7a46dab1c3c16fa76a59ab:97b0171e3ac4b492dc5def57f8e8f521
+https://5multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Deportes 6" tvg-name="M+ Deportes 6" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MULTI8", M+ Deportes 6.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=49c2d5b4bfa944ef8671734253c40391:f533c8e5170c30ba32e7a1c8be62857d
+https://6multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Deportes 7" tvg-name="M+ Deportes 7" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MULTI6", M+ Deportes 7.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=877fc369c6d544c387d71bbd944e9e10:801568108e776f1afa36ee811b46a408
+https://7multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="M+ Deportes 8" tvg-name="M+ Deportes 8" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/MULTI9", M+ Deportes 8.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=b2741f5852e04e008bc4b80fcd4c510a:64ea7d76c04f6c67bf290dcb2d4b8f9a
+https://8multidep-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN 3" tvg-name="DAZN 3" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZN3", DAZN 3.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=7524150b70e746a1977e3ed30a7972e3:0e8b2772faf3a9650ad5ee7605a278a0
+https://dazn3-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="DAZN 4" tvg-name="DAZN 4" group-title="Movistar Deportes Playready" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/sammos/DAZN4", DAZN 4.
+#KODIPROP:inputstream.adaptive.license_type=playready
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 7.0) AppleWebKit/537.36
+#KODIPROP:inputstream.adaptive.license_key=9493bea060764400b35273c4187125a8:408d9109da44481170f75399896b51bb
+https://dazn4-pry-movistarplus.emisiondof6.com/index.isml/Manifest
+#EXTINF:-1 tvg-id="LaLiga TV Bar" tvg-name="LaLiga TV Bar" tvg-logo="https://static.masmediatv.com/channel_logos/gnZg4NkBEYlDEslkFBcBOWsqWFcvHAtA.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/d/dd/DAZN_BoxedLogo_01_RGB.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" catchup-type="default" catchup-source="http://vfpc.gb.vodafone.es/sdash/LIVE$CUP038/2.mpd/Manifest.mpd?start=LIVE&end=END&device=PLAYOUT02&start={utc:Y-m-dTH:M:S}Z&end={utcend:Y-m-dTH:M:S}Z&device=DASH_XDSL_SSP_ENC_LIVE" catchup-days="150" group-title="02 ⚽ Fútbol",LaLiga TV Bar
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=1fdd37d8ede64c9b943c8752532d2e46:8fc8dc7dc42db2bf93000ce13f4d3a1d
+http://vfpc.gb.vodafone.es/sdash/LIVE$CUP038/2.mpd/Manifest.mpd?start=LIVE&end=END&device=PLAYOUT02
+#EXTINF:-1 tvg-id="DAZN LaLiga" tvg-name="DAZN LaLiga" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Logo_DAZN_LALIGA.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-r4/__c/DAZN_LALIGA1/__op/dash-wv/__f/manifest.mpd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" group-title="03 🔥 DAZN",DAZN LaLiga
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=55d6fb98721edb5ba8103a9cf21071d4:4a2158d932e315ffe13f72e44aad457e
+https://live.euskaltel.com/__cl/cg:lv-r4/__c/DAZN_LALIGA1/__op/dash-wv/__f/manifest.mpd
+#EXTINF:-1 tvg-id="DAZN LaLiga" tvg-name="DAZN LaLiga" tvg-shift="+2" ch-number="293" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Logo_DAZN_LALIGA.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-r4/__c/DAZN_LALIGA1/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="03 🔥 DAZN",DAZN LaLiga (-2h)
+https://live.euskaltel.com/__cl/cg:lv-r4/__c/DAZN_LALIGA1/__op/delay-default/__f/index.m3u8
+#EXTINF:-1 tvg-id="DAZN LaLiga" tvg-name="DAZN LaLiga" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Logo_DAZN_LALIGA.png" catchup-type="default" catchup-source="https://requestrouter3.cdn.agiletv.net/__cl/cg:lv-r4/__c/DAZN_LALIGA1/__op/8fe5c65f81d13f7af6496748b5fb148b/__f/index.m3u8?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" group-title="03 🔥 DAZN",DAZN LaLiga (iPhone-VLC)
+https://requestrouter3.cdn.agiletv.net/__cl/cg:lv-r4/__c/DAZN_LALIGA1/__op/8fe5c65f81d13f7af6496748b5fb148b/__f/index.m3u8
+#EXTINF:-1 tvg-id="DAZN LaLiga 2" tvg-name="DAZN LaLiga 2" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Default_Image_DAZN_LALIGA_2.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-r4/__c/DAZN_LALIGA2/__op/dash-wv/__f/manifest.mpd?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" group-title="03 🔥 DAZN",DAZN LaLiga 2
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=cf743dd9b130fb6d54250d5f90b57965:39e0c1f9938a7114a263bb75e715042b
+https://live.euskaltel.com/__cl/cg:lv-r4/__c/DAZN_LALIGA2/__op/dash-wv/__f/manifest.mpd
+#EXTINF:-1 tvg-id="DAZN LaLiga 2" tvg-name="DAZN LaLiga 2" tvg-shift="+2" ch-number="294" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Default_Image_DAZN_LALIGA_2.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-r4/__c/DAZN_LALIGA2/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="03 🔥 DAZN",DAZN LaLiga 2 (-2h)
+https://live.euskaltel.com/__cl/cg:lv-r4/__c/DAZN_LALIGA2/__op/delay-default/__f/index.m3u8
+#EXTINF:-1 tvg-id="DAZN LaLiga 2" tvg-name="DAZN LaLiga 2" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Default_Image_DAZN_LALIGA_2.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-r4/__c/DAZN_LALIGA2/__op/8fe5c65f81d13f7af6496748b5fb148b/__f/index.m3u8?device_profile=DASH_TV_WIDEVINE&start_time={utc:Y-m-dTH:M:S}Z&end_time={utcend:Y-m-dTH:M:S}Z" group-title="03 🔥 DAZN",Dazn Liga 2 (iPhone-VLC)
+https://requestrouter3.cdn.agiletv.net/__cl/cg:lv-r4/__c/DAZN_LALIGA2/__op/8fe5c65f81d13f7af6496748b5fb148b/__f/index.m3u8
+#EXTINF:-1 tvg-id="DE | DAZN FAST" tvg-name="DAZN Fast" tvg-logo="https://image.discovery.indazn.com/ca/v2/ca/image?id=1453384261487_image-header_pDach_1690558366000&quality=70" group-title="03 🔥 DAZN",DAZN Fast
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=8bcec6b31cc9edcb6768ab26548e22c3:e3c5b07328894c33734a4de6ae55a87f
+https://ac-003.live.p7s1video.net/63f8995e/t_003/dazn-fast-hd/cenc-default.mpd
+#EXTINF:-1 tvg-id="DE | DAZN COMBAT" tvg-logo="" group-title="03 🔥 DAZN",DAZN COMBAT
+https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8
+#EXTINF:-1 tvg-id="F1 TV FHD" tvg-logo="https://media.formula1.com/f_auto,c_limit,w_640,q_auto/common/logos/f1_logo_white_pssdvx" group-title="05 🏎️ Motor",F1 TV FHD
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=609d795905904705028ef54653019af7:2c791eb611e57a7d7f203022bc1b9ba3
+https://otte.cache.aiv-cdn.net/fra-nitro/live/clients/dash/enc/duqbirmk0d/out/v1/40f53c7cbc95498db3afd081c377d776/cenc.mpd
+#EXTINF:-1 tvg-id="MotoGP" tvg-name="" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DPBLAN/wpmos/DAZMOT" group-title="05 🏎️ Motor",MotoGP TV
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e03f302ec4dabcccca82cc9f76731ec9:53ea1027d2bf2893a552cf15bc0366de
+https://otte.live.fly.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/wjeweupwyc/out/v1/8197c8e055c94a868623653ac55c10bf/cenc.mpd
+#EXTINF:-1 tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Eurosport_1@2x.png" tvg-id="eurosports1hd" group-title="06 🎾 Deportes",Eurosports 1 HD
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0624b581c7e4722f46903c9aa032074d:f84f6e73237dd43770b3cb9c371441b3
+https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/zitbm32cd4/out/v1/de17cb98c1cb42b5978948f04fe4b4c0/cenc.mpd
+#EXTINF:-1 tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Eurosport_2@2x.png" tvg-id="eurosports2hd" group-title="06 🎾 Deportes",Eurosports 2 HD
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=47a3de154c541c255c37989b6ac77538:b9f74118a06217f2c2746799ace2d84e
+https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/to7i2ywspg/out/v1/2b9c64c6360947deaa5c824ebbd9aa83/cenc.mpd
+#EXTINF:-1 tvg-id="EFC Premium Fights" tvg-logo="https://inverleigh.com/wp-content/uploads/2018/09/efc-p.png" group-title="99 📦 Otros",EFC Premium Fights
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b619a5bd25977327d25d60d5be1cf82a:de028949cf19fa3ed23df9c769a396ae
+https://a151aivottlinear-a.akamaihd.net/OTTB/lhr-nitro/live/clients/dash/enc/suxa4abq1f/out/v1/cf0a6e4efa204452a76f49fbb0983e25/cenc.mpd
+#EXTINF:-1 tvg-logo="https://iili.io/KWCPXBS.png" group-title="99 📦 Otros",UFC +
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=a49085f8da5e65af1efff0edac830b1f:4659bc58a85c062e3fe0c039a446fe47
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/8mxwjnh2te/out/v1/356704796c0c4bed81f67cd3518d0c8a/cenc.mpd
+#EXTINF:-1 tvg-id="LaLiga TV Hypermotion" tvg-name="LaLiga TV Hypermotion" tvg-logo="https://estatico.emisiondof6.com/recorte/m-DP/wpmos/MLIGS" catchup-type="default" catchup-source="https://requestrouter3.cdn.agiletv.net/__cl/cg:lv-r2/__c/Liga_Smartbank/__op/dash-wv/__f/manifest.mpd?startTime={utc:YmdTHMS}Z&stopTime={utcend:YmdTHMS}Z" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga TV Hypermotion.
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=34a35470e46fea198d341e700cdcbf97:9e2695aab80178ccedbd7233d15b7c6a
+https://requestrouter3.cdn.agiletv.net/__cl/cg:lv-r2/__c/Liga_Smartbank/__op/dash-wv/__f/manifest.mpd
+#EXTINF:-1 tvg-id="LaLiga Hypermotion tv" ch-number="49" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/LaLigaHypermotion.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-r4/__c/Liga_Hypermotion_LW/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga Hypermotion tv_
+https://live.euskaltel.com/__cl/cg:lv-r4/__c/Liga_Hypermotion_LW/__op/default/__f/index.m3u8
+#EXTINF:-1 tvg-id="LaLiga Hypermotion tv" tvg-shift="+2" ch-number="49" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/LaLigaHypermotion.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-r4/__c/Liga_Hypermotion_LW/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga Hypermotion tv (-2h)_
+https://live.euskaltel.com/__cl/cg:lv-r4/__c/Liga_Hypermotion_LW/__op/delay-default/__f/index.m3u8
+#EXTINF:-1 tvg-id="LaLiga Hypermotion TV Multi 2" ch-number="50" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Hypermotion2.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-r4/__c/Liga_Hypermotion_Multi_2_LW/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga Hypermotion TV Multi 2_
+https://live.euskaltel.com/__cl/cg:lv-r4/__c/Liga_Hypermotion_Multi_2_LW/__op/default/__f/index.m3u8
+#EXTINF:-1 tvg-id="LaLiga Hypermotion TV Multi 2" tvg-shift="+2" ch-number="50" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Hypermotion2.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-r4/__c/Liga_Hypermotion_Multi_2_LW/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga Hypermotion TV Multi 2 (-2h)_
+https://live.euskaltel.com/__cl/cg:lv-r4/__c/Liga_Hypermotion_Multi_2_LW/__op/delay-default/__f/index.m3u8
+#EXTINF:-1 tvg-id="LaLiga Hypermotion TV Multi 3" ch-number="51" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Hypermotion3.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:live1/__c/Liga_hypermotion_Multi_3/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga Hypermotion TV Multi 3_
+https://live.euskaltel.com/__cl/cg:live1/__c/Liga_hypermotion_Multi_3/__op/default/__f/index.m3u8
+#EXTINF:-1 tvg-id="LaLiga Hypermotion TV Multi 3" tvg-shift="+2" ch-number="51" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/Hypermotion3.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:live1/__c/Liga_hypermotion_Multi_3/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga Hypermotion TV Multi 3 (-2h)_
+https://live.euskaltel.com/__cl/cg:live1/__c/Liga_hypermotion_Multi_3/__op/delay-default/__f/index.m3u8
+#EXTINF:-1 tvg-id="LaLiga Inside" ch-number="52" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/LaLigaInside.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga Inside_
+https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/default/__f/index.m3u8
+#EXTINF:-1 tvg-id="LaLiga Inside" tvg-shift="+2" ch-number="52" tvg-logo="https://agiletv-images.s3.eu-west-1.amazonaws.com/channelicons/LaLigaInside.png" catchup-type="default" catchup-source="https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/default/__f/index.m3u8?startTime=${start}&stopTime=${end}" catchup-days="7" group-title="02 ⚽ Fútbol",LaLiga Inside (-2h)_
+https://live.euskaltel.com/__cl/cg:lv-p1/__c/LaLigaSportsTV_HD/__op/delay-default/__f/index.m3u8
+#EXTINF:-1 tvg-id="Onetoro" tvg-name="Onetoro" tvg-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" group-logo="https://play-lh.googleusercontent.com/ZDSjarTntWnvUp47rSsoVwbT7PU-FqDHSkzQ5nc0CTlAbujoKUQr2_jw7QBbMF2hmQ=w480-h960-rw" catchup-type="default" catchup-source="https://live.onetoro.transparentedge.io/onetoro/index-${start}-${duration}.mpd" catchup-days="7" group-title="99 📦 Otros",OneToro TV
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=479e04f3d12d112b5c04c9ee67e4b1e6:48a98cfdea9a952e24b949fae4f692f3
+https://live.onetoro.transparentedge.io/onetoro/index.mpd
+#EXTINF:-1 tvg-id="Onetoro" tvg-name="Onetoro" tvg-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" catchup-type="default" catchup-source="http://vfott2cdn.gb.vodafone.es/sdash/LIVE$CUP052/2.mpd/Manifest.mpd?device_profile=DASH_XDSL_SSP_ENC_LIVE&start={utc:Y-m-dTH:M:S}Z&end={utcend:Y-m-dTH:M:S}Z&device=DASH_XDSL_SSP_ENC_LIVE" catchup-days="150" group-title="99 📦 Otros",OneToro TV
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e9ea64457ac54e8b810882bf8154ca5e:6460093b52241504709d89f62124098f
+http://vfott2cdn.gb.vodafone.es/sdash/LIVE$CUP052/2.mpd/Manifest.mpd?start=LIVE&end=END&device=DASH_XDSL_SSP_ENC_LIVE
+#EXTINF:-1 tvg-id="Onetoro" tvg-name="Onetoro" tvg-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" group-logo="https://media.tvup.cloud/canales/color_lg_6422c81c0ab5410023953ce5.png" group-title="99 📦 Otros",OneToro TV - Zapi TV
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=8c9a3b0ee0984799a8ec767c3a1d3665:5b3c1b11be351207b43388ce5781054e
+https://cache3.zapitv.com/live/eds_c2/MUNDOTORO/dash_live_ez/MUNDOTORO.mpd
