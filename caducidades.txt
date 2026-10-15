@@ -35,3 +35,4 @@ batqo.m3u - 19-09-2027 Septiembre 2027
 bcpfx.m3u - 15-10-2027 Octubre 2027 
 bz4r7.m3u - 15-10-2027 Octubre 2027 
 c291i.m3u - 15-10-2027 Octubre 2027 
+c3mfs.m3u - 15-10-2027 Octubre 2027 
