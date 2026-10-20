@@ -64,3 +64,4 @@ lquri.m3u - 20-10-2027 Octubre 2027
 lsyvr.m3u - 20-10-2027 Octubre 2027 
 ltdjm.m3u - 20-10-2027 Octubre 2027 
 mar5x.m3u - 20-10-2027 Octubre 2027 
+mbduj.m3u - PRUEBA HOY 20-10
