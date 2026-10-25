@@ -26,18 +26,18 @@ GRUPOS_PRIORITARIOS = {
 }
 PREFIJO_GRUPO_PRIORITARIO = "00 ⭐ "
 
-# Si lo pones en True, además del filtro por categoría se aplicarán las
-# BLOCK_WORDS. Por defecto está en False porque ya filtras por categoría y
-# esa lista tan grande (sport, sky, tnt, uk, usa...) podría eliminar
-# canales que sí quieres.
+# Si lo pones en True se aplicarán también las BLOCK_WORDS.
 APLICAR_BLOCK_WORDS = False
 
 BLOCK_WORDS = [
-    "portugal", "polsat", "israel", "méxico", "mexico", "france", "usa", "uk",
+    "portugal",
+    "polsat",
+    "israel",
     # ... pega aquí el resto de tu lista si activas APLICAR_BLOCK_WORDS ...
 ]
 
 contador = Counter()
+
 
 # ---------------------------------------------------------------------------
 # UTILIDADES
@@ -60,40 +60,58 @@ _palabras = sorted(
     key=len,
     reverse=True,
 )
-PATRON_BLOCK_WORDS = (
-    re.compile("|".join(_patron_para_palabra(p) for p in _palabras))
-    if _palabras
-    else None
-)
+
+if _palabras:
+    PATRON_BLOCK_WORDS = re.compile(
+        "|".join(_patron_para_palabra(p) for p in _palabras)
+    )
+else:
+    PATRON_BLOCK_WORDS = None
 
 
 def contiene_palabra_bloqueada(extinf):
-    if not PATRON_BLOCK_WORDS:
+    if PATRON_BLOCK_WORDS is None:
         return None
     texto = _quitar_urls_de_atributos(extinf).casefold()
     m = PATRON_BLOCK_WORDS.search(texto)
-    return m.group(0) if m else None
+    if m:
+        return m.group(0)
+    return None
 
 
 def obtener_grupo(extinf):
     """Devuelve el group-title original (o None si no tiene)."""
     m = re.search(r'group-title="([^"]*)"', extinf, re.IGNORECASE)
-    return m.group(1).strip() if m else None
+    if m:
+        return m.group(1).strip()
+    return None
 
 
 def aplicar_prefijo_si_prioritario(extinf, grupo):
-    """Mantiene el nombre de grupo original; solo añade el prefijo '00 ⭐'
-    a los grupos prioritarios para que salgan los primeros."""
+    """Añade el prefijo '00 ⭐' solo a los grupos prioritarios."""
     if grupo.casefold() in GRUPOS_PRIORITARIOS:
         nuevo = PREFIJO_GRUPO_PRIORITARIO + grupo
-        return re.sub(
+        extinf = re.sub(
             r'group-title="[^"]*"',
             lambda m: f'group-title="{nuevo}"',
             extinf,
             count=1,
             flags=re.IGNORECASE,
-        ), True
+        )
+        return extinf, True
     return extinf, False
+
+
+def motivo_descarte(extinf, grupo):
+    """Devuelve un texto con el motivo si el canal debe descartarse,
+    o None si se acepta."""
+    if grupo is None or grupo.casefold() not in CATEGORIAS:
+        return f"grupo no permitido: {grupo}"
+    if APLICAR_BLOCK_WORDS:
+        palabra = contiene_palabra_bloqueada(extinf)
+        if palabra:
+            return f"palabra bloqueada: {palabra}"
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -114,28 +132,4 @@ try:
 
     lineas = contenido.splitlines()
     if lineas and lineas[0].lstrip("\ufeff").startswith("#EXTM3U"):
-        lineas = lineas[1:]
-
-    omitir = True          # hasta que un #EXTINF válido lo cambie
-    destino = salida
-
-    for linea in lineas:
-        linea = linea.strip()
-        if not linea:
-            continue
-
-        # Las etiquetas #EXTGRP se descartan siempre.
-        if linea.startswith("#EXTGRP"):
-            continue
-
-        if linea.startswith("#EXTINF"):
-            grupo = obtener_grupo(linea)
-
-            # 1) Filtro por categoría
-            if grupo is None or grupo.casefold() not in CATEGORIAS:
-                omitir = True
-                print(f"DESCARTADO (grupo: {grupo}) -> {linea}")
-                continue
-
-            # 2) Filtro opcional por palabras bloqueadas
-            if APLICAR_BLOCK_WORDS:
+        lineas
