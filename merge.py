@@ -254,7 +254,7 @@ PATRON_TERMINA_EN_ES = re.compile(r"\bES\s*$", re.IGNORECASE)
 contador = Counter()
 
 GRUPOS_PROTEGIDOS = [
-    "movistar deportes playready",
+    "Movistar Deportes Fairplay",
 ]
 
 # Prefijo que se añade al nombre de los grupos protegidos para que
@@ -566,7 +566,7 @@ def cumple_es_o_movistar(extinf):
 
 cabecera = f'#EXTM3U url-tvg="{EPG_URL}"'
 
-# Los canales de grupos protegidos (movistar deportes playready) van a
+# Los canales de grupos protegidos (Movistar Deportes Fairplay) van a
 # una lista aparte para escribirlos los PRIMEROS en lista.m3u.
 salida_prioritaria = []
 salida = []
