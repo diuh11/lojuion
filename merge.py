@@ -1,18 +1,12 @@
-import requests
 import hashlib
 import re
 from collections import Counter
 
-# ---------------------------------------------------------------------------
-# FUENTE (única)
-# ---------------------------------------------------------------------------
+import requests
 
 URL = "https://pastebin.com/raw/hV2z2e9g"
-
 EPG_URL = "http://143.47.50.252:5000/getEPG"
 
-# Solo se conservan los canales cuyo group-title ORIGINAL (sin importar
-# mayúsculas/minúsculas) esté en esta lista. El resto se descarta.
 CATEGORIAS = {
     "movistar deportes fairplay",
     "dazn hls",
@@ -20,116 +14,95 @@ CATEGORIAS = {
     "dazn",
 }
 
-# Grupos que aparecerán los primeros en la app (se les añade el prefijo).
 GRUPOS_PRIORITARIOS = {
     "movistar deportes fairplay",
 }
 PREFIJO_GRUPO_PRIORITARIO = "00 ⭐ "
 
-# Si lo pones en True se aplicarán también las BLOCK_WORDS.
-APLICAR_BLOCK_WORDS = False
-
-BLOCK_WORDS = [
-    "portugal",
-    "polsat",
-    "israel",
-    # ... pega aquí el resto de tu lista si activas APLICAR_BLOCK_WORDS ...
-]
-
-contador = Counter()
-
-
-# ---------------------------------------------------------------------------
-# UTILIDADES
-# ---------------------------------------------------------------------------
-
-def _quitar_urls_de_atributos(extinf):
-    texto = re.sub(r'tvg-logo="[^"]*"', "", extinf, flags=re.IGNORECASE)
-    texto = re.sub(r'catchup-source="[^"]*"', "", texto, flags=re.IGNORECASE)
-    return texto
-
-
-def _patron_para_palabra(palabra):
-    prefijo = r"\b" if palabra[0].isalnum() else ""
-    sufijo = r"\b" if palabra[-1].isalnum() else ""
-    return prefijo + re.escape(palabra) + sufijo
-
-
-_palabras = sorted(
-    {p.strip().casefold() for p in BLOCK_WORDS if p.strip()},
-    key=len,
-    reverse=True,
-)
-
-if _palabras:
-    PATRON_BLOCK_WORDS = re.compile(
-        "|".join(_patron_para_palabra(p) for p in _palabras)
-    )
-else:
-    PATRON_BLOCK_WORDS = None
-
-
-def contiene_palabra_bloqueada(extinf):
-    if PATRON_BLOCK_WORDS is None:
-        return None
-    texto = _quitar_urls_de_atributos(extinf).casefold()
-    m = PATRON_BLOCK_WORDS.search(texto)
-    if m:
-        return m.group(0)
-    return None
-
 
 def obtener_grupo(extinf):
-    """Devuelve el group-title original (o None si no tiene)."""
     m = re.search(r'group-title="([^"]*)"', extinf, re.IGNORECASE)
     if m:
         return m.group(1).strip()
     return None
 
 
-def aplicar_prefijo_si_prioritario(extinf, grupo):
-    """Añade el prefijo '00 ⭐' solo a los grupos prioritarios."""
-    if grupo.casefold() in GRUPOS_PRIORITARIOS:
-        nuevo = PREFIJO_GRUPO_PRIORITARIO + grupo
-        extinf = re.sub(
-            r'group-title="[^"]*"',
-            lambda m: f'group-title="{nuevo}"',
-            extinf,
-            count=1,
-            flags=re.IGNORECASE,
-        )
-        return extinf, True
-    return extinf, False
+def poner_prefijo(extinf, grupo):
+    nuevo = PREFIJO_GRUPO_PRIORITARIO + grupo
+    return re.sub(
+        r'group-title="[^"]*"',
+        lambda m: 'group-title="' + nuevo + '"',
+        extinf,
+        count=1,
+        flags=re.IGNORECASE,
+    )
 
 
-def motivo_descarte(extinf, grupo):
-    """Devuelve un texto con el motivo si el canal debe descartarse,
-    o None si se acepta."""
-    if grupo is None or grupo.casefold() not in CATEGORIAS:
-        return f"grupo no permitido: {grupo}"
-    if APLICAR_BLOCK_WORDS:
-        palabra = contiene_palabra_bloqueada(extinf)
-        if palabra:
-            return f"palabra bloqueada: {palabra}"
-    return None
-
-
-# ---------------------------------------------------------------------------
-# PROCESO PRINCIPAL
-# ---------------------------------------------------------------------------
-
-cabecera = f'#EXTM3U url-tvg="{EPG_URL}"'
-
-salida_prioritaria = []
-salida = []
-
-try:
-    print(f"Descargando: {URL}")
-    respuesta = requests.get(URL, timeout=30)
+def descargar_lineas(url):
+    print("Descargando: " + url)
+    respuesta = requests.get(url, timeout=30)
     respuesta.raise_for_status()
-    contenido = respuesta.text
-    print(f"Bytes descargados: {len(contenido)}")
-
-    lineas = contenido.splitlines()
+    texto = respuesta.text
+    print("Bytes descargados: " + str(len(texto)))
+    lineas = texto.splitlines()
     if lineas and lineas[0].lstrip("\ufeff").startswith("#EXTM3U"):
-        lineas
+        lineas = lineas[1:]
+    return lineas
+
+
+def procesar(lineas):
+    contador = Counter()
+    prioritarios = []
+    normales = []
+    destino = normales
+    omitir = True
+
+    for linea in lineas:
+        linea = linea.strip()
+        if not linea:
+            continue
+        if linea.startswith("#EXTGRP"):
+            continue
+
+        if linea.startswith("#EXTINF"):
+            grupo = obtener_grupo(linea)
+            if grupo is None or grupo.casefold() not in CATEGORIAS:
+                omitir = True
+                continue
+
+            omitir = False
+            if grupo.casefold() in GRUPOS_PRIORITARIOS:
+                linea = poner_prefijo(linea, grupo)
+                destino = prioritarios
+            else:
+                destino = normales
+            contador[obtener_grupo(linea)] += 1
+
+        if not omitir:
+            destino.append(linea)
+
+    return prioritarios, normales, contador
+
+
+def main():
+    lineas = descargar_lineas(URL)
+    prioritarios, normales, contador = procesar(lineas)
+
+    cabecera = '#EXTM3U url-tvg="' + EPG_URL + '"'
+    contenido = "\n".join([cabecera] + prioritarios + normales) + "\n"
+    md5 = hashlib.md5(contenido.encode("utf-8")).hexdigest()
+
+    with open("lista.m3u", "w", encoding="utf-8") as f:
+        f.write(contenido)
+
+    print()
+    print("=" * 60)
+    for categoria, total in sorted(contador.items()):
+        print(categoria + ": " + str(total))
+    print("Canales procesados: " + str(sum(contador.values())))
+    print("MD5: " + md5)
+    print("lista.m3u creada correctamente")
+    print("=" * 60)
+
+
+main()
