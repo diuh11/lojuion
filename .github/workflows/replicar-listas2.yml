@@ -1,0 +1,40 @@
+name: Replicar listas2
+
+# Se encadena DESPUÉS de "Copias por TV" (que a su vez va después de "Actualizar")
+# para que nunca haya dos pushes simultáneos a main.
+on:
+  workflow_run:
+    workflows: ["Copias por TV"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: replicar-listas2
+  cancel-in-progress: false
+
+jobs:
+  replicar:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Generar réplicas en listas2/
+        run: python3 replicar.py
+
+      - name: Subir cambios
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A listas2
+          git commit -m "listas2 actualizadas" || exit 0
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
